@@ -1,0 +1,625 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Muxer
+   | Peer Talk documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Muxer
+   | Peer Talk documentation ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/ipfs-logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PeerTalk.Multiplex.Muxer">
+  
+  
+  <h1 id="PeerTalk_Multiplex_Muxer" data-uid="PeerTalk.Multiplex.Muxer" class="text-break">Class Muxer
+  </h1>
+  <div class="markdown level0 summary"><p>Supports multiple protocols over a single channel (stream).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">Muxer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PeerTalk.Multiplex.html">PeerTalk.Multiplex</a></h6>
+  <h6><strong>Assembly</strong>: PeerTalk.dll</h6>
+  <h5 id="PeerTalk_Multiplex_Muxer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Muxer</code></pre>
+  </div>
+  <h5 id="PeerTalk_Multiplex_Muxer_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>See <a href="https://github.com/libp2p/mplex">https://github.com/libp2p/mplex</a> for the spec.</p>
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_Substreams.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.Substreams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L68">View Source</a>
+  </span>
+  <h4 id="PeerTalk_Multiplex_Muxer_Substreams" data-uid="PeerTalk.Multiplex.Muxer.Substreams">Substreams</h4>
+  <div class="markdown level1 summary"><p>The substreams that are open.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConcurrentDictionary&lt;long, Substream&gt; Substreams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="PeerTalk.Multiplex.Substream.html">Substream</a>&gt;</td>
+        <td><p>The key is stream ID and the value is a <a class="xref" href="PeerTalk.Multiplex.Substream.html">Substream</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_Channel.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.Channel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L40">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_Channel_" data-uid="PeerTalk.Multiplex.Muxer.Channel*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_Channel" data-uid="PeerTalk.Multiplex.Muxer.Channel">Channel</h4>
+  <div class="markdown level1 summary"><p>The signle channel to exchange protocol messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Stream Channel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a> to exchange protocol messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_Connection.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.Connection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L48">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_Connection_" data-uid="PeerTalk.Multiplex.Muxer.Connection*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_Connection" data-uid="PeerTalk.Multiplex.Muxer.Connection">Connection</h4>
+  <div class="markdown level1 summary"><p>The peer connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PeerConnection Connection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.PeerConnection.html">PeerConnection</a></td>
+        <td><p>The peer connection that owns this muxer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_Initiator.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.Initiator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L77">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_Initiator_" data-uid="PeerTalk.Multiplex.Muxer.Initiator*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_Initiator" data-uid="PeerTalk.Multiplex.Muxer.Initiator">Initiator</h4>
+  <div class="markdown level1 summary"><p>Determines if the muxer is the initiator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Initiator { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if the muxer is the initiator.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_Multiplex_Muxer_Initiator_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PeerTalk.Multiplex.Muxer.html#PeerTalk_Multiplex_Muxer_Receiver">Receiver</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_NextStreamId.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.NextStreamId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L32">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_NextStreamId_" data-uid="PeerTalk.Multiplex.Muxer.NextStreamId*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_NextStreamId" data-uid="PeerTalk.Multiplex.Muxer.NextStreamId">NextStreamId</h4>
+  <div class="markdown level1 summary"><p>The next stream ID to create.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long NextStreamId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p>The session initiator allocates even IDs and the session receiver allocates odd IDs.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_Receiver.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.Receiver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L94">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_Receiver_" data-uid="PeerTalk.Multiplex.Muxer.Receiver*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_Receiver" data-uid="PeerTalk.Multiplex.Muxer.Receiver">Receiver</h4>
+  <div class="markdown level1 summary"><p>Determines if the muxer is the receiver.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Receiver { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if the muxer is the receiver.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_Multiplex_Muxer_Receiver_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PeerTalk.Multiplex.Muxer.html#PeerTalk_Multiplex_Muxer_Initiator">Initiator</a></div>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_AcquireWriteAccessAsync.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.AcquireWriteAccessAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L324">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_AcquireWriteAccessAsync_" data-uid="PeerTalk.Multiplex.Muxer.AcquireWriteAccessAsync*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_AcquireWriteAccessAsync" data-uid="PeerTalk.Multiplex.Muxer.AcquireWriteAccessAsync">AcquireWriteAccessAsync()</h4>
+  <div class="markdown level1 summary"><p>Acquire permission to write to the Channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IDisposable&gt; AcquireWriteAccessAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>&gt;</td>
+        <td><p>A task that represents the asynchronous get operation. The task&apos;s value
+is an <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a> that releases the lock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_CreateStreamAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.CreateStreamAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L112">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_CreateStreamAsync_" data-uid="PeerTalk.Multiplex.Muxer.CreateStreamAsync*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_CreateStreamAsync_System_String_System_Threading_CancellationToken_" data-uid="PeerTalk.Multiplex.Muxer.CreateStreamAsync(System.String,System.Threading.CancellationToken)">CreateStreamAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new stream with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Substream&gt; CreateStreamAsync(string name = &quot;&quot;, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>A name for the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="PeerTalk.Multiplex.Substream.html">Substream</a>&gt;</td>
+        <td><p>A duplex stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_ProcessRequestsAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.ProcessRequestsAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L177">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_ProcessRequestsAsync_" data-uid="PeerTalk.Multiplex.Muxer.ProcessRequestsAsync*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_ProcessRequestsAsync_System_Threading_CancellationToken_" data-uid="PeerTalk.Multiplex.Muxer.ProcessRequestsAsync(System.Threading.CancellationToken)">ProcessRequestsAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Read the multiplex packets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ProcessRequestsAsync(CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_Multiplex_Muxer_ProcessRequestsAsync_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A background task that reads and processes the multiplex packets while
+the <a class="xref" href="PeerTalk.Multiplex.Muxer.html#PeerTalk_Multiplex_Muxer_Channel">Channel</a> is open and not <code data-dev-comment-type="paramref" class="paramref">cancel</code>.
+<p>
+Any encountered errors will close the <a class="xref" href="PeerTalk.Multiplex.Muxer.html#PeerTalk_Multiplex_Muxer_Channel">Channel</a>.
+</p></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_RemoveStreamAsync_PeerTalk_Multiplex_Substream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.RemoveStreamAsync(PeerTalk.Multiplex.Substream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L144">View Source</a>
+  </span>
+  <a id="PeerTalk_Multiplex_Muxer_RemoveStreamAsync_" data-uid="PeerTalk.Multiplex.Muxer.RemoveStreamAsync*"></a>
+  <h4 id="PeerTalk_Multiplex_Muxer_RemoveStreamAsync_PeerTalk_Multiplex_Substream_System_Threading_CancellationToken_" data-uid="PeerTalk.Multiplex.Muxer.RemoveStreamAsync(PeerTalk.Multiplex.Substream,System.Threading.CancellationToken)">RemoveStreamAsync(Substream, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Remove the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Substream&gt; RemoveStreamAsync(Substream stream, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.Multiplex.Substream.html">Substream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="PeerTalk.Multiplex.Substream.html">Substream</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_Multiplex_Muxer_RemoveStreamAsync_PeerTalk_Multiplex_Substream_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Internal method called by Substream.Dispose().</p>
+</div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_SubstreamClosed.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.SubstreamClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L58">View Source</a>
+  </span>
+  <h4 id="PeerTalk_Multiplex_Muxer_SubstreamClosed" data-uid="PeerTalk.Multiplex.Muxer.SubstreamClosed">SubstreamClosed</h4>
+  <div class="markdown level1 summary"><p>Raised when the remote end closes a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;Substream&gt; SubstreamClosed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PeerTalk.Multiplex.Substream.html">Substream</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer_SubstreamCreated.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer.SubstreamCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L53">View Source</a>
+  </span>
+  <h4 id="PeerTalk_Multiplex_Muxer_SubstreamCreated" data-uid="PeerTalk.Multiplex.Muxer.SubstreamCreated">SubstreamCreated</h4>
+  <div class="markdown level1 summary"><p>Raised when the remote end creates a new stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;Substream&gt; SubstreamCreated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PeerTalk.Multiplex.Substream.html">Substream</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Multiplex_Muxer.md&amp;value=---%0Auid%3A%20PeerTalk.Multiplex.Muxer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Multiplex/Muxer.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

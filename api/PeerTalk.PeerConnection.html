@@ -1,0 +1,1010 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PeerConnection
+   | Peer Talk documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PeerConnection
+   | Peer Talk documentation ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../images/ipfs-favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/ipfs-logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PeerTalk.PeerConnection">
+  
+  
+  <h1 id="PeerTalk_PeerConnection" data-uid="PeerTalk.PeerConnection" class="text-break">Class PeerConnection
+  </h1>
+  <div class="markdown level0 summary"><p>A connection between two peers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">PeerConnection</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PeerTalk.html">PeerTalk</a></h6>
+  <h6><strong>Assembly</strong>: PeerTalk.dll</h6>
+  <h5 id="PeerTalk_PeerConnection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PeerConnection : IDisposable</code></pre>
+  </div>
+  <h5 id="PeerTalk_PeerConnection_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A connection is used to exchange messages between peers.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_BytesRead.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.BytesRead%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L158">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_BytesRead_" data-uid="PeerTalk.PeerConnection.BytesRead*"></a>
+  <h4 id="PeerTalk_PeerConnection_BytesRead" data-uid="PeerTalk.PeerConnection.BytesRead">BytesRead</h4>
+  <div class="markdown level1 summary"><p>Number of bytes read over the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long BytesRead { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_BytesWritten.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.BytesWritten%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L163">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_BytesWritten_" data-uid="PeerTalk.PeerConnection.BytesWritten*"></a>
+  <h4 id="PeerTalk_PeerConnection_BytesWritten" data-uid="PeerTalk.PeerConnection.BytesWritten">BytesWritten</h4>
+  <div class="markdown level1 summary"><p>Number of bytes written over the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long BytesWritten { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_IdentityEstablished.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.IdentityEstablished%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L148">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_IdentityEstablished_" data-uid="PeerTalk.PeerConnection.IdentityEstablished*"></a>
+  <h4 id="PeerTalk_PeerConnection_IdentityEstablished" data-uid="PeerTalk.PeerConnection.IdentityEstablished">IdentityEstablished</h4>
+  <div class="markdown level1 summary"><p>Signals that the identity of the remote endpoint is established.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TaskCompletionSource&lt;Peer&gt; IdentityEstablished { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcompletionsource-1">TaskCompletionSource</a>&lt;<a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_PeerConnection_IdentityEstablished_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This can be awaited.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_IsIncoming.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.IsIncoming%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L63">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_IsIncoming_" data-uid="PeerTalk.PeerConnection.IsIncoming*"></a>
+  <h4 id="PeerTalk_PeerConnection_IsIncoming" data-uid="PeerTalk.PeerConnection.IsIncoming">IsIncoming</h4>
+  <div class="markdown level1 summary"><p>Determine which peer (local or remote) initiated the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsIncoming { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><strong>true</strong> if the <a class="xref" href="PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_RemotePeer">RemotePeer</a> initiated the connection;
+otherwise, <strong>false</strong>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_LastUsed.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.LastUsed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L153">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_LastUsed_" data-uid="PeerTalk.PeerConnection.LastUsed*"></a>
+  <h4 id="PeerTalk_PeerConnection_LastUsed" data-uid="PeerTalk.PeerConnection.LastUsed">LastUsed</h4>
+  <div class="markdown level1 summary"><p>When the connection was last used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime LastUsed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_LocalAddress.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.LocalAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L41">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_LocalAddress_" data-uid="PeerTalk.PeerConnection.LocalAddress*"></a>
+  <h4 id="PeerTalk_PeerConnection_LocalAddress" data-uid="PeerTalk.PeerConnection.LocalAddress">LocalAddress</h4>
+  <div class="markdown level1 summary"><p>The local peer&apos;s end point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiAddress LocalAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html">MultiAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_LocalPeer.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.LocalPeer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L31">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_LocalPeer_" data-uid="PeerTalk.PeerConnection.LocalPeer*"></a>
+  <h4 id="PeerTalk_PeerConnection_LocalPeer" data-uid="PeerTalk.PeerConnection.LocalPeer">LocalPeer</h4>
+  <div class="markdown level1 summary"><p>The local peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Peer LocalPeer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_LocalPeerKey.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.LocalPeerKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L54">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_LocalPeerKey_" data-uid="PeerTalk.PeerConnection.LocalPeerKey*"></a>
+  <h4 id="PeerTalk_PeerConnection_LocalPeerKey" data-uid="PeerTalk.PeerConnection.LocalPeerKey">LocalPeerKey</h4>
+  <div class="markdown level1 summary"><p>The private key of the local peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Key LocalPeerKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.Cryptography.Key.html">Key</a></td>
+        <td><p>Used to prove the identity of the <a class="xref" href="PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_LocalPeer">LocalPeer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_MuxerEstablished.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.MuxerEstablished%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L136">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_MuxerEstablished_" data-uid="PeerTalk.PeerConnection.MuxerEstablished*"></a>
+  <h4 id="PeerTalk_PeerConnection_MuxerEstablished" data-uid="PeerTalk.PeerConnection.MuxerEstablished">MuxerEstablished</h4>
+  <div class="markdown level1 summary"><p>Signals that the muxer for the connection is established.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TaskCompletionSource&lt;Muxer&gt; MuxerEstablished { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcompletionsource-1">TaskCompletionSource</a>&lt;<a class="xref" href="PeerTalk.Multiplex.Muxer.html">Muxer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_PeerConnection_MuxerEstablished_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This can be awaited.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_Protocols.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.Protocols%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L91">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_Protocols_" data-uid="PeerTalk.PeerConnection.Protocols*"></a>
+  <h4 id="PeerTalk_PeerConnection_Protocols" data-uid="PeerTalk.PeerConnection.Protocols">Protocols</h4>
+  <div class="markdown level1 summary"><p>The protocols that the connection will handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, Func&lt;PeerConnection, Stream, CancellationToken, Task&gt;&gt; Protocols { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="PeerTalk.PeerConnection.html">PeerConnection</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;&gt;</td>
+        <td><p>The key is a protocol name, such as &quot;/mplex/6.7.0&quot;.  The value
+is a function that will process the protocol message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_PeerConnection_Protocols_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_AddProtocol_PeerTalk_Protocols_IPeerProtocol_">AddProtocol(IPeerProtocol)</a></div>
+      <div><a class="xref" href="PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_AddProtocols_System_Collections_Generic_IEnumerable_PeerTalk_Protocols_IPeerProtocol__">AddProtocols(IEnumerable&lt;IPeerProtocol&gt;)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_RemoteAddress.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.RemoteAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L46">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_RemoteAddress_" data-uid="PeerTalk.PeerConnection.RemoteAddress*"></a>
+  <h4 id="PeerTalk_PeerConnection_RemoteAddress" data-uid="PeerTalk.PeerConnection.RemoteAddress">RemoteAddress</h4>
+  <div class="markdown level1 summary"><p>The remote peer&apos;s end point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiAddress RemoteAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html">MultiAddress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_RemotePeer.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.RemotePeer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L36">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_RemotePeer_" data-uid="PeerTalk.PeerConnection.RemotePeer*"></a>
+  <h4 id="PeerTalk_PeerConnection_RemotePeer" data-uid="PeerTalk.PeerConnection.RemotePeer">RemotePeer</h4>
+  <div class="markdown level1 summary"><p>The remote peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Peer RemotePeer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_SecurityEstablished.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.SecurityEstablished%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L128">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_SecurityEstablished_" data-uid="PeerTalk.PeerConnection.SecurityEstablished*"></a>
+  <h4 id="PeerTalk_PeerConnection_SecurityEstablished" data-uid="PeerTalk.PeerConnection.SecurityEstablished">SecurityEstablished</h4>
+  <div class="markdown level1 summary"><p>Signals that the security for the connection is established.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TaskCompletionSource&lt;bool&gt; SecurityEstablished { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcompletionsource-1">TaskCompletionSource</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_PeerConnection_SecurityEstablished_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This can be awaited.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_Stream.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.Stream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L68">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_Stream_" data-uid="PeerTalk.PeerConnection.Stream*"></a>
+  <h4 id="PeerTalk_PeerConnection_Stream" data-uid="PeerTalk.PeerConnection.Stream">Stream</h4>
+  <div class="markdown level1 summary"><p>The duplex stream between the two peers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Stream Stream { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_AddProtocol_PeerTalk_Protocols_IPeerProtocol_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.AddProtocol(PeerTalk.Protocols.IPeerProtocol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L100">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_AddProtocol_" data-uid="PeerTalk.PeerConnection.AddProtocol*"></a>
+  <h4 id="PeerTalk_PeerConnection_AddProtocol_PeerTalk_Protocols_IPeerProtocol_" data-uid="PeerTalk.PeerConnection.AddProtocol(PeerTalk.Protocols.IPeerProtocol)">AddProtocol(IPeerProtocol)</h4>
+  <div class="markdown level1 summary"><p>Add a protocol that the connection will handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddProtocol(IPeerProtocol protocol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a></td>
+        <td><span class="parametername">protocol</span></td>
+        <td><p>A peer protocol to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_AddProtocols_System_Collections_Generic_IEnumerable_PeerTalk_Protocols_IPeerProtocol__.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.AddProtocols(System.Collections.Generic.IEnumerable%7BPeerTalk.Protocols.IPeerProtocol%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L111">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_AddProtocols_" data-uid="PeerTalk.PeerConnection.AddProtocols*"></a>
+  <h4 id="PeerTalk_PeerConnection_AddProtocols_System_Collections_Generic_IEnumerable_PeerTalk_Protocols_IPeerProtocol__" data-uid="PeerTalk.PeerConnection.AddProtocols(System.Collections.Generic.IEnumerable{PeerTalk.Protocols.IPeerProtocol})">AddProtocols(IEnumerable&lt;IPeerProtocol&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add a seequence of protocols that the connection will handle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddProtocols(IEnumerable&lt;IPeerProtocol&gt; protocols)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a>&gt;</td>
+        <td><span class="parametername">protocols</span></td>
+        <td><p>The peer protocols to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_Dispose.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L382">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_Dispose_" data-uid="PeerTalk.PeerConnection.Dispose*"></a>
+  <h4 id="PeerTalk_PeerConnection_Dispose" data-uid="PeerTalk.PeerConnection.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L328">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_Dispose_" data-uid="PeerTalk.PeerConnection.Dispose*"></a>
+  <h4 id="PeerTalk_PeerConnection_Dispose_System_Boolean_" data-uid="PeerTalk.PeerConnection.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>TODO</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_EstablishProtocolAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.EstablishProtocolAsync(System.String%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L233">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_EstablishProtocolAsync_" data-uid="PeerTalk.PeerConnection.EstablishProtocolAsync*"></a>
+  <h4 id="PeerTalk_PeerConnection_EstablishProtocolAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.EstablishProtocolAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)">EstablishProtocolAsync(String, Stream, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>TODO:</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task EstablishProtocolAsync(string name, Stream stream, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_EstablishProtocolAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.EstablishProtocolAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L221">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_EstablishProtocolAsync_" data-uid="PeerTalk.PeerConnection.EstablishProtocolAsync*"></a>
+  <h4 id="PeerTalk_PeerConnection_EstablishProtocolAsync_System_String_System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.EstablishProtocolAsync(System.String,System.Threading.CancellationToken)">EstablishProtocolAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>TODO:</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task EstablishProtocolAsync(string name, CancellationToken cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_InitiateAsync_System_Collections_Generic_IEnumerable_PeerTalk_Protocols_IEncryptionProtocol__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.InitiateAsync(System.Collections.Generic.IEnumerable%7BPeerTalk.Protocols.IEncryptionProtocol%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L174">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_InitiateAsync_" data-uid="PeerTalk.PeerConnection.InitiateAsync*"></a>
+  <h4 id="PeerTalk_PeerConnection_InitiateAsync_System_Collections_Generic_IEnumerable_PeerTalk_Protocols_IEncryptionProtocol__System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.InitiateAsync(System.Collections.Generic.IEnumerable{PeerTalk.Protocols.IEncryptionProtocol},System.Threading.CancellationToken)">InitiateAsync(IEnumerable&lt;IEncryptionProtocol&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Establish the connection with the remote node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task InitiateAsync(IEnumerable&lt;IEncryptionProtocol&gt; securityProtocols, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="PeerTalk.Protocols.IEncryptionProtocol.html">IEncryptionProtocol</a>&gt;</td>
+        <td><span class="parametername">securityProtocols</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_PeerConnection_InitiateAsync_System_Collections_Generic_IEnumerable_PeerTalk_Protocols_IEncryptionProtocol__System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This should be called when the local peer wants a connection with
+the remote peer.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_ReadMessages_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.ReadMessages(System.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L293">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_ReadMessages_" data-uid="PeerTalk.PeerConnection.ReadMessages*"></a>
+  <h4 id="PeerTalk_PeerConnection_ReadMessages_System_IO_Stream_System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.ReadMessages(System.IO.Stream,System.Threading.CancellationToken)">ReadMessages(Stream, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts reading messages from the remote peer on the specified stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReadMessages(Stream stream, CancellationToken cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_ReadMessages_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.ReadMessages(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L259">View Source</a>
+  </span>
+  <a id="PeerTalk_PeerConnection_ReadMessages_" data-uid="PeerTalk.PeerConnection.ReadMessages*"></a>
+  <h4 id="PeerTalk_PeerConnection_ReadMessages_System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.ReadMessages(System.Threading.CancellationToken)">ReadMessages(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts reading messages from the remote peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReadMessages(CancellationToken cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_Closed.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.Closed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L322">View Source</a>
+  </span>
+  <h4 id="PeerTalk_PeerConnection_Closed" data-uid="PeerTalk.PeerConnection.Closed">Closed</h4>
+  <div class="markdown level1 summary"><p>Signals that the connection is closed (disposed).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;PeerConnection&gt; Closed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PeerTalk.PeerConnection.html">PeerConnection</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

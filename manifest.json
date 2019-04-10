@@ -1,0 +1,839 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/projects/peer-talk/doc",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.BlackList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.BlackList-1.html",
+          "hash": "SZyOAvb+FHiy7YjCDJBPeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.ConnectionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.ConnectionManager.html",
+          "hash": "IOqtTL7BQO6H3jc69e4x3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Cryptography.CtrStreamCipher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Cryptography.CtrStreamCipher.html",
+          "hash": "MaCxZ3Dnhva1kCOLyFOXTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Cryptography.EphermalKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Cryptography.EphermalKey.html",
+          "hash": "+SjDHDog01F0bYXVVxybzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Cryptography.Key.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Cryptography.Key.html",
+          "hash": "1ohwbXKWgJMgh30xQq70cQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Cryptography.StretchedKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Cryptography.StretchedKey.html",
+          "hash": "LWjER4EuTBe+purZhSCDlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Cryptography.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Cryptography.html",
+          "hash": "lVdj0skbDneRZ8q/GlCluw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Discovery.Bootstrap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Discovery.Bootstrap.html",
+          "hash": "RWd9FrZigJ0Rgxk5Azo7zQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Discovery.IPeerDiscovery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Discovery.IPeerDiscovery.html",
+          "hash": "8zhdaHW7FyandV7BVzOCeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Discovery.Mdns.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Discovery.Mdns.html",
+          "hash": "zOhxz1k7erxTOIFWV70BYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Discovery.MdnsGo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Discovery.MdnsGo.html",
+          "hash": "vR3dKxvaCoYzML0S5S2+Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Discovery.MdnsJs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Discovery.MdnsJs.html",
+          "hash": "UkPFPswqQ1vBp8gylJ8hZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Discovery.MdnsNext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Discovery.MdnsNext.html",
+          "hash": "kSWlGfRo7o+jJJL9zkNHng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Discovery.PeerDiscoveredEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Discovery.PeerDiscoveredEventArgs.html",
+          "hash": "46pnxElahQ1HtXIzIP2QUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Discovery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Discovery.html",
+          "hash": "GgrutwYPpRGid1wKjh/qnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.IService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.IService.html",
+          "hash": "iWdY/W/eYt3s4mcVuKY4vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.MultiAddressExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.MultiAddressExtensions.html",
+          "hash": "+/vF5pR8sem6vakrDo1TaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Multiplex.Header.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Multiplex.Header.html",
+          "hash": "qRMYdF9jXdtNxHQFqsDdgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Multiplex.Muxer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Multiplex.Muxer.html",
+          "hash": "OLKdjF6MWdNXyECk26Q/ww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Multiplex.PacketType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Multiplex.PacketType.html",
+          "hash": "qyysh1SS9xZLm88voFX1+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Multiplex.Substream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Multiplex.Substream.html",
+          "hash": "GJXKwGHDJGEggSyLpRUhoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Multiplex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Multiplex.html",
+          "hash": "JqTgGMZpJXu/wgid033Ugw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.PeerConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.PeerConnection.html",
+          "hash": "WVM07mKl/UzA4JnzZHYkug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Policy-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Policy-1.html",
+          "hash": "i4OnWA1JJV6PBdI62w7vOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.PolicyAlways-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.PolicyAlways-1.html",
+          "hash": "VJVMlj9qzkIgOJIDGFRZqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.PolicyNever-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.PolicyNever-1.html",
+          "hash": "7LttAJS9Wik88AbZL83bQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.ProtoBufHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.ProtoBufHelper.html",
+          "hash": "UrZGU/D0lFK4T6ZE4cBYWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.IEncryptionProtocol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.IEncryptionProtocol.html",
+          "hash": "Mb+A9I+GZ3nCfGmKAxIqrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.IPeerProtocol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.IPeerProtocol.html",
+          "hash": "eS94jRfBHGUvSNWKHLY8Uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.Identify1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.Identify1.html",
+          "hash": "U/MBHxfuiF3YpY+XTHFghg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.Message.html",
+          "hash": "auvO3EbDcqmzOZqWlKmLAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.Mplex67.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.Mplex67.html",
+          "hash": "B26kwwwv+QvdFcibO7njag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.Multistream1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.Multistream1.html",
+          "hash": "NM5jrMFQG7subGK/XigUJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.Plaintext1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.Plaintext1.html",
+          "hash": "S8F3cixPyDqziPcguKUovA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.ProtocolRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.ProtocolRegistry.html",
+          "hash": "iOWqnPSmw7tmZUKNx7NoHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.VersionedName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.VersionedName.html",
+          "hash": "gx92MTfiYTxEfN8vcIBzSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.html",
+          "hash": "7dpEpAtxhAkH4RkvFQU5eA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.Dht1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.Dht1.html",
+          "hash": "SbIix1jdXUkIeCGeBs5dRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.DistributedQuery-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.DistributedQuery-1.html",
+          "hash": "OSAlzh9l3n8l/cMk2YRz6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.IContentRouting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.IContentRouting.html",
+          "hash": "sm/x1ZywK5h9qRf8crjjQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.IPeerRouting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.IPeerRouting.html",
+          "hash": "YRMisH6K9mZUWHftdgDLRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.MessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.MessageType.html",
+          "hash": "1X/eS6MfnbJz518JKgfZsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.RoutingTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.RoutingTable.html",
+          "hash": "fzG4njy5YDPfDr+Li0dVxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.html",
+          "hash": "gRNlXIYx8+Au5sGMkVTpYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.SecureCommunication.Secio1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.SecureCommunication.Secio1.html",
+          "hash": "njEOrk204oj7/BmEf7VfJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.SecureCommunication.Secio1Stream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.SecureCommunication.Secio1Stream.html",
+          "hash": "XImWT8NXQYOrO0IVI8oAUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.SecureCommunication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.SecureCommunication.html",
+          "hash": "vdbflrI7b2KtNb3apQDLow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.StatsStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.StatsStream.html",
+          "hash": "uqTwMZ8A0wyR3giDXhZEcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Swarm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Swarm.html",
+          "hash": "wTVayZZW8xwF0fveIqTWVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.TaskHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.TaskHelper.html",
+          "hash": "yoEHQqDlNZ0v45dT0hPY7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Transports.IPeerTransport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Transports.IPeerTransport.html",
+          "hash": "7VJ3GN0Tjb/Sxpvt+eeuQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Transports.Tcp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Transports.Tcp.html",
+          "hash": "dHkIQvWCa0vtfQHcXYXf4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Transports.Udp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Transports.Udp.html",
+          "hash": "ogyus2fr+jTL5NDXRGOvdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Transports.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Transports.html",
+          "hash": "4S01k706vYt1UK33HxYICw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.WhiteList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.WhiteList-1.html",
+          "hash": "k/nnLNNW5E0mBRiAgDs/iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.html",
+          "hash": "pYm3SjNI5UcMs4fv2emsZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "dmC5pIgbMegJFEEA3DbFLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "dc0R3Q7fHDnBgKp0UR0y2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "7fT6QBCjCpZ0zMNVjknqFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/atlascity.io-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/atlascity.io-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/docs-latest-green.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/docs-latest-green.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ipfs-favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/ipfs-favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ipfs-logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/ipfs-logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Xl8UmK/uZd/fLMRRSo0OgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "JjLiqTfOV50C0GylHLBTWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 56,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
