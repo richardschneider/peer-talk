@@ -65,6 +65,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Cryptography.PreSharedKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Cryptography.PreSharedKey.html",
+          "hash": "XL9zdGAnS+WK0Gv9iNxEYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PeerTalk.Cryptography.StretchedKey.yml",
       "output": {
         ".html": {
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Cryptography.html",
-          "hash": "UV8ZSo+lNsN3Gl4OOfRrdg=="
+          "hash": "Ry2Xv8qcnS4/244FB7r6PA=="
         }
       },
       "is_incremental": false,
@@ -681,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "dmC5pIgbMegJFEEA3DbFLg=="
+          "hash": "lYB+3+Q0Z/3VTpfEpRtv0w=="
         }
       },
       "is_incremental": false,
@@ -824,13 +836,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -844,10 +849,17 @@
           "total_file_count": 2,
           "skipped_file_count": 0
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 56,
+          "total_file_count": 57,
           "skipped_file_count": 0
         }
       }

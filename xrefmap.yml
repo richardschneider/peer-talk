@@ -364,6 +364,77 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Cryptography.Key.Verify
   nameWithType: Key.Verify
+- uid: PeerTalk.Cryptography.PreSharedKey
+  name: PreSharedKey
+  href: api/PeerTalk.Cryptography.PreSharedKey.html
+  commentId: T:PeerTalk.Cryptography.PreSharedKey
+  fullName: PeerTalk.Cryptography.PreSharedKey
+  nameWithType: PreSharedKey
+- uid: PeerTalk.Cryptography.PreSharedKey.Export(System.IO.TextWriter,System.String)
+  name: Export(TextWriter, String)
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Export_System_IO_TextWriter_System_String_
+  commentId: M:PeerTalk.Cryptography.PreSharedKey.Export(System.IO.TextWriter,System.String)
+  fullName: PeerTalk.Cryptography.PreSharedKey.Export(System.IO.TextWriter, System.String)
+  nameWithType: PreSharedKey.Export(TextWriter, String)
+- uid: PeerTalk.Cryptography.PreSharedKey.Export*
+  name: Export
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Export_
+  commentId: Overload:PeerTalk.Cryptography.PreSharedKey.Export
+  isSpec: "True"
+  fullName: PeerTalk.Cryptography.PreSharedKey.Export
+  nameWithType: PreSharedKey.Export
+- uid: PeerTalk.Cryptography.PreSharedKey.Generate(System.Int32)
+  name: Generate(Int32)
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Generate_System_Int32_
+  commentId: M:PeerTalk.Cryptography.PreSharedKey.Generate(System.Int32)
+  fullName: PeerTalk.Cryptography.PreSharedKey.Generate(System.Int32)
+  nameWithType: PreSharedKey.Generate(Int32)
+- uid: PeerTalk.Cryptography.PreSharedKey.Generate*
+  name: Generate
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Generate_
+  commentId: Overload:PeerTalk.Cryptography.PreSharedKey.Generate
+  isSpec: "True"
+  fullName: PeerTalk.Cryptography.PreSharedKey.Generate
+  nameWithType: PreSharedKey.Generate
+- uid: PeerTalk.Cryptography.PreSharedKey.Import(System.IO.TextReader)
+  name: Import(TextReader)
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Import_System_IO_TextReader_
+  commentId: M:PeerTalk.Cryptography.PreSharedKey.Import(System.IO.TextReader)
+  fullName: PeerTalk.Cryptography.PreSharedKey.Import(System.IO.TextReader)
+  nameWithType: PreSharedKey.Import(TextReader)
+- uid: PeerTalk.Cryptography.PreSharedKey.Import*
+  name: Import
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Import_
+  commentId: Overload:PeerTalk.Cryptography.PreSharedKey.Import
+  isSpec: "True"
+  fullName: PeerTalk.Cryptography.PreSharedKey.Import
+  nameWithType: PreSharedKey.Import
+- uid: PeerTalk.Cryptography.PreSharedKey.Length
+  name: Length
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Length
+  commentId: P:PeerTalk.Cryptography.PreSharedKey.Length
+  fullName: PeerTalk.Cryptography.PreSharedKey.Length
+  nameWithType: PreSharedKey.Length
+- uid: PeerTalk.Cryptography.PreSharedKey.Length*
+  name: Length
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Length_
+  commentId: Overload:PeerTalk.Cryptography.PreSharedKey.Length
+  isSpec: "True"
+  fullName: PeerTalk.Cryptography.PreSharedKey.Length
+  nameWithType: PreSharedKey.Length
+- uid: PeerTalk.Cryptography.PreSharedKey.Value
+  name: Value
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Value
+  commentId: P:PeerTalk.Cryptography.PreSharedKey.Value
+  fullName: PeerTalk.Cryptography.PreSharedKey.Value
+  nameWithType: PreSharedKey.Value
+- uid: PeerTalk.Cryptography.PreSharedKey.Value*
+  name: Value
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Value_
+  commentId: Overload:PeerTalk.Cryptography.PreSharedKey.Value
+  isSpec: "True"
+  fullName: PeerTalk.Cryptography.PreSharedKey.Value
+  nameWithType: PreSharedKey.Value
 - uid: PeerTalk.Cryptography.StretchedKey
   name: StretchedKey
   href: api/PeerTalk.Cryptography.StretchedKey.html
