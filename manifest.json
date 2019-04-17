@@ -557,6 +557,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.SecureCommunication.Psk1Protector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.SecureCommunication.Psk1Protector.html",
+          "hash": "UBdNFTyGySv96aWb3bUGBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.SecureCommunication.Psk1Stream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.SecureCommunication.Psk1Stream.html",
+          "hash": "Xg3/BhUafzZp1kTCUCl26Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PeerTalk.SecureCommunication.Secio1.yml",
       "output": {
         ".html": {
@@ -585,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.SecureCommunication.html",
-          "hash": "xj+hnMEStZ9giLkc2zpBZA=="
+          "hash": "47CQTFrpYv5sFV1KjWD6Ag=="
         }
       },
       "is_incremental": false,
@@ -705,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "EH9jci0BMP9vRhgJONY8Rg=="
+          "hash": "fkou1GnsL9eEMTXDRGAf2g=="
         }
       },
       "is_incremental": false,
@@ -864,7 +888,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 58,
+          "total_file_count": 60,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
