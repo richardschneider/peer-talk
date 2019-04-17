@@ -197,6 +197,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.INetworkProtector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.INetworkProtector.html",
+          "hash": "v2Xm0lY5HbcsbRCCGdZLsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PeerTalk.IService.yml",
       "output": {
         ".html": {
@@ -597,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Swarm.html",
-          "hash": "OnEFcKbCpq2AUHp5QcIdZg=="
+          "hash": "KMpA/APM2Hzi80zjNHIZtA=="
         }
       },
       "is_incremental": false,
@@ -681,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.html",
-          "hash": "4LoUcYJPxNuokqLTkQNJZw=="
+          "hash": "ziv6Mk2zZ+am1QjpOS9vJw=="
         }
       },
       "is_incremental": false,
@@ -693,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lYB+3+Q0Z/3VTpfEpRtv0w=="
+          "hash": "EH9jci0BMP9vRhgJONY8Rg=="
         }
       },
       "is_incremental": false,
@@ -849,17 +861,17 @@
           "total_file_count": 2,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 58,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 57,
           "skipped_file_count": 0
         }
       }

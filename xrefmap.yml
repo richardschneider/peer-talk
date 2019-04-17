@@ -835,6 +835,25 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Discovery.PeerDiscoveredEventArgs.Address
   nameWithType: PeerDiscoveredEventArgs.Address
+- uid: PeerTalk.INetworkProtector
+  name: INetworkProtector
+  href: api/PeerTalk.INetworkProtector.html
+  commentId: T:PeerTalk.INetworkProtector
+  fullName: PeerTalk.INetworkProtector
+  nameWithType: INetworkProtector
+- uid: PeerTalk.INetworkProtector.ProtectAsync(PeerTalk.PeerConnection,System.Threading.CancellationToken)
+  name: ProtectAsync(PeerConnection, CancellationToken)
+  href: api/PeerTalk.INetworkProtector.html#PeerTalk_INetworkProtector_ProtectAsync_PeerTalk_PeerConnection_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.INetworkProtector.ProtectAsync(PeerTalk.PeerConnection,System.Threading.CancellationToken)
+  fullName: PeerTalk.INetworkProtector.ProtectAsync(PeerTalk.PeerConnection, System.Threading.CancellationToken)
+  nameWithType: INetworkProtector.ProtectAsync(PeerConnection, CancellationToken)
+- uid: PeerTalk.INetworkProtector.ProtectAsync*
+  name: ProtectAsync
+  href: api/PeerTalk.INetworkProtector.html#PeerTalk_INetworkProtector_ProtectAsync_
+  commentId: Overload:PeerTalk.INetworkProtector.ProtectAsync
+  isSpec: "True"
+  fullName: PeerTalk.INetworkProtector.ProtectAsync
+  nameWithType: INetworkProtector.ProtectAsync
 - uid: PeerTalk.IService
   name: IService
   href: api/PeerTalk.IService.html
@@ -3701,6 +3720,19 @@ references:
   commentId: F:PeerTalk.Swarm.Manager
   fullName: PeerTalk.Swarm.Manager
   nameWithType: Swarm.Manager
+- uid: PeerTalk.Swarm.NetworkProtector
+  name: NetworkProtector
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_NetworkProtector
+  commentId: P:PeerTalk.Swarm.NetworkProtector
+  fullName: PeerTalk.Swarm.NetworkProtector
+  nameWithType: Swarm.NetworkProtector
+- uid: PeerTalk.Swarm.NetworkProtector*
+  name: NetworkProtector
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_NetworkProtector_
+  commentId: Overload:PeerTalk.Swarm.NetworkProtector
+  isSpec: "True"
+  fullName: PeerTalk.Swarm.NetworkProtector
+  nameWithType: Swarm.NetworkProtector
 - uid: PeerTalk.Swarm.PeerDiscovered
   name: PeerDiscovered
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_PeerDiscovered
