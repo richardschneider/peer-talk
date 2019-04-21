@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Dht1
    | Peer Talk documentation ">
-    <meta name="generator" content="docfx 2.41.0.0">
+    <meta name="generator" content="docfx 2.42.0.0">
     
     <link rel="shortcut icon" href="../images/peertalk.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,8 +85,8 @@
     <h5>Implements</h5>
     <div><a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a></div>
     <div><a class="xref" href="PeerTalk.IService.html">IService</a></div>
-    <div><a class="xref" href="PeerTalk.Routing.IPeerRouting.html">IPeerRouting</a></div>
-    <div><a class="xref" href="PeerTalk.Routing.IContentRouting.html">IContentRouting</a></div>
+    <div><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.CoreApi.IPeerRouting.html">IPeerRouting</a></div>
+    <div><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.CoreApi.IContentRouting.html">IContentRouting</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -253,8 +253,7 @@
   </span>
   <a id="PeerTalk_Routing_Dht1_FindPeerAsync_" data-uid="PeerTalk.Routing.Dht1.FindPeerAsync*"></a>
   <h4 id="PeerTalk_Routing_Dht1_FindPeerAsync_Ipfs_MultiHash_System_Threading_CancellationToken_" data-uid="PeerTalk.Routing.Dht1.FindPeerAsync(Ipfs.MultiHash,System.Threading.CancellationToken)">FindPeerAsync(MultiHash, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Information about an IPFS peer.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -273,14 +272,12 @@
       <tr>
         <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html">MultiHash</a></td>
         <td><span class="parametername">id</span></td>
-        <td><p>The <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html">MultiHash</a> ID of the IPFS peer.  </p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -295,9 +292,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a>&gt;</td>
-        <td><p>A task that represents the asynchronous operation that returns
-the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a> information or a closer peer.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -310,8 +305,7 @@ the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/I
   </span>
   <a id="PeerTalk_Routing_Dht1_FindProvidersAsync_" data-uid="PeerTalk.Routing.Dht1.FindProvidersAsync*"></a>
   <h4 id="PeerTalk_Routing_Dht1_FindProvidersAsync_Ipfs_Cid_System_Int32_System_Action_Ipfs_Peer__System_Threading_CancellationToken_" data-uid="PeerTalk.Routing.Dht1.FindProvidersAsync(Ipfs.Cid,System.Int32,System.Action{Ipfs.Peer},System.Threading.CancellationToken)">FindProvidersAsync(Cid, Int32, Action&lt;Peer&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Find the providers for the specified content.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -330,14 +324,12 @@ the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/I
       <tr>
         <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a></td>
         <td><span class="parametername">id</span></td>
-        <td><p>The <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a> of the content.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">limit</span></td>
-        <td><p>The maximum number of peers to return.  Defaults to 20.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a>&gt;</td>
@@ -347,8 +339,7 @@ the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/I
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -363,9 +354,7 @@ the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/I
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a>&gt;&gt;</td>
-        <td><p>A task that represents the asynchronous operation that returns
-a sequence of IPFS <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a>.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -440,8 +429,7 @@ a sequence of IPFS <a class="xref" href="https://richardschneider.github.io/net-
   </span>
   <a id="PeerTalk_Routing_Dht1_ProvideAsync_" data-uid="PeerTalk.Routing.Dht1.ProvideAsync*"></a>
   <h4 id="PeerTalk_Routing_Dht1_ProvideAsync_Ipfs_Cid_System_Boolean_System_Threading_CancellationToken_" data-uid="PeerTalk.Routing.Dht1.ProvideAsync(Ipfs.Cid,System.Boolean,System.Threading.CancellationToken)">ProvideAsync(Cid, Boolean, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Adds the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a> to the content routing system.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -460,20 +448,17 @@ a sequence of IPFS <a class="xref" href="https://richardschneider.github.io/net-
       <tr>
         <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a></td>
         <td><span class="parametername">cid</span></td>
-        <td><p>The ID of some content that the peer contains.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">advertise</span></td>
-        <td><p>Advertise the <code data-dev-comment-type="paramref" class="paramref">cid</code> to other peers.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -488,8 +473,7 @@ a sequence of IPFS <a class="xref" href="https://richardschneider.github.io/net-
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td><p>A task that represents the asynchronous operation.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -595,10 +579,10 @@ a sequence of IPFS <a class="xref" href="https://richardschneider.github.io/net-
       <a class="xref" href="PeerTalk.IService.html">IService</a>
   </div>
   <div>
-      <a class="xref" href="PeerTalk.Routing.IPeerRouting.html">IPeerRouting</a>
+      <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.CoreApi.IPeerRouting.html">IPeerRouting</a>
   </div>
   <div>
-      <a class="xref" href="PeerTalk.Routing.IContentRouting.html">IContentRouting</a>
+      <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.CoreApi.IContentRouting.html">IContentRouting</a>
   </div>
 </article>
           </div>
