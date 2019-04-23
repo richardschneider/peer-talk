@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Multistream1
+    <title>Class DhtRecordMessage
    | Peer Talk documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Multistream1
+    <meta name="title" content="Class DhtRecordMessage
    | Peer Talk documentation ">
     <meta name="generator" content="docfx 2.42.1.0">
     
@@ -68,22 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PeerTalk.Protocols.Multistream1">
+            <article class="content wrap" id="_content" data-uid="PeerTalk.Routing.DhtRecordMessage">
   
   
-  <h1 id="PeerTalk_Protocols_Multistream1" data-uid="PeerTalk.Protocols.Multistream1" class="text-break">Class Multistream1
+  <h1 id="PeerTalk_Routing_DhtRecordMessage" data-uid="PeerTalk.Routing.DhtRecordMessage" class="text-break">Class DhtRecordMessage
   </h1>
-  <div class="markdown level0 summary"><p>A protocol to select other protocols.</p>
+  <div class="markdown level0 summary"><p>TODO</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">Multistream1</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a></div>
+    <div class="level1"><span class="xref">DhtRecordMessage</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,30 +101,131 @@
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
     </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PeerTalk.Protocols.html">PeerTalk.Protocols</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PeerTalk.Routing.html">PeerTalk.Routing</a></h6>
   <h6><strong>Assembly</strong>: PeerTalk.dll</h6>
-  <h5 id="PeerTalk_Protocols_Multistream1_syntax">Syntax</h5>
+  <h5 id="PeerTalk_Routing_DhtRecordMessage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Multistream1 : IPeerProtocol</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoContract]
+public class DhtRecordMessage</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_Multistream1_Name.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.Multistream1.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtRecordMessage_Author.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtRecordMessage.Author%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/Multistream1.cs/#L22">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L35">View Source</a>
   </span>
-  <a id="PeerTalk_Protocols_Multistream1_Name_" data-uid="PeerTalk.Protocols.Multistream1.Name*"></a>
-  <h4 id="PeerTalk_Protocols_Multistream1_Name" data-uid="PeerTalk.Protocols.Multistream1.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The name of the protocol.</p>
+  <a id="PeerTalk_Routing_DhtRecordMessage_Author_" data-uid="PeerTalk.Routing.DhtRecordMessage.Author*"></a>
+  <h4 id="PeerTalk_Routing_DhtRecordMessage_Author" data-uid="PeerTalk.Routing.DhtRecordMessage.Author">Author</h4>
+  <div class="markdown level1 summary"><p>TODO</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(3)]
+public byte[] Author { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtRecordMessage_Key.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtRecordMessage.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L23">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_DhtRecordMessage_Key_" data-uid="PeerTalk.Routing.DhtRecordMessage.Key*"></a>
+  <h4 id="PeerTalk_Routing_DhtRecordMessage_Key" data-uid="PeerTalk.Routing.DhtRecordMessage.Key">Key</h4>
+  <div class="markdown level1 summary"><p>TODO</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ProtoMember(1)]
+public byte[] Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtRecordMessage_Signature.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtRecordMessage.Signature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L41">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_DhtRecordMessage_Signature_" data-uid="PeerTalk.Routing.DhtRecordMessage.Signature*"></a>
+  <h4 id="PeerTalk_Routing_DhtRecordMessage_Signature" data-uid="PeerTalk.Routing.DhtRecordMessage.Signature">Signature</h4>
+  <div class="markdown level1 summary"><p>TODO</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ProtoMember(4)]
+public byte[] Signature { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtRecordMessage_TimeReceived.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtRecordMessage.TimeReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L47">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_DhtRecordMessage_TimeReceived_" data-uid="PeerTalk.Routing.DhtRecordMessage.TimeReceived*"></a>
+  <h4 id="PeerTalk_Routing_DhtRecordMessage_TimeReceived" data-uid="PeerTalk.Routing.DhtRecordMessage.TimeReceived">TimeReceived</h4>
+  <div class="markdown level1 summary"><p>TODO</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ProtoMember(5)]
+public string TimeReceived { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,19 +244,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_Multistream1_Version.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.Multistream1.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtRecordMessage_Value.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtRecordMessage.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/Multistream1.cs/#L25">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L29">View Source</a>
   </span>
-  <a id="PeerTalk_Protocols_Multistream1_Version_" data-uid="PeerTalk.Protocols.Multistream1.Version*"></a>
-  <h4 id="PeerTalk_Protocols_Multistream1_Version" data-uid="PeerTalk.Protocols.Multistream1.Version">Version</h4>
-  <div class="markdown level1 summary"><p>The version of the protocol.</p>
+  <a id="PeerTalk_Routing_DhtRecordMessage_Value_" data-uid="PeerTalk.Routing.DhtRecordMessage.Value*"></a>
+  <h4 id="PeerTalk_Routing_DhtRecordMessage_Value" data-uid="PeerTalk.Routing.DhtRecordMessage.Value">Value</h4>
+  <div class="markdown level1 summary"><p>TODO</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SemVersion Version { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(2)]
+public byte[] Value { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -171,115 +269,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Semver.SemVersion</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_Multistream1_ProcessMessageAsync_PeerTalk_PeerConnection_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.Multistream1.ProcessMessageAsync(PeerTalk.PeerConnection%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/Multistream1.cs/#L35">View Source</a>
-  </span>
-  <a id="PeerTalk_Protocols_Multistream1_ProcessMessageAsync_" data-uid="PeerTalk.Protocols.Multistream1.ProcessMessageAsync*"></a>
-  <h4 id="PeerTalk_Protocols_Multistream1_ProcessMessageAsync_PeerTalk_PeerConnection_System_IO_Stream_System_Threading_CancellationToken_" data-uid="PeerTalk.Protocols.Multistream1.ProcessMessageAsync(PeerTalk.PeerConnection,System.IO.Stream,System.Threading.CancellationToken)">ProcessMessageAsync(PeerConnection, Stream, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Process a message for the protocol.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task ProcessMessageAsync(PeerConnection connection, Stream stream, CancellationToken cancel = default(CancellationToken))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PeerTalk.PeerConnection.html">PeerConnection</a></td>
-        <td><span class="parametername">connection</span></td>
-        <td><p>A connection between two peers.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
-        <td><span class="parametername">stream</span></td>
-        <td><p>The message source.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancel</span></td>
-        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td><p>A task that represents the asynchronous operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_Multistream1_ToString.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.Multistream1.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/Multistream1.cs/#L28">View Source</a>
-  </span>
-  <a id="PeerTalk_Protocols_Multistream1_ToString_" data-uid="PeerTalk.Protocols.Multistream1.ToString*"></a>
-  <h4 id="PeerTalk_Protocols_Multistream1_ToString" data-uid="PeerTalk.Protocols.Multistream1.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a>
-  </div>
-  <h3 id="seealso">See Also</h3>
-  <div class="seealso">
-      <div><span><a href="https://github.com/multiformats/multistream-select">https://github.com/multiformats/multistream-select</a></span></div>
-  </div>
 </article>
           </div>
           
@@ -288,10 +282,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_Multistream1.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.Multistream1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtRecordMessage.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtRecordMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/Multistream1.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.BlackList-1.html",
-          "hash": "7hfXQhX5rV1ZdpawBiclpw=="
+          "hash": "B4HzqLKjzl/hIV3EenzujQ=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.ConnectionManager.html",
-          "hash": "ZkLqE9LaYMq8pBveRhF5cw=="
+          "hash": "atL/7bLR4m8GHyKt2suGmQ=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Cryptography.CtrStreamCipher.html",
-          "hash": "hHrvNik/5B/hV84HlWypaw=="
+          "hash": "69PRVsrwK000lf0K5JKMJw=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Cryptography.EphermalKey.html",
-          "hash": "1PlIi6HrFvMM6GWglpPbcg=="
+          "hash": "VeT0DkfkBIxpn7GjcMgsTQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Cryptography.Key.html",
-          "hash": "cfoDnAuRnDCC4aPN5AP4Zg=="
+          "hash": "XET9H49IQeqWgTL/7eKyXQ=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Cryptography.PreSharedKey.html",
-          "hash": "RzQP9k+Hi1OXZl4rd0fBIQ=="
+          "hash": "1ENiSxHHMlyxQojzuRSLfg=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Cryptography.StretchedKey.html",
-          "hash": "S3t9iyg5/Ku5O2Lhi+b2sw=="
+          "hash": "IJZBlazYbhh/AIQ0NemFZQ=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Cryptography.html",
-          "hash": "Bg4xgqlD9ZC7aWUMlJh4yQ=="
+          "hash": "+fFS/SacxveOj5dF3172Ng=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.Bootstrap.html",
-          "hash": "7xjpl1PaheTM3ZnqOkkf1A=="
+          "hash": "qYqrEUIDJvNQ85s/lJDPew=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.IPeerDiscovery.html",
-          "hash": "DWqGBvBsoPRWwnCZeyuxRQ=="
+          "hash": "dTBZV75XSv5cUhZ48Gnlfw=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.Mdns.html",
-          "hash": "ZS4Dcq8pXVDxcTr7OmzfUQ=="
+          "hash": "9eDmqr/IJJp+grPIYjVFoQ=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.MdnsGo.html",
-          "hash": "MkUZG4u+LfFa3cl5BlkVFg=="
+          "hash": "RpkEbXQcmsBTPSuAJ6OHZA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.MdnsJs.html",
-          "hash": "yvHsOMjRrWgX3sNST+wfBQ=="
+          "hash": "XgqEJlsY6pJyv1Rv2wMTTA=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.MdnsNext.html",
-          "hash": "PFQfyWL5ru+DynrEl4alcQ=="
+          "hash": "GmFFRNYLYykXBpSZnaJRbQ=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.PeerDiscoveredEventArgs.html",
-          "hash": "vTTkNCuXYzu+jH1weKY7DQ=="
+          "hash": "+fbyIzTUCsunUtOEivJHlA=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.html",
-          "hash": "DzXN0c/ejSl3BBXSRPY1uQ=="
+          "hash": "HN1CfaIR2JQCSmKjbFkqxA=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.INetworkProtector.html",
-          "hash": "IOnjuf09Rx0YZe4qBZRdfg=="
+          "hash": "PN13ZOHItJf92cGgsgUiXw=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.IService.html",
-          "hash": "jqpDYtAKoUdfpYbKhXA8LA=="
+          "hash": "q4WxXlofvGVxicbz7E86xw=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.MultiAddressExtensions.html",
-          "hash": "OCnc2C9nCj5i8kyfD2sjhw=="
+          "hash": "UwYotuvbKxp3j+ZQgRSeFg=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Multiplex.Header.html",
-          "hash": "M3Z5pb8b4ty+dLe3Y6VIFw=="
+          "hash": "oKRaRhoBwXoX8d1NFMBrnw=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Multiplex.Muxer.html",
-          "hash": "OyAsXvYswnUcy7cpgoeLiQ=="
+          "hash": "66HFDManuihNXwYTl+TALQ=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Multiplex.PacketType.html",
-          "hash": "7ZxBTDi86b06/3ofzy8QVA=="
+          "hash": "tDyqk12BzQVkiU5tSw30tA=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Multiplex.Substream.html",
-          "hash": "Jl128acLdMv8Uq7W8E02Rw=="
+          "hash": "Kqsrswnr4B7tBMrSpFR77w=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Multiplex.html",
-          "hash": "mLA0lqzu4PMIVatHHZkjIA=="
+          "hash": "CZIgLj12k6iwwriOmIDqiA=="
         }
       },
       "is_incremental": false,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.PeerConnection.html",
-          "hash": "bbhqznrnDD6ip/xtf7EmBw=="
+          "hash": "eE0ti5iqNkNZRGQU7si3Fg=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Policy-1.html",
-          "hash": "SNEK785yWUlvQmIGDp/elQ=="
+          "hash": "5wyGozQsTVW+KCFXi1g6WQ=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.PolicyAlways-1.html",
-          "hash": "sC87Ai5P8A02tJ4EfB/18A=="
+          "hash": "lRaJNGInSD9rhY/jK2A03Q=="
         }
       },
       "is_incremental": false,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.PolicyNever-1.html",
-          "hash": "tADhuO9+5Yt9+aqg3CcT+g=="
+          "hash": "bbKxgXxNgMGO/hoeuNYo4g=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.ProtoBufHelper.html",
-          "hash": "5ziHX2JO1r6YT4mRRcX+Mw=="
+          "hash": "UnT2vRm8/9uzzbtSDT2JRg=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.IEncryptionProtocol.html",
-          "hash": "evXLXUADHkC8vpOtPZ2r0w=="
+          "hash": "bkq0KAcPiyYiIjn1N5qazQ=="
         }
       },
       "is_incremental": false,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.IPeerProtocol.html",
-          "hash": "pHQFvGd1b7nZo94ZA1Rm9Q=="
+          "hash": "Jsivc4Sr55BP4EmACGWxyw=="
         }
       },
       "is_incremental": false,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.Identify1.html",
-          "hash": "snVamlmRVWuUenGtZDye+Q=="
+          "hash": "xaP63mBMfS+0PSk5WFskBQ=="
         }
       },
       "is_incremental": false,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.Message.html",
-          "hash": "otiN+TW/r1UKT4Jz1ZmIug=="
+          "hash": "Jpsg7eAgfjtkhvL3AGSSHA=="
         }
       },
       "is_incremental": false,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.Mplex67.html",
-          "hash": "/1tKvwgxg0d5X16bjYadxQ=="
+          "hash": "6a3Xoto3NR2yiydzRUEPXA=="
         }
       },
       "is_incremental": false,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.Multistream1.html",
-          "hash": "V7JQu45bGExBhYvLDIhMEQ=="
+          "hash": "EeNMmy/sgD+FWdxGtEy07A=="
         }
       },
       "is_incremental": false,
@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.Plaintext1.html",
-          "hash": "RgnSPG8Q9diL+H7HhH0iIg=="
+          "hash": "nNnP/FusNPmBvABAthKIoA=="
         }
       },
       "is_incremental": false,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.ProtocolRegistry.html",
-          "hash": "cjQV/oZaG8vXPaH1KZoa7A=="
+          "hash": "b1w7P3yqWyAIuoYzkCDJPw=="
         }
       },
       "is_incremental": false,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.VersionedName.html",
-          "hash": "VXu+DCuaRWaBhejm0GUujA=="
+          "hash": "lSXQUVyAq3gUCj54minqvw=="
         }
       },
       "is_incremental": false,
@@ -465,7 +465,19 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.html",
-          "hash": "ct4gWz8+VdvFnZyYxwEMjw=="
+          "hash": "wxQjU/VZZYlBKGIEiI36NQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.ConnectionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.ConnectionType.html",
+          "hash": "CGvj4qvy1MC7/vIsp83E1Q=="
         }
       },
       "is_incremental": false,
@@ -477,7 +489,43 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Routing.Dht1.html",
-          "hash": "4A9qwwC+MtcmXTM4B9O/2Q=="
+          "hash": "bPOJ09wZAFOjBAAfCvZ3fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.DhtMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.DhtMessage.html",
+          "hash": "8vVZG+XjeucQlTFQs1ex9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.DhtPeerMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.DhtPeerMessage.html",
+          "hash": "KWU0IDcJS3GebI/Nnxybgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.DhtRecordMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.DhtRecordMessage.html",
+          "hash": "xAXgh2FwSMLw1FGi7bNsiw=="
         }
       },
       "is_incremental": false,
@@ -489,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Routing.DistributedQuery-1.html",
-          "hash": "gUBbOpb5Zesh7u++BDj2Yg=="
+          "hash": "PKDpVs74OfnBiFf6Xl9/mA=="
         }
       },
       "is_incremental": false,
@@ -501,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Routing.MessageType.html",
-          "hash": "iHO09lun8KwhM6EvJGqcnQ=="
+          "hash": "UXyDEbQDheDWt4Y39bKDcg=="
         }
       },
       "is_incremental": false,
@@ -513,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Routing.RoutingTable.html",
-          "hash": "N0eA7MdEr5lAfaDsl9i4pQ=="
+          "hash": "ypTbq8ZJT+Y+q2j+ttqKPg=="
         }
       },
       "is_incremental": false,
@@ -525,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Routing.html",
-          "hash": "bMU3HZDlQN43B+Y17tDZUQ=="
+          "hash": "OHtTY4pYt/KDzKdkH1m+dw=="
         }
       },
       "is_incremental": false,
@@ -537,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.SecureCommunication.Psk1Protector.html",
-          "hash": "nLWBibh4kJqnFCo5LeaI9Q=="
+          "hash": "IxWuaoS0Sce6mLIzyFNGCQ=="
         }
       },
       "is_incremental": false,
@@ -549,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.SecureCommunication.Psk1Stream.html",
-          "hash": "6RVnjvBPPgYxyOcsvSI0Ug=="
+          "hash": "634MOWQvf3zepcPMT9zkDw=="
         }
       },
       "is_incremental": false,
@@ -561,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.SecureCommunication.Secio1.html",
-          "hash": "/UDVUc2nABhC2upcKIpGWw=="
+          "hash": "V1tuUIcb0mjLsl+kBATnNQ=="
         }
       },
       "is_incremental": false,
@@ -573,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.SecureCommunication.Secio1Stream.html",
-          "hash": "DqQXdyoPClXjL1F4BXfhhQ=="
+          "hash": "Htu1ZnvEQt0w3JMlXbCSNA=="
         }
       },
       "is_incremental": false,
@@ -585,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.SecureCommunication.html",
-          "hash": "22t5xOpaHkJqGPgjWccQZA=="
+          "hash": "PiZ3Q6cnHELOaZf2Gr3J7g=="
         }
       },
       "is_incremental": false,
@@ -597,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.StatsStream.html",
-          "hash": "0kyFoCAPWl6w8Zq3M03j8w=="
+          "hash": "zD4kMyhKv8r0Z85NjoFiFg=="
         }
       },
       "is_incremental": false,
@@ -609,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Swarm.html",
-          "hash": "Wnhxwq9+aDc4vP8h6JL4Bw=="
+          "hash": "7/KToOdWPdwk3u3ehHtF1A=="
         }
       },
       "is_incremental": false,
@@ -621,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.TaskHelper.html",
-          "hash": "hsMf6n49bNfHctDU/SoajA=="
+          "hash": "GauN69VLRXs0rGAEP5w15g=="
         }
       },
       "is_incremental": false,
@@ -633,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Transports.IPeerTransport.html",
-          "hash": "Sqev4WnHLPtlXNZXtSPS4w=="
+          "hash": "zwcPZJKsxhLd5dSkgtr2KA=="
         }
       },
       "is_incremental": false,
@@ -645,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Transports.Tcp.html",
-          "hash": "FgsV0VJnSNycP6fQsMvyEA=="
+          "hash": "6TqzzUGthb0PcnHwwFaAtg=="
         }
       },
       "is_incremental": false,
@@ -657,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Transports.Udp.html",
-          "hash": "qBcaGgYHUSpl4XK2NtrCVw=="
+          "hash": "CksBnGi7+9U5pH+mlQH2xw=="
         }
       },
       "is_incremental": false,
@@ -669,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Transports.html",
-          "hash": "UIVsQVGNr5aqvqzQzHfsvg=="
+          "hash": "dwpoEX9Db1PoIQ4Dr7LzhA=="
         }
       },
       "is_incremental": false,
@@ -681,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.WhiteList-1.html",
-          "hash": "hpgqMRvAYQb5xUaNHylq8A=="
+          "hash": "PDzZfoTj3QF1Tvjy0gSc8A=="
         }
       },
       "is_incremental": false,
@@ -693,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.html",
-          "hash": "gssq2hl3MhackHSfBrR4EA=="
+          "hash": "QomlyqFPw1rOOpGd6eCBAQ=="
         }
       },
       "is_incremental": false,
@@ -705,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "w1ps/lO4LkQOyN+501eBNQ=="
+          "hash": "jcfsK8+BDKRpd/BAHqqlUQ=="
         }
       },
       "is_incremental": false,
@@ -717,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "6iDQWr3NoQBJY47ieFUW+g=="
+          "hash": "8nU/e9ex9v96stCIdft85Q=="
         }
       },
       "is_incremental": false,
@@ -818,7 +866,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "x4N4l0T5Fs+nPenoYTFwmw=="
+          "hash": "hRz2Eab+GQnFk49UUto67w=="
         }
       },
       "is_incremental": false,
@@ -848,9 +896,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -861,9 +909,9 @@
           "total_file_count": 2,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -871,7 +919,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 58,
+          "total_file_count": 62,
           "skipped_file_count": 0
         }
       }

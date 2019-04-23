@@ -2430,12 +2430,55 @@ references:
   commentId: N:PeerTalk.Routing
   fullName: PeerTalk.Routing
   nameWithType: PeerTalk.Routing
+- uid: PeerTalk.Routing.ConnectionType
+  name: ConnectionType
+  href: api/PeerTalk.Routing.ConnectionType.html
+  commentId: T:PeerTalk.Routing.ConnectionType
+  fullName: PeerTalk.Routing.ConnectionType
+  nameWithType: ConnectionType
+- uid: PeerTalk.Routing.ConnectionType.CanConnect
+  name: CanConnect
+  href: api/PeerTalk.Routing.ConnectionType.html#PeerTalk_Routing_ConnectionType_CanConnect
+  commentId: F:PeerTalk.Routing.ConnectionType.CanConnect
+  fullName: PeerTalk.Routing.ConnectionType.CanConnect
+  nameWithType: ConnectionType.CanConnect
+- uid: PeerTalk.Routing.ConnectionType.CannotConnect
+  name: CannotConnect
+  href: api/PeerTalk.Routing.ConnectionType.html#PeerTalk_Routing_ConnectionType_CannotConnect
+  commentId: F:PeerTalk.Routing.ConnectionType.CannotConnect
+  fullName: PeerTalk.Routing.ConnectionType.CannotConnect
+  nameWithType: ConnectionType.CannotConnect
+- uid: PeerTalk.Routing.ConnectionType.Connected
+  name: Connected
+  href: api/PeerTalk.Routing.ConnectionType.html#PeerTalk_Routing_ConnectionType_Connected
+  commentId: F:PeerTalk.Routing.ConnectionType.Connected
+  fullName: PeerTalk.Routing.ConnectionType.Connected
+  nameWithType: ConnectionType.Connected
+- uid: PeerTalk.Routing.ConnectionType.NotConnected
+  name: NotConnected
+  href: api/PeerTalk.Routing.ConnectionType.html#PeerTalk_Routing_ConnectionType_NotConnected
+  commentId: F:PeerTalk.Routing.ConnectionType.NotConnected
+  fullName: PeerTalk.Routing.ConnectionType.NotConnected
+  nameWithType: ConnectionType.NotConnected
 - uid: PeerTalk.Routing.Dht1
   name: Dht1
   href: api/PeerTalk.Routing.Dht1.html
   commentId: T:PeerTalk.Routing.Dht1
   fullName: PeerTalk.Routing.Dht1
   nameWithType: Dht1
+- uid: PeerTalk.Routing.Dht1.CloserPeerCount
+  name: CloserPeerCount
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_CloserPeerCount
+  commentId: P:PeerTalk.Routing.Dht1.CloserPeerCount
+  fullName: PeerTalk.Routing.Dht1.CloserPeerCount
+  nameWithType: Dht1.CloserPeerCount
+- uid: PeerTalk.Routing.Dht1.CloserPeerCount*
+  name: CloserPeerCount
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_CloserPeerCount_
+  commentId: Overload:PeerTalk.Routing.Dht1.CloserPeerCount
+  isSpec: "True"
+  fullName: PeerTalk.Routing.Dht1.CloserPeerCount
+  nameWithType: Dht1.CloserPeerCount
 - uid: PeerTalk.Routing.Dht1.FindPeerAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
   name: FindPeerAsync(MultiHash, CancellationToken)
   href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_FindPeerAsync_Ipfs_MultiHash_System_Threading_CancellationToken_
@@ -2478,6 +2521,32 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Routing.Dht1.Name
   nameWithType: Dht1.Name
+- uid: PeerTalk.Routing.Dht1.ProcessFindNode(PeerTalk.Routing.DhtMessage,PeerTalk.Routing.DhtMessage)
+  name: ProcessFindNode(DhtMessage, DhtMessage)
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ProcessFindNode_PeerTalk_Routing_DhtMessage_PeerTalk_Routing_DhtMessage_
+  commentId: M:PeerTalk.Routing.Dht1.ProcessFindNode(PeerTalk.Routing.DhtMessage,PeerTalk.Routing.DhtMessage)
+  fullName: PeerTalk.Routing.Dht1.ProcessFindNode(PeerTalk.Routing.DhtMessage, PeerTalk.Routing.DhtMessage)
+  nameWithType: Dht1.ProcessFindNode(DhtMessage, DhtMessage)
+- uid: PeerTalk.Routing.Dht1.ProcessFindNode*
+  name: ProcessFindNode
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ProcessFindNode_
+  commentId: Overload:PeerTalk.Routing.Dht1.ProcessFindNode
+  isSpec: "True"
+  fullName: PeerTalk.Routing.Dht1.ProcessFindNode
+  nameWithType: Dht1.ProcessFindNode
+- uid: PeerTalk.Routing.Dht1.ProcessGetProviders(PeerTalk.Routing.DhtMessage,PeerTalk.Routing.DhtMessage)
+  name: ProcessGetProviders(DhtMessage, DhtMessage)
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ProcessGetProviders_PeerTalk_Routing_DhtMessage_PeerTalk_Routing_DhtMessage_
+  commentId: M:PeerTalk.Routing.Dht1.ProcessGetProviders(PeerTalk.Routing.DhtMessage,PeerTalk.Routing.DhtMessage)
+  fullName: PeerTalk.Routing.Dht1.ProcessGetProviders(PeerTalk.Routing.DhtMessage, PeerTalk.Routing.DhtMessage)
+  nameWithType: Dht1.ProcessGetProviders(DhtMessage, DhtMessage)
+- uid: PeerTalk.Routing.Dht1.ProcessGetProviders*
+  name: ProcessGetProviders
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ProcessGetProviders_
+  commentId: Overload:PeerTalk.Routing.Dht1.ProcessGetProviders
+  isSpec: "True"
+  fullName: PeerTalk.Routing.Dht1.ProcessGetProviders
+  nameWithType: Dht1.ProcessGetProviders
 - uid: PeerTalk.Routing.Dht1.ProcessMessageAsync(PeerTalk.PeerConnection,System.IO.Stream,System.Threading.CancellationToken)
   name: ProcessMessageAsync(PeerConnection, Stream, CancellationToken)
   href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ProcessMessageAsync_PeerTalk_PeerConnection_System_IO_Stream_System_Threading_CancellationToken_
@@ -2575,6 +2644,209 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Routing.Dht1.Version
   nameWithType: Dht1.Version
+- uid: PeerTalk.Routing.DhtMessage
+  name: DhtMessage
+  href: api/PeerTalk.Routing.DhtMessage.html
+  commentId: T:PeerTalk.Routing.DhtMessage
+  fullName: PeerTalk.Routing.DhtMessage
+  nameWithType: DhtMessage
+- uid: PeerTalk.Routing.DhtMessage.CloserPeers
+  name: CloserPeers
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_CloserPeers
+  commentId: P:PeerTalk.Routing.DhtMessage.CloserPeers
+  fullName: PeerTalk.Routing.DhtMessage.CloserPeers
+  nameWithType: DhtMessage.CloserPeers
+- uid: PeerTalk.Routing.DhtMessage.CloserPeers*
+  name: CloserPeers
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_CloserPeers_
+  commentId: Overload:PeerTalk.Routing.DhtMessage.CloserPeers
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtMessage.CloserPeers
+  nameWithType: DhtMessage.CloserPeers
+- uid: PeerTalk.Routing.DhtMessage.ClusterLevelRaw
+  name: ClusterLevelRaw
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_ClusterLevelRaw
+  commentId: P:PeerTalk.Routing.DhtMessage.ClusterLevelRaw
+  fullName: PeerTalk.Routing.DhtMessage.ClusterLevelRaw
+  nameWithType: DhtMessage.ClusterLevelRaw
+- uid: PeerTalk.Routing.DhtMessage.ClusterLevelRaw*
+  name: ClusterLevelRaw
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_ClusterLevelRaw_
+  commentId: Overload:PeerTalk.Routing.DhtMessage.ClusterLevelRaw
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtMessage.ClusterLevelRaw
+  nameWithType: DhtMessage.ClusterLevelRaw
+- uid: PeerTalk.Routing.DhtMessage.Key
+  name: Key
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_Key
+  commentId: P:PeerTalk.Routing.DhtMessage.Key
+  fullName: PeerTalk.Routing.DhtMessage.Key
+  nameWithType: DhtMessage.Key
+- uid: PeerTalk.Routing.DhtMessage.Key*
+  name: Key
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_Key_
+  commentId: Overload:PeerTalk.Routing.DhtMessage.Key
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtMessage.Key
+  nameWithType: DhtMessage.Key
+- uid: PeerTalk.Routing.DhtMessage.ProviderPeers
+  name: ProviderPeers
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_ProviderPeers
+  commentId: P:PeerTalk.Routing.DhtMessage.ProviderPeers
+  fullName: PeerTalk.Routing.DhtMessage.ProviderPeers
+  nameWithType: DhtMessage.ProviderPeers
+- uid: PeerTalk.Routing.DhtMessage.ProviderPeers*
+  name: ProviderPeers
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_ProviderPeers_
+  commentId: Overload:PeerTalk.Routing.DhtMessage.ProviderPeers
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtMessage.ProviderPeers
+  nameWithType: DhtMessage.ProviderPeers
+- uid: PeerTalk.Routing.DhtMessage.Record
+  name: Record
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_Record
+  commentId: P:PeerTalk.Routing.DhtMessage.Record
+  fullName: PeerTalk.Routing.DhtMessage.Record
+  nameWithType: DhtMessage.Record
+- uid: PeerTalk.Routing.DhtMessage.Record*
+  name: Record
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_Record_
+  commentId: Overload:PeerTalk.Routing.DhtMessage.Record
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtMessage.Record
+  nameWithType: DhtMessage.Record
+- uid: PeerTalk.Routing.DhtMessage.Type
+  name: Type
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_Type
+  commentId: P:PeerTalk.Routing.DhtMessage.Type
+  fullName: PeerTalk.Routing.DhtMessage.Type
+  nameWithType: DhtMessage.Type
+- uid: PeerTalk.Routing.DhtMessage.Type*
+  name: Type
+  href: api/PeerTalk.Routing.DhtMessage.html#PeerTalk_Routing_DhtMessage_Type_
+  commentId: Overload:PeerTalk.Routing.DhtMessage.Type
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtMessage.Type
+  nameWithType: DhtMessage.Type
+- uid: PeerTalk.Routing.DhtPeerMessage
+  name: DhtPeerMessage
+  href: api/PeerTalk.Routing.DhtPeerMessage.html
+  commentId: T:PeerTalk.Routing.DhtPeerMessage
+  fullName: PeerTalk.Routing.DhtPeerMessage
+  nameWithType: DhtPeerMessage
+- uid: PeerTalk.Routing.DhtPeerMessage.Addresses
+  name: Addresses
+  href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_Addresses
+  commentId: P:PeerTalk.Routing.DhtPeerMessage.Addresses
+  fullName: PeerTalk.Routing.DhtPeerMessage.Addresses
+  nameWithType: DhtPeerMessage.Addresses
+- uid: PeerTalk.Routing.DhtPeerMessage.Addresses*
+  name: Addresses
+  href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_Addresses_
+  commentId: Overload:PeerTalk.Routing.DhtPeerMessage.Addresses
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtPeerMessage.Addresses
+  nameWithType: DhtPeerMessage.Addresses
+- uid: PeerTalk.Routing.DhtPeerMessage.Id
+  name: Id
+  href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_Id
+  commentId: P:PeerTalk.Routing.DhtPeerMessage.Id
+  fullName: PeerTalk.Routing.DhtPeerMessage.Id
+  nameWithType: DhtPeerMessage.Id
+- uid: PeerTalk.Routing.DhtPeerMessage.Id*
+  name: Id
+  href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_Id_
+  commentId: Overload:PeerTalk.Routing.DhtPeerMessage.Id
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtPeerMessage.Id
+  nameWithType: DhtPeerMessage.Id
+- uid: PeerTalk.Routing.DhtPeerMessage.TryToPeer(Ipfs.Peer@)
+  name: TryToPeer(out Peer)
+  href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_TryToPeer_Ipfs_Peer__
+  commentId: M:PeerTalk.Routing.DhtPeerMessage.TryToPeer(Ipfs.Peer@)
+  name.vb: TryToPeer(ByRef Peer)
+  fullName: PeerTalk.Routing.DhtPeerMessage.TryToPeer(out Ipfs.Peer)
+  fullName.vb: PeerTalk.Routing.DhtPeerMessage.TryToPeer(ByRef Ipfs.Peer)
+  nameWithType: DhtPeerMessage.TryToPeer(out Peer)
+  nameWithType.vb: DhtPeerMessage.TryToPeer(ByRef Peer)
+- uid: PeerTalk.Routing.DhtPeerMessage.TryToPeer*
+  name: TryToPeer
+  href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_TryToPeer_
+  commentId: Overload:PeerTalk.Routing.DhtPeerMessage.TryToPeer
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtPeerMessage.TryToPeer
+  nameWithType: DhtPeerMessage.TryToPeer
+- uid: PeerTalk.Routing.DhtRecordMessage
+  name: DhtRecordMessage
+  href: api/PeerTalk.Routing.DhtRecordMessage.html
+  commentId: T:PeerTalk.Routing.DhtRecordMessage
+  fullName: PeerTalk.Routing.DhtRecordMessage
+  nameWithType: DhtRecordMessage
+- uid: PeerTalk.Routing.DhtRecordMessage.Author
+  name: Author
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_Author
+  commentId: P:PeerTalk.Routing.DhtRecordMessage.Author
+  fullName: PeerTalk.Routing.DhtRecordMessage.Author
+  nameWithType: DhtRecordMessage.Author
+- uid: PeerTalk.Routing.DhtRecordMessage.Author*
+  name: Author
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_Author_
+  commentId: Overload:PeerTalk.Routing.DhtRecordMessage.Author
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtRecordMessage.Author
+  nameWithType: DhtRecordMessage.Author
+- uid: PeerTalk.Routing.DhtRecordMessage.Key
+  name: Key
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_Key
+  commentId: P:PeerTalk.Routing.DhtRecordMessage.Key
+  fullName: PeerTalk.Routing.DhtRecordMessage.Key
+  nameWithType: DhtRecordMessage.Key
+- uid: PeerTalk.Routing.DhtRecordMessage.Key*
+  name: Key
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_Key_
+  commentId: Overload:PeerTalk.Routing.DhtRecordMessage.Key
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtRecordMessage.Key
+  nameWithType: DhtRecordMessage.Key
+- uid: PeerTalk.Routing.DhtRecordMessage.Signature
+  name: Signature
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_Signature
+  commentId: P:PeerTalk.Routing.DhtRecordMessage.Signature
+  fullName: PeerTalk.Routing.DhtRecordMessage.Signature
+  nameWithType: DhtRecordMessage.Signature
+- uid: PeerTalk.Routing.DhtRecordMessage.Signature*
+  name: Signature
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_Signature_
+  commentId: Overload:PeerTalk.Routing.DhtRecordMessage.Signature
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtRecordMessage.Signature
+  nameWithType: DhtRecordMessage.Signature
+- uid: PeerTalk.Routing.DhtRecordMessage.TimeReceived
+  name: TimeReceived
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_TimeReceived
+  commentId: P:PeerTalk.Routing.DhtRecordMessage.TimeReceived
+  fullName: PeerTalk.Routing.DhtRecordMessage.TimeReceived
+  nameWithType: DhtRecordMessage.TimeReceived
+- uid: PeerTalk.Routing.DhtRecordMessage.TimeReceived*
+  name: TimeReceived
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_TimeReceived_
+  commentId: Overload:PeerTalk.Routing.DhtRecordMessage.TimeReceived
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtRecordMessage.TimeReceived
+  nameWithType: DhtRecordMessage.TimeReceived
+- uid: PeerTalk.Routing.DhtRecordMessage.Value
+  name: Value
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_Value
+  commentId: P:PeerTalk.Routing.DhtRecordMessage.Value
+  fullName: PeerTalk.Routing.DhtRecordMessage.Value
+  nameWithType: DhtRecordMessage.Value
+- uid: PeerTalk.Routing.DhtRecordMessage.Value*
+  name: Value
+  href: api/PeerTalk.Routing.DhtRecordMessage.html#PeerTalk_Routing_DhtRecordMessage_Value_
+  commentId: Overload:PeerTalk.Routing.DhtRecordMessage.Value
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtRecordMessage.Value
+  nameWithType: DhtRecordMessage.Value
 - uid: PeerTalk.Routing.DistributedQuery`1
   name: DistributedQuery<T>
   href: api/PeerTalk.Routing.DistributedQuery-1.html

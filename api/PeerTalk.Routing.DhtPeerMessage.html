@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ProtocolRegistry
+    <title>Class DhtPeerMessage
    | Peer Talk documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ProtocolRegistry
+    <meta name="title" content="Class DhtPeerMessage
    | Peer Talk documentation ">
     <meta name="generator" content="docfx 2.42.1.0">
     
@@ -68,18 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PeerTalk.Protocols.ProtocolRegistry">
+            <article class="content wrap" id="_content" data-uid="PeerTalk.Routing.DhtPeerMessage">
   
   
-  <h1 id="PeerTalk_Protocols_ProtocolRegistry" data-uid="PeerTalk.Protocols.ProtocolRegistry" class="text-break">Class ProtocolRegistry
+  <h1 id="PeerTalk_Routing_DhtPeerMessage" data-uid="PeerTalk.Routing.DhtPeerMessage" class="text-break">Class DhtPeerMessage
   </h1>
-  <div class="markdown level0 summary"><p>Metadata on <a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a>.</p>
+  <div class="markdown level0 summary"><p>Information about a peer.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">ProtocolRegistry</span></div>
+    <div class="level1"><span class="xref">DhtPeerMessage</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,30 +105,33 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PeerTalk.Protocols.html">PeerTalk.Protocols</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PeerTalk.Routing.html">PeerTalk.Routing</a></h6>
   <h6><strong>Assembly</strong>: PeerTalk.dll</h6>
-  <h5 id="PeerTalk_Protocols_ProtocolRegistry_syntax">Syntax</h5>
+  <h5 id="PeerTalk_Routing_DhtPeerMessage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ProtocolRegistry</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoContract]
+public class DhtPeerMessage</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_ProtocolRegistry_Protocols.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.ProtocolRegistry.Protocols%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtPeerMessage_Addresses.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtPeerMessage.Addresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/ProtocolRegistry.cs/#L21">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L135">View Source</a>
   </span>
-  <h4 id="PeerTalk_Protocols_ProtocolRegistry_Protocols" data-uid="PeerTalk.Protocols.ProtocolRegistry.Protocols">Protocols</h4>
-  <div class="markdown level1 summary"><p>All the peer protocols.</p>
+  <a id="PeerTalk_Routing_DhtPeerMessage_Addresses_" data-uid="PeerTalk.Routing.DhtPeerMessage.Addresses*"></a>
+  <h4 id="PeerTalk_Routing_DhtPeerMessage_Addresses" data-uid="PeerTalk.Routing.DhtPeerMessage.Addresses">Addresses</h4>
+  <div class="markdown level1 summary"><p>Addresses for a given peer</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, Func&lt;IPeerProtocol&gt;&gt; Protocols</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(2)]
+public byte[][] Addresses { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -138,32 +141,62 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a>&gt;&gt;</td>
-        <td></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[][]</td>
+        <td><p>A sequence of <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html">MultiAddress</a> as a byte array.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h5 id="PeerTalk_Protocols_ProtocolRegistry_Protocols_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The key is the name and version of the peer protocol, like &quot;/multiselect/1.0.0&quot;.
-The value is a Func that returns an new instance of the peer protocol.</p>
-</div>
-  <h3 id="methods">Methods
-  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_ProtocolRegistry_Deregister_System_String_.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.ProtocolRegistry.Deregister(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtPeerMessage_Id.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtPeerMessage.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/ProtocolRegistry.cs/#L49">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L126">View Source</a>
   </span>
-  <a id="PeerTalk_Protocols_ProtocolRegistry_Deregister_" data-uid="PeerTalk.Protocols.ProtocolRegistry.Deregister*"></a>
-  <h4 id="PeerTalk_Protocols_ProtocolRegistry_Deregister_System_String_" data-uid="PeerTalk.Protocols.ProtocolRegistry.Deregister(System.String)">Deregister(String)</h4>
-  <div class="markdown level1 summary"><p>Remove the specified protocol.</p>
+  <a id="PeerTalk_Routing_DhtPeerMessage_Id_" data-uid="PeerTalk.Routing.DhtPeerMessage.Id*"></a>
+  <h4 id="PeerTalk_Routing_DhtPeerMessage_Id" data-uid="PeerTalk.Routing.DhtPeerMessage.Id">Id</h4>
+  <div class="markdown level1 summary"><p>ID of a given peer. </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Deregister(string protocolName)</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(1)]
+public byte[] Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><p>The <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html">MultiHash</a> as a byte array,</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtPeerMessage_TryToPeer_Ipfs_Peer__.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtPeerMessage.TryToPeer(Ipfs.Peer%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L149">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_DhtPeerMessage_TryToPeer_" data-uid="PeerTalk.Routing.DhtPeerMessage.TryToPeer*"></a>
+  <h4 id="PeerTalk_Routing_DhtPeerMessage_TryToPeer_Ipfs_Peer__" data-uid="PeerTalk.Routing.DhtPeerMessage.TryToPeer(Ipfs.Peer@)">TryToPeer(out Peer)</h4>
+  <div class="markdown level1 summary"><p>Convert the message into a <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryToPeer(out Peer peer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,41 +209,23 @@ The value is a Func that returns an new instance of the peer protocol.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">protocolName</span></td>
-        <td><p>The protocol name to remove.</p>
-</td>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a></td>
+        <td><span class="parametername">peer</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_ProtocolRegistry_Register__1.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.ProtocolRegistry.Register%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/ProtocolRegistry.cs/#L37">View Source</a>
-  </span>
-  <a id="PeerTalk_Protocols_ProtocolRegistry_Register_" data-uid="PeerTalk.Protocols.ProtocolRegistry.Register*"></a>
-  <h4 id="PeerTalk_Protocols_ProtocolRegistry_Register__1" data-uid="PeerTalk.Protocols.ProtocolRegistry.Register``1">Register&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"><p>Register a new protocol.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Register&lt;T&gt;()
-    where T : IPeerProtocol, new()</code></pre>
-  </div>
-  <h5 class="typeParameters">Type Parameters</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -223,10 +238,10 @@ The value is a Func that returns an new instance of the peer protocol.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Protocols_ProtocolRegistry.md&amp;value=---%0Auid%3A%20PeerTalk.Protocols.ProtocolRegistry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_DhtPeerMessage.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.DhtPeerMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Protocols/ProtocolRegistry.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/DhtMessages.cs/#L117" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
