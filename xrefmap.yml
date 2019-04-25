@@ -7,6 +7,63 @@ references:
   commentId: N:PeerTalk
   fullName: PeerTalk
   nameWithType: PeerTalk
+- uid: PeerTalk.AutoDialer
+  name: AutoDialer
+  href: api/PeerTalk.AutoDialer.html
+  commentId: T:PeerTalk.AutoDialer
+  fullName: PeerTalk.AutoDialer
+  nameWithType: AutoDialer
+- uid: PeerTalk.AutoDialer.#ctor(PeerTalk.Swarm)
+  name: AutoDialer(Swarm)
+  href: api/PeerTalk.AutoDialer.html#PeerTalk_AutoDialer__ctor_PeerTalk_Swarm_
+  commentId: M:PeerTalk.AutoDialer.#ctor(PeerTalk.Swarm)
+  fullName: PeerTalk.AutoDialer.AutoDialer(PeerTalk.Swarm)
+  nameWithType: AutoDialer.AutoDialer(Swarm)
+- uid: PeerTalk.AutoDialer.#ctor*
+  name: AutoDialer
+  href: api/PeerTalk.AutoDialer.html#PeerTalk_AutoDialer__ctor_
+  commentId: Overload:PeerTalk.AutoDialer.#ctor
+  isSpec: "True"
+  fullName: PeerTalk.AutoDialer.AutoDialer
+  nameWithType: AutoDialer.AutoDialer
+- uid: PeerTalk.AutoDialer.DefaultMinConnections
+  name: DefaultMinConnections
+  href: api/PeerTalk.AutoDialer.html#PeerTalk_AutoDialer_DefaultMinConnections
+  commentId: F:PeerTalk.AutoDialer.DefaultMinConnections
+  fullName: PeerTalk.AutoDialer.DefaultMinConnections
+  nameWithType: AutoDialer.DefaultMinConnections
+- uid: PeerTalk.AutoDialer.Dispose
+  name: Dispose()
+  href: api/PeerTalk.AutoDialer.html#PeerTalk_AutoDialer_Dispose
+  commentId: M:PeerTalk.AutoDialer.Dispose
+  fullName: PeerTalk.AutoDialer.Dispose()
+  nameWithType: AutoDialer.Dispose()
+- uid: PeerTalk.AutoDialer.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/PeerTalk.AutoDialer.html#PeerTalk_AutoDialer_Dispose_System_Boolean_
+  commentId: M:PeerTalk.AutoDialer.Dispose(System.Boolean)
+  fullName: PeerTalk.AutoDialer.Dispose(System.Boolean)
+  nameWithType: AutoDialer.Dispose(Boolean)
+- uid: PeerTalk.AutoDialer.Dispose*
+  name: Dispose
+  href: api/PeerTalk.AutoDialer.html#PeerTalk_AutoDialer_Dispose_
+  commentId: Overload:PeerTalk.AutoDialer.Dispose
+  isSpec: "True"
+  fullName: PeerTalk.AutoDialer.Dispose
+  nameWithType: AutoDialer.Dispose
+- uid: PeerTalk.AutoDialer.MinConnections
+  name: MinConnections
+  href: api/PeerTalk.AutoDialer.html#PeerTalk_AutoDialer_MinConnections
+  commentId: P:PeerTalk.AutoDialer.MinConnections
+  fullName: PeerTalk.AutoDialer.MinConnections
+  nameWithType: AutoDialer.MinConnections
+- uid: PeerTalk.AutoDialer.MinConnections*
+  name: MinConnections
+  href: api/PeerTalk.AutoDialer.html#PeerTalk_AutoDialer_MinConnections_
+  commentId: Overload:PeerTalk.AutoDialer.MinConnections
+  isSpec: "True"
+  fullName: PeerTalk.AutoDialer.MinConnections
+  nameWithType: AutoDialer.MinConnections
 - uid: PeerTalk.BlackList`1
   name: BlackList<T>
   href: api/PeerTalk.BlackList-1.html
@@ -108,6 +165,12 @@ references:
   isSpec: "True"
   fullName: PeerTalk.ConnectionManager.IsConnected
   nameWithType: ConnectionManager.IsConnected
+- uid: PeerTalk.ConnectionManager.PeerDisconnected
+  name: PeerDisconnected
+  href: api/PeerTalk.ConnectionManager.html#PeerTalk_ConnectionManager_PeerDisconnected
+  commentId: E:PeerTalk.ConnectionManager.PeerDisconnected
+  fullName: PeerTalk.ConnectionManager.PeerDisconnected
+  nameWithType: ConnectionManager.PeerDisconnected
 - uid: PeerTalk.ConnectionManager.Remove(Ipfs.MultiHash)
   name: Remove(MultiHash)
   href: api/PeerTalk.ConnectionManager.html#PeerTalk_ConnectionManager_Remove_Ipfs_MultiHash_
@@ -4145,6 +4208,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Swarm.IsNotAllowedAsync
   nameWithType: Swarm.IsNotAllowedAsync
+- uid: PeerTalk.Swarm.IsRunning
+  name: IsRunning
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsRunning
+  commentId: P:PeerTalk.Swarm.IsRunning
+  fullName: PeerTalk.Swarm.IsRunning
+  nameWithType: Swarm.IsRunning
+- uid: PeerTalk.Swarm.IsRunning*
+  name: IsRunning
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsRunning_
+  commentId: Overload:PeerTalk.Swarm.IsRunning
+  isSpec: "True"
+  fullName: PeerTalk.Swarm.IsRunning
+  nameWithType: Swarm.IsRunning
 - uid: PeerTalk.Swarm.KnownPeerAddresses
   name: KnownPeerAddresses
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_KnownPeerAddresses
@@ -4222,6 +4298,12 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Swarm.NetworkProtector
   nameWithType: Swarm.NetworkProtector
+- uid: PeerTalk.Swarm.PeerDisconnected
+  name: PeerDisconnected
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_PeerDisconnected
+  commentId: E:PeerTalk.Swarm.PeerDisconnected
+  fullName: PeerTalk.Swarm.PeerDisconnected
+  nameWithType: Swarm.PeerDisconnected
 - uid: PeerTalk.Swarm.PeerDiscovered
   name: PeerDiscovered
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_PeerDiscovered
