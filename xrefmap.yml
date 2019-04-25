@@ -446,6 +446,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Cryptography.PreSharedKey.Export
   nameWithType: PreSharedKey.Export
+- uid: PeerTalk.Cryptography.PreSharedKey.Fingerprint
+  name: Fingerprint()
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Fingerprint
+  commentId: M:PeerTalk.Cryptography.PreSharedKey.Fingerprint
+  fullName: PeerTalk.Cryptography.PreSharedKey.Fingerprint()
+  nameWithType: PreSharedKey.Fingerprint()
+- uid: PeerTalk.Cryptography.PreSharedKey.Fingerprint*
+  name: Fingerprint
+  href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Fingerprint_
+  commentId: Overload:PeerTalk.Cryptography.PreSharedKey.Fingerprint
+  isSpec: "True"
+  fullName: PeerTalk.Cryptography.PreSharedKey.Fingerprint
+  nameWithType: PreSharedKey.Fingerprint
 - uid: PeerTalk.Cryptography.PreSharedKey.Generate(System.Int32)
   name: Generate(Int32)
   href: api/PeerTalk.Cryptography.PreSharedKey.html#PeerTalk_Cryptography_PreSharedKey_Generate_System_Int32_

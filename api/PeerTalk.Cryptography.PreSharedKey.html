@@ -121,7 +121,7 @@
     <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Cryptography_PreSharedKey_Length.md&amp;value=---%0Auid%3A%20PeerTalk.Cryptography.PreSharedKey.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L37">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L40">View Source</a>
   </span>
   <a id="PeerTalk_Cryptography_PreSharedKey_Length_" data-uid="PeerTalk.Cryptography.PreSharedKey.Length*"></a>
   <h4 id="PeerTalk_Cryptography_PreSharedKey_Length" data-uid="PeerTalk.Cryptography.PreSharedKey.Length">Length</h4>
@@ -153,7 +153,7 @@
     <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Cryptography_PreSharedKey_Value.md&amp;value=---%0Auid%3A%20PeerTalk.Cryptography.PreSharedKey.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L29">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L32">View Source</a>
   </span>
   <a id="PeerTalk_Cryptography_PreSharedKey_Value_" data-uid="PeerTalk.Cryptography.PreSharedKey.Value*"></a>
   <h4 id="PeerTalk_Cryptography_PreSharedKey_Value" data-uid="PeerTalk.Cryptography.PreSharedKey.Value">Value</h4>
@@ -187,7 +187,7 @@
     <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Cryptography_PreSharedKey_Export_System_IO_TextWriter_System_String_.md&amp;value=---%0Auid%3A%20PeerTalk.Cryptography.PreSharedKey.Export(System.IO.TextWriter%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L74">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L105">View Source</a>
   </span>
   <a id="PeerTalk_Cryptography_PreSharedKey_Export_" data-uid="PeerTalk.Cryptography.PreSharedKey.Export*"></a>
   <h4 id="PeerTalk_Cryptography_PreSharedKey_Export_System_IO_TextWriter_System_String_" data-uid="PeerTalk.Cryptography.PreSharedKey.Export(System.IO.TextWriter,System.String)">Export(TextWriter, String)</h4>
@@ -231,10 +231,46 @@
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Cryptography_PreSharedKey_Fingerprint.md&amp;value=---%0Auid%3A%20PeerTalk.Cryptography.PreSharedKey.Fingerprint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L52">View Source</a>
+  </span>
+  <a id="PeerTalk_Cryptography_PreSharedKey_Fingerprint_" data-uid="PeerTalk.Cryptography.PreSharedKey.Fingerprint*"></a>
+  <h4 id="PeerTalk_Cryptography_PreSharedKey_Fingerprint" data-uid="PeerTalk.Cryptography.PreSharedKey.Fingerprint">Fingerprint()</h4>
+  <div class="markdown level1 summary"><p>Gets an ID for the key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Fingerprint()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><p>A byte array that can be used as an identifier for the key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_Cryptography_PreSharedKey_Fingerprint_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>C# implementation of the GO code at 
+<a href="https://github.com/libp2p/go-libp2p-pnet/blob/bed5e6afdf9099121029f6fb675be12a50196114/fingerprint.go#L10">https://github.com/libp2p/go-libp2p-pnet/blob/bed5e6afdf9099121029f6fb675be12a50196114/fingerprint.go#L10</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Cryptography_PreSharedKey_Generate_System_Int32_.md&amp;value=---%0Auid%3A%20PeerTalk.Cryptography.PreSharedKey.Generate(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L48">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L79">View Source</a>
   </span>
   <a id="PeerTalk_Cryptography_PreSharedKey_Generate_" data-uid="PeerTalk.Cryptography.PreSharedKey.Generate*"></a>
   <h4 id="PeerTalk_Cryptography_PreSharedKey_Generate_System_Int32_" data-uid="PeerTalk.Cryptography.PreSharedKey.Generate(System.Int32)">Generate(Int32)</h4>
@@ -284,7 +320,7 @@
     <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Cryptography_PreSharedKey_Import_System_IO_TextReader_.md&amp;value=---%0Auid%3A%20PeerTalk.Cryptography.PreSharedKey.Import(System.IO.TextReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L99">View Source</a>
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L130">View Source</a>
   </span>
   <a id="PeerTalk_Cryptography_PreSharedKey_Import_" data-uid="PeerTalk.Cryptography.PreSharedKey.Import*"></a>
   <h4 id="PeerTalk_Cryptography_PreSharedKey_Import_System_IO_TextReader_" data-uid="PeerTalk.Cryptography.PreSharedKey.Import(System.IO.TextReader)">Import(TextReader)</h4>
@@ -328,7 +364,7 @@
                     <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Cryptography_PreSharedKey.md&amp;value=---%0Auid%3A%20PeerTalk.Cryptography.PreSharedKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Cryptography/PreSharedKey.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
