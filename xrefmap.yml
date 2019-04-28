@@ -2681,6 +2681,12 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Routing.Dht1.StopAsync
   nameWithType: Dht1.StopAsync
+- uid: PeerTalk.Routing.Dht1.Stopped
+  name: Stopped
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_Stopped
+  commentId: E:PeerTalk.Routing.Dht1.Stopped
+  fullName: PeerTalk.Routing.Dht1.Stopped
+  nameWithType: Dht1.Stopped
 - uid: PeerTalk.Routing.Dht1.Swarm
   name: Swarm
   href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_Swarm
