@@ -1665,6 +1665,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.PeerConnection.InitiateAsync
   nameWithType: PeerConnection.InitiateAsync
+- uid: PeerTalk.PeerConnection.IsActive
+  name: IsActive
+  href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_IsActive
+  commentId: P:PeerTalk.PeerConnection.IsActive
+  fullName: PeerTalk.PeerConnection.IsActive
+  nameWithType: PeerConnection.IsActive
+- uid: PeerTalk.PeerConnection.IsActive*
+  name: IsActive
+  href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_IsActive_
+  commentId: Overload:PeerTalk.PeerConnection.IsActive
+  isSpec: "True"
+  fullName: PeerTalk.PeerConnection.IsActive
+  nameWithType: PeerConnection.IsActive
 - uid: PeerTalk.PeerConnection.IsIncoming
   name: IsIncoming
   href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_IsIncoming
