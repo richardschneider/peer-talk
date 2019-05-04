@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.Bootstrap.html",
-          "hash": "qYqrEUIDJvNQ85s/lJDPew=="
+          "hash": "4EoGrVb6ud8VcqVtIM05PQ=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.IPeerDiscovery.html",
-          "hash": "dTBZV75XSv5cUhZ48Gnlfw=="
+          "hash": "BZEhTshSagSbKySJ1MJDkQ=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.Mdns.html",
-          "hash": "9eDmqr/IJJp+grPIYjVFoQ=="
+          "hash": "dKprkkLVq7J+WfRjnrLSXA=="
         }
       },
       "is_incremental": false,
@@ -185,23 +185,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PeerTalk.Discovery.PeerDiscoveredEventArgs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PeerTalk.Discovery.PeerDiscoveredEventArgs.html",
-          "hash": "+fbyIzTUCsunUtOEivJHlA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/PeerTalk.Discovery.yml",
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Discovery.html",
-          "hash": "HN1CfaIR2JQCSmKjbFkqxA=="
+          "hash": "nLQpW0Is90nlDdZcjFmFVQ=="
         }
       },
       "is_incremental": false,
@@ -765,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Wfn3D7wFLOncQNH5M37zEA=="
+          "hash": "IVe4AObZuQ618g5yoNGukQ=="
         }
       },
       "is_incremental": false,
@@ -908,16 +896,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 62,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 63,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

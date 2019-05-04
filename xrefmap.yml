@@ -892,25 +892,6 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Discovery.MdnsNext.GetAddresses
   nameWithType: MdnsNext.GetAddresses
-- uid: PeerTalk.Discovery.PeerDiscoveredEventArgs
-  name: PeerDiscoveredEventArgs
-  href: api/PeerTalk.Discovery.PeerDiscoveredEventArgs.html
-  commentId: T:PeerTalk.Discovery.PeerDiscoveredEventArgs
-  fullName: PeerTalk.Discovery.PeerDiscoveredEventArgs
-  nameWithType: PeerDiscoveredEventArgs
-- uid: PeerTalk.Discovery.PeerDiscoveredEventArgs.Address
-  name: Address
-  href: api/PeerTalk.Discovery.PeerDiscoveredEventArgs.html#PeerTalk_Discovery_PeerDiscoveredEventArgs_Address
-  commentId: P:PeerTalk.Discovery.PeerDiscoveredEventArgs.Address
-  fullName: PeerTalk.Discovery.PeerDiscoveredEventArgs.Address
-  nameWithType: PeerDiscoveredEventArgs.Address
-- uid: PeerTalk.Discovery.PeerDiscoveredEventArgs.Address*
-  name: Address
-  href: api/PeerTalk.Discovery.PeerDiscoveredEventArgs.html#PeerTalk_Discovery_PeerDiscoveredEventArgs_Address_
-  commentId: Overload:PeerTalk.Discovery.PeerDiscoveredEventArgs.Address
-  isSpec: "True"
-  fullName: PeerTalk.Discovery.PeerDiscoveredEventArgs.Address
-  nameWithType: PeerDiscoveredEventArgs.Address
 - uid: PeerTalk.INetworkProtector
   name: INetworkProtector
   href: api/PeerTalk.INetworkProtector.html
