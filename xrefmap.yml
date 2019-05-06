@@ -4427,6 +4427,12 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Swarm.StopListeningAsync
   nameWithType: Swarm.StopListeningAsync
+- uid: PeerTalk.Swarm.TransportConnectionTimeout
+  name: TransportConnectionTimeout
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_TransportConnectionTimeout
+  commentId: F:PeerTalk.Swarm.TransportConnectionTimeout
+  fullName: PeerTalk.Swarm.TransportConnectionTimeout
+  nameWithType: Swarm.TransportConnectionTimeout
 - uid: PeerTalk.Swarm.WhiteList
   name: WhiteList
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_WhiteList
