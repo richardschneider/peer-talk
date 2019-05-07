@@ -4195,6 +4195,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Swarm.DisconnectAsync
   nameWithType: Swarm.DisconnectAsync
+- uid: PeerTalk.Swarm.HasPendingConnection(Ipfs.Peer)
+  name: HasPendingConnection(Peer)
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_HasPendingConnection_Ipfs_Peer_
+  commentId: M:PeerTalk.Swarm.HasPendingConnection(Ipfs.Peer)
+  fullName: PeerTalk.Swarm.HasPendingConnection(Ipfs.Peer)
+  nameWithType: Swarm.HasPendingConnection(Peer)
+- uid: PeerTalk.Swarm.HasPendingConnection*
+  name: HasPendingConnection
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_HasPendingConnection_
+  commentId: Overload:PeerTalk.Swarm.HasPendingConnection
+  isSpec: "True"
+  fullName: PeerTalk.Swarm.HasPendingConnection
+  nameWithType: Swarm.HasPendingConnection
 - uid: PeerTalk.Swarm.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
   name: IsAllowedAsync(MultiAddress, CancellationToken)
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
