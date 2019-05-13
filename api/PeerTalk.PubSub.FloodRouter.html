@@ -1,0 +1,750 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FloodRouter
+   | Peer Talk documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FloodRouter
+   | Peer Talk documentation ">
+    <meta name="generator" content="docfx 2.42.2.0">
+    
+    <link rel="shortcut icon" href="../images/peertalk.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/peertalk.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PeerTalk.PubSub.FloodRouter">
+  
+  
+  <h1 id="PeerTalk_PubSub_FloodRouter" data-uid="PeerTalk.PubSub.FloodRouter" class="text-break">Class FloodRouter
+  </h1>
+  <div class="markdown level0 summary"><p>The original flood sub router.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">FloodRouter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PeerTalk.IService.html">IService</a></div>
+    <div><a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a></div>
+    <div><a class="xref" href="PeerTalk.PubSub.IMessageRouter.html">IMessageRouter</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PeerTalk.PubSub.html">PeerTalk.PubSub</a></h6>
+  <h6><strong>Assembly</strong>: PeerTalk.dll</h6>
+  <h5 id="PeerTalk_PubSub_FloodRouter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FloodRouter : IService, IPeerProtocol, IMessageRouter</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_Name.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L35">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_Name_" data-uid="PeerTalk.PubSub.FloodRouter.Name*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_Name" data-uid="PeerTalk.PubSub.FloodRouter.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the protocol.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_RemoteTopics.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.RemoteTopics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L29">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_RemoteTopics_" data-uid="PeerTalk.PubSub.FloodRouter.RemoteTopics*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_RemoteTopics" data-uid="PeerTalk.PubSub.FloodRouter.RemoteTopics">RemoteTopics</h4>
+  <div class="markdown level1 summary"><p>The topics of interest of other peers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicManager RemoteTopics { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.PubSub.TopicManager.html">TopicManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_Swarm.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.Swarm%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L49">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_Swarm_" data-uid="PeerTalk.PubSub.FloodRouter.Swarm*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_Swarm" data-uid="PeerTalk.PubSub.FloodRouter.Swarm">Swarm</h4>
+  <div class="markdown level1 summary"><p>Provides access to other peers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Swarm Swarm { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.Swarm.html">Swarm</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_Version.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L38">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_Version_" data-uid="PeerTalk.PubSub.FloodRouter.Version*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_Version" data-uid="PeerTalk.PubSub.FloodRouter.Version">Version</h4>
+  <div class="markdown level1 summary"><p>The version of the protocol.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SemVersion Version { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Semver.SemVersion</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_InterestedPeers_System_String_.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.InterestedPeers(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L130">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_InterestedPeers_" data-uid="PeerTalk.PubSub.FloodRouter.InterestedPeers*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_InterestedPeers_System_String_" data-uid="PeerTalk.PubSub.FloodRouter.InterestedPeers(System.String)">InterestedPeers(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the sequence of peers interested in the topic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Peer&gt; InterestedPeers(string topic)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td><p>The topic of interest or <strong>null</strong> for all topics.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a>&gt;</td>
+        <td><p>A sequence of <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a> that are subsribed to the
+<code data-dev-comment-type="paramref" class="paramref">topic</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_JoinTopicAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.JoinTopicAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L136">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_JoinTopicAsync_" data-uid="PeerTalk.PubSub.FloodRouter.JoinTopicAsync*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_JoinTopicAsync_System_String_System_Threading_CancellationToken_" data-uid="PeerTalk.PubSub.FloodRouter.JoinTopicAsync(System.String,System.Threading.CancellationToken)">JoinTopicAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Indicates that the local peer is interested in the topic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task JoinTopicAsync(string topic, CancellationToken cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td><p>The topic of interested.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that represents the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_LeaveTopicAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.LeaveTopicAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L162">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_LeaveTopicAsync_" data-uid="PeerTalk.PubSub.FloodRouter.LeaveTopicAsync*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_LeaveTopicAsync_System_String_System_Threading_CancellationToken_" data-uid="PeerTalk.PubSub.FloodRouter.LeaveTopicAsync(System.String,System.Threading.CancellationToken)">LeaveTopicAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Indicates that the local peer is no longer interested in the topic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task LeaveTopicAsync(string topic, CancellationToken cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td><p>The topic of interested.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that represents the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_ProcessMessageAsync_PeerTalk_PeerConnection_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.ProcessMessageAsync(PeerTalk.PeerConnection%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L77">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_ProcessMessageAsync_" data-uid="PeerTalk.PubSub.FloodRouter.ProcessMessageAsync*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_ProcessMessageAsync_PeerTalk_PeerConnection_System_IO_Stream_System_Threading_CancellationToken_" data-uid="PeerTalk.PubSub.FloodRouter.ProcessMessageAsync(PeerTalk.PeerConnection,System.IO.Stream,System.Threading.CancellationToken)">ProcessMessageAsync(PeerConnection, Stream, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Process a message for the protocol.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ProcessMessageAsync(PeerConnection connection, Stream stream, CancellationToken cancel = default(CancellationToken))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.PeerConnection.html">PeerConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>A connection between two peers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The message source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that represents the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_ProcessSubscription_PeerTalk_PubSub_Subscription_Ipfs_Peer_.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.ProcessSubscription(PeerTalk.PubSub.Subscription%2CIpfs.Peer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L117">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_ProcessSubscription_" data-uid="PeerTalk.PubSub.FloodRouter.ProcessSubscription*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_ProcessSubscription_PeerTalk_PubSub_Subscription_Ipfs_Peer_" data-uid="PeerTalk.PubSub.FloodRouter.ProcessSubscription(PeerTalk.PubSub.Subscription,Ipfs.Peer)">ProcessSubscription(Subscription, Peer)</h4>
+  <div class="markdown level1 summary"><p>Process a subscription request from another peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ProcessSubscription(Subscription sub, Peer remote)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.PubSub.Subscription.html">Subscription</a></td>
+        <td><span class="parametername">sub</span></td>
+        <td><p>The subscription request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a></td>
+        <td><span class="parametername">remote</span></td>
+        <td><p>The remote <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PeerTalk_PubSub_FloodRouter_ProcessSubscription_PeerTalk_PubSub_Subscription_Ipfs_Peer__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Maintains the <a class="xref" href="PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_RemoteTopics">RemoteTopics</a>.</p>
+</div>
+  <h5 id="PeerTalk_PubSub_FloodRouter_ProcessSubscription_PeerTalk_PubSub_Subscription_Ipfs_Peer__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_RemoteTopics">RemoteTopics</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_PublishAsync_PeerTalk_PubSub_PublishedMessage_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L188">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_PublishAsync_" data-uid="PeerTalk.PubSub.FloodRouter.PublishAsync*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_PublishAsync_PeerTalk_PubSub_PublishedMessage_System_Threading_CancellationToken_" data-uid="PeerTalk.PubSub.FloodRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage,System.Threading.CancellationToken)">PublishAsync(PublishedMessage, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sends the message to other peers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task PublishAsync(PublishedMessage message, CancellationToken cancel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PeerTalk.PubSub.PublishedMessage.html">PublishedMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancel</span></td>
+        <td><p>Is used to stop the task.  When cancelled, the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.taskcanceledexception">TaskCanceledException</a> is raised.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task that represents the asynchronous operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_StartAsync.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.StartAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L52">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_StartAsync_" data-uid="PeerTalk.PubSub.FloodRouter.StartAsync*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_StartAsync" data-uid="PeerTalk.PubSub.FloodRouter.StartAsync">StartAsync()</h4>
+  <div class="markdown level1 summary"><p>Start the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StartAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_StopAsync.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.StopAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L64">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_StopAsync_" data-uid="PeerTalk.PubSub.FloodRouter.StopAsync*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_StopAsync" data-uid="PeerTalk.PubSub.FloodRouter.StopAsync">StopAsync()</h4>
+  <div class="markdown level1 summary"><p>Stop the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StopAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_ToString.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L41">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_FloodRouter_ToString_" data-uid="PeerTalk.PubSub.FloodRouter.ToString*"></a>
+  <h4 id="PeerTalk_PubSub_FloodRouter_ToString" data-uid="PeerTalk.PubSub.FloodRouter.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter_MessageReceived.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter.MessageReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L32">View Source</a>
+  </span>
+  <h4 id="PeerTalk_PubSub_FloodRouter_MessageReceived" data-uid="PeerTalk.PubSub.FloodRouter.MessageReceived">MessageReceived</h4>
+  <div class="markdown level1 summary"><p>Raised when a new message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;PublishedMessage&gt; MessageReceived</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PeerTalk.PubSub.PublishedMessage.html">PublishedMessage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PeerTalk.IService.html">IService</a>
+  </div>
+  <div>
+      <a class="xref" href="PeerTalk.Protocols.IPeerProtocol.html">IPeerProtocol</a>
+  </div>
+  <div>
+      <a class="xref" href="PeerTalk.PubSub.IMessageRouter.html">IMessageRouter</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_FloodRouter.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.FloodRouter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/FloodRouter.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

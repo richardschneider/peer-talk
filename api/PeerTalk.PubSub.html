@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace PeerTalk.Discovery
+    <title>Namespace PeerTalk.PubSub
    | Peer Talk documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace PeerTalk.Discovery
+    <meta name="title" content="Namespace PeerTalk.PubSub
    | Peer Talk documentation ">
     <meta name="generator" content="docfx 2.42.2.0">
     
@@ -68,37 +68,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PeerTalk.Discovery">
+            <article class="content wrap" id="_content" data-uid="PeerTalk.PubSub">
   
-  <h1 id="PeerTalk_Discovery" data-uid="PeerTalk.Discovery" class="text-break">Namespace PeerTalk.Discovery
+  <h1 id="PeerTalk_PubSub" data-uid="PeerTalk.PubSub" class="text-break">Namespace PeerTalk.PubSub
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="PeerTalk.Discovery.Bootstrap.html">Bootstrap</a></h4>
-      <section><p>Discovers the pre-configured peers.</p>
+      <h4><a class="xref" href="PeerTalk.PubSub.FloodRouter.html">FloodRouter</a></h4>
+      <section><p>The original flood sub router.</p>
 </section>
-      <h4><a class="xref" href="PeerTalk.Discovery.Mdns.html">Mdns</a></h4>
-      <section><p>Base class to discover peers using Multicast DNS.</p>
+      <h4><a class="xref" href="PeerTalk.PubSub.LoopbackRouter.html">LoopbackRouter</a></h4>
+      <section><p>A message router that always raises <a class="xref" href="PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_MessageReceived">MessageReceived</a>
+when a message is published.</p>
 </section>
-      <h4><a class="xref" href="PeerTalk.Discovery.MdnsGo.html">MdnsGo</a></h4>
-      <section><p>Discovers peers using Multicast DNS according to
-go-ipfs v0.4.17</p>
+      <h4><a class="xref" href="PeerTalk.PubSub.NotificationService.html">NotificationService</a></h4>
+      <section><p>A simple pub/sub messaging service that supports
+multiple message routers.</p>
 </section>
-      <h4><a class="xref" href="PeerTalk.Discovery.MdnsJs.html">MdnsJs</a></h4>
-      <section><p>Discovers peers using Multicast DNS according to
-js-ipfs v0.32.3</p>
+      <h4><a class="xref" href="PeerTalk.PubSub.PublishedMessage.html">PublishedMessage</a></h4>
+      <section><p>A published messaged for a topic(s).</p>
 </section>
-      <h4><a class="xref" href="PeerTalk.Discovery.MdnsNext.html">MdnsNext</a></h4>
-      <section><p>Discovers peers using Multicast DNS according to
-<a href="https://github.com/libp2p/specs/blob/master/discovery/mdns.md">https://github.com/libp2p/specs/blob/master/discovery/mdns.md</a></p>
+      <h4><a class="xref" href="PeerTalk.PubSub.PubSubMessage.html">PubSubMessage</a></h4>
+      <section><p>The PubSub message exchanged between peers.</p>
+</section>
+      <h4><a class="xref" href="PeerTalk.PubSub.Subscription.html">Subscription</a></h4>
+      <section><p>A peer&apos;s subscription to a topic.</p>
+</section>
+      <h4><a class="xref" href="PeerTalk.PubSub.TopicManager.html">TopicManager</a></h4>
+      <section><p>Maintains the sequence of peer&apos;s that are interested in a topic.</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="PeerTalk.Discovery.IPeerDiscovery.html">IPeerDiscovery</a></h4>
-      <section><p>Describes a service that finds a peer.</p>
+      <h4><a class="xref" href="PeerTalk.PubSub.IMessageRouter.html">IMessageRouter</a></h4>
+      <section><p>Routes pub/sub messages to other peers.</p>
 </section>
 </article>
           </div>

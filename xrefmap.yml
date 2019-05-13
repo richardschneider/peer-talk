@@ -943,6 +943,54 @@ references:
   isSpec: "True"
   fullName: PeerTalk.IService.StopAsync
   nameWithType: IService.StopAsync
+- uid: PeerTalk.MessageTracker
+  name: MessageTracker
+  href: api/PeerTalk.MessageTracker.html
+  commentId: T:PeerTalk.MessageTracker
+  fullName: PeerTalk.MessageTracker
+  nameWithType: MessageTracker
+- uid: PeerTalk.MessageTracker.Prune(System.DateTime)
+  name: Prune(DateTime)
+  href: api/PeerTalk.MessageTracker.html#PeerTalk_MessageTracker_Prune_System_DateTime_
+  commentId: M:PeerTalk.MessageTracker.Prune(System.DateTime)
+  fullName: PeerTalk.MessageTracker.Prune(System.DateTime)
+  nameWithType: MessageTracker.Prune(DateTime)
+- uid: PeerTalk.MessageTracker.Prune*
+  name: Prune
+  href: api/PeerTalk.MessageTracker.html#PeerTalk_MessageTracker_Prune_
+  commentId: Overload:PeerTalk.MessageTracker.Prune
+  isSpec: "True"
+  fullName: PeerTalk.MessageTracker.Prune
+  nameWithType: MessageTracker.Prune
+- uid: PeerTalk.MessageTracker.Recent
+  name: Recent
+  href: api/PeerTalk.MessageTracker.html#PeerTalk_MessageTracker_Recent
+  commentId: P:PeerTalk.MessageTracker.Recent
+  fullName: PeerTalk.MessageTracker.Recent
+  nameWithType: MessageTracker.Recent
+- uid: PeerTalk.MessageTracker.Recent*
+  name: Recent
+  href: api/PeerTalk.MessageTracker.html#PeerTalk_MessageTracker_Recent_
+  commentId: Overload:PeerTalk.MessageTracker.Recent
+  isSpec: "True"
+  fullName: PeerTalk.MessageTracker.Recent
+  nameWithType: MessageTracker.Recent
+- uid: PeerTalk.MessageTracker.RecentlySeen(System.String,System.Nullable{System.DateTime})
+  name: RecentlySeen(String, Nullable<DateTime>)
+  href: api/PeerTalk.MessageTracker.html#PeerTalk_MessageTracker_RecentlySeen_System_String_System_Nullable_System_DateTime__
+  commentId: M:PeerTalk.MessageTracker.RecentlySeen(System.String,System.Nullable{System.DateTime})
+  name.vb: RecentlySeen(String, Nullable(Of DateTime))
+  fullName: PeerTalk.MessageTracker.RecentlySeen(System.String, System.Nullable<System.DateTime>)
+  fullName.vb: PeerTalk.MessageTracker.RecentlySeen(System.String, System.Nullable(Of System.DateTime))
+  nameWithType: MessageTracker.RecentlySeen(String, Nullable<DateTime>)
+  nameWithType.vb: MessageTracker.RecentlySeen(String, Nullable(Of DateTime))
+- uid: PeerTalk.MessageTracker.RecentlySeen*
+  name: RecentlySeen
+  href: api/PeerTalk.MessageTracker.html#PeerTalk_MessageTracker_RecentlySeen_
+  commentId: Overload:PeerTalk.MessageTracker.RecentlySeen
+  isSpec: "True"
+  fullName: PeerTalk.MessageTracker.RecentlySeen
+  nameWithType: MessageTracker.RecentlySeen
 - uid: PeerTalk.MultiAddressExtensions
   name: MultiAddressExtensions
   href: api/PeerTalk.MultiAddressExtensions.html
@@ -2494,6 +2542,719 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Protocols.VersionedName.Version
   nameWithType: VersionedName.Version
+- uid: PeerTalk.PubSub
+  name: PeerTalk.PubSub
+  href: api/PeerTalk.PubSub.html
+  commentId: N:PeerTalk.PubSub
+  fullName: PeerTalk.PubSub
+  nameWithType: PeerTalk.PubSub
+- uid: PeerTalk.PubSub.FloodRouter
+  name: FloodRouter
+  href: api/PeerTalk.PubSub.FloodRouter.html
+  commentId: T:PeerTalk.PubSub.FloodRouter
+  fullName: PeerTalk.PubSub.FloodRouter
+  nameWithType: FloodRouter
+- uid: PeerTalk.PubSub.FloodRouter.InterestedPeers(System.String)
+  name: InterestedPeers(String)
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_InterestedPeers_System_String_
+  commentId: M:PeerTalk.PubSub.FloodRouter.InterestedPeers(System.String)
+  fullName: PeerTalk.PubSub.FloodRouter.InterestedPeers(System.String)
+  nameWithType: FloodRouter.InterestedPeers(String)
+- uid: PeerTalk.PubSub.FloodRouter.InterestedPeers*
+  name: InterestedPeers
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_InterestedPeers_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.InterestedPeers
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.InterestedPeers
+  nameWithType: FloodRouter.InterestedPeers
+- uid: PeerTalk.PubSub.FloodRouter.JoinTopicAsync(System.String,System.Threading.CancellationToken)
+  name: JoinTopicAsync(String, CancellationToken)
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_JoinTopicAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.FloodRouter.JoinTopicAsync(System.String,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.FloodRouter.JoinTopicAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: FloodRouter.JoinTopicAsync(String, CancellationToken)
+- uid: PeerTalk.PubSub.FloodRouter.JoinTopicAsync*
+  name: JoinTopicAsync
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_JoinTopicAsync_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.JoinTopicAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.JoinTopicAsync
+  nameWithType: FloodRouter.JoinTopicAsync
+- uid: PeerTalk.PubSub.FloodRouter.LeaveTopicAsync(System.String,System.Threading.CancellationToken)
+  name: LeaveTopicAsync(String, CancellationToken)
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_LeaveTopicAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.FloodRouter.LeaveTopicAsync(System.String,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.FloodRouter.LeaveTopicAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: FloodRouter.LeaveTopicAsync(String, CancellationToken)
+- uid: PeerTalk.PubSub.FloodRouter.LeaveTopicAsync*
+  name: LeaveTopicAsync
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_LeaveTopicAsync_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.LeaveTopicAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.LeaveTopicAsync
+  nameWithType: FloodRouter.LeaveTopicAsync
+- uid: PeerTalk.PubSub.FloodRouter.MessageReceived
+  name: MessageReceived
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_MessageReceived
+  commentId: E:PeerTalk.PubSub.FloodRouter.MessageReceived
+  fullName: PeerTalk.PubSub.FloodRouter.MessageReceived
+  nameWithType: FloodRouter.MessageReceived
+- uid: PeerTalk.PubSub.FloodRouter.Name
+  name: Name
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_Name
+  commentId: P:PeerTalk.PubSub.FloodRouter.Name
+  fullName: PeerTalk.PubSub.FloodRouter.Name
+  nameWithType: FloodRouter.Name
+- uid: PeerTalk.PubSub.FloodRouter.Name*
+  name: Name
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_Name_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.Name
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.Name
+  nameWithType: FloodRouter.Name
+- uid: PeerTalk.PubSub.FloodRouter.ProcessMessageAsync(PeerTalk.PeerConnection,System.IO.Stream,System.Threading.CancellationToken)
+  name: ProcessMessageAsync(PeerConnection, Stream, CancellationToken)
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_ProcessMessageAsync_PeerTalk_PeerConnection_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.FloodRouter.ProcessMessageAsync(PeerTalk.PeerConnection,System.IO.Stream,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.FloodRouter.ProcessMessageAsync(PeerTalk.PeerConnection, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: FloodRouter.ProcessMessageAsync(PeerConnection, Stream, CancellationToken)
+- uid: PeerTalk.PubSub.FloodRouter.ProcessMessageAsync*
+  name: ProcessMessageAsync
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_ProcessMessageAsync_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.ProcessMessageAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.ProcessMessageAsync
+  nameWithType: FloodRouter.ProcessMessageAsync
+- uid: PeerTalk.PubSub.FloodRouter.ProcessSubscription(PeerTalk.PubSub.Subscription,Ipfs.Peer)
+  name: ProcessSubscription(Subscription, Peer)
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_ProcessSubscription_PeerTalk_PubSub_Subscription_Ipfs_Peer_
+  commentId: M:PeerTalk.PubSub.FloodRouter.ProcessSubscription(PeerTalk.PubSub.Subscription,Ipfs.Peer)
+  fullName: PeerTalk.PubSub.FloodRouter.ProcessSubscription(PeerTalk.PubSub.Subscription, Ipfs.Peer)
+  nameWithType: FloodRouter.ProcessSubscription(Subscription, Peer)
+- uid: PeerTalk.PubSub.FloodRouter.ProcessSubscription*
+  name: ProcessSubscription
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_ProcessSubscription_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.ProcessSubscription
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.ProcessSubscription
+  nameWithType: FloodRouter.ProcessSubscription
+- uid: PeerTalk.PubSub.FloodRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage,System.Threading.CancellationToken)
+  name: PublishAsync(PublishedMessage, CancellationToken)
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_PublishAsync_PeerTalk_PubSub_PublishedMessage_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.FloodRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.FloodRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage, System.Threading.CancellationToken)
+  nameWithType: FloodRouter.PublishAsync(PublishedMessage, CancellationToken)
+- uid: PeerTalk.PubSub.FloodRouter.PublishAsync*
+  name: PublishAsync
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_PublishAsync_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.PublishAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.PublishAsync
+  nameWithType: FloodRouter.PublishAsync
+- uid: PeerTalk.PubSub.FloodRouter.RemoteTopics
+  name: RemoteTopics
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_RemoteTopics
+  commentId: P:PeerTalk.PubSub.FloodRouter.RemoteTopics
+  fullName: PeerTalk.PubSub.FloodRouter.RemoteTopics
+  nameWithType: FloodRouter.RemoteTopics
+- uid: PeerTalk.PubSub.FloodRouter.RemoteTopics*
+  name: RemoteTopics
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_RemoteTopics_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.RemoteTopics
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.RemoteTopics
+  nameWithType: FloodRouter.RemoteTopics
+- uid: PeerTalk.PubSub.FloodRouter.StartAsync
+  name: StartAsync()
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_StartAsync
+  commentId: M:PeerTalk.PubSub.FloodRouter.StartAsync
+  fullName: PeerTalk.PubSub.FloodRouter.StartAsync()
+  nameWithType: FloodRouter.StartAsync()
+- uid: PeerTalk.PubSub.FloodRouter.StartAsync*
+  name: StartAsync
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_StartAsync_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.StartAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.StartAsync
+  nameWithType: FloodRouter.StartAsync
+- uid: PeerTalk.PubSub.FloodRouter.StopAsync
+  name: StopAsync()
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_StopAsync
+  commentId: M:PeerTalk.PubSub.FloodRouter.StopAsync
+  fullName: PeerTalk.PubSub.FloodRouter.StopAsync()
+  nameWithType: FloodRouter.StopAsync()
+- uid: PeerTalk.PubSub.FloodRouter.StopAsync*
+  name: StopAsync
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_StopAsync_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.StopAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.StopAsync
+  nameWithType: FloodRouter.StopAsync
+- uid: PeerTalk.PubSub.FloodRouter.Swarm
+  name: Swarm
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_Swarm
+  commentId: P:PeerTalk.PubSub.FloodRouter.Swarm
+  fullName: PeerTalk.PubSub.FloodRouter.Swarm
+  nameWithType: FloodRouter.Swarm
+- uid: PeerTalk.PubSub.FloodRouter.Swarm*
+  name: Swarm
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_Swarm_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.Swarm
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.Swarm
+  nameWithType: FloodRouter.Swarm
+- uid: PeerTalk.PubSub.FloodRouter.ToString
+  name: ToString()
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_ToString
+  commentId: M:PeerTalk.PubSub.FloodRouter.ToString
+  fullName: PeerTalk.PubSub.FloodRouter.ToString()
+  nameWithType: FloodRouter.ToString()
+- uid: PeerTalk.PubSub.FloodRouter.ToString*
+  name: ToString
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_ToString_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.ToString
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.ToString
+  nameWithType: FloodRouter.ToString
+- uid: PeerTalk.PubSub.FloodRouter.Version
+  name: Version
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_Version
+  commentId: P:PeerTalk.PubSub.FloodRouter.Version
+  fullName: PeerTalk.PubSub.FloodRouter.Version
+  nameWithType: FloodRouter.Version
+- uid: PeerTalk.PubSub.FloodRouter.Version*
+  name: Version
+  href: api/PeerTalk.PubSub.FloodRouter.html#PeerTalk_PubSub_FloodRouter_Version_
+  commentId: Overload:PeerTalk.PubSub.FloodRouter.Version
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.FloodRouter.Version
+  nameWithType: FloodRouter.Version
+- uid: PeerTalk.PubSub.IMessageRouter
+  name: IMessageRouter
+  href: api/PeerTalk.PubSub.IMessageRouter.html
+  commentId: T:PeerTalk.PubSub.IMessageRouter
+  fullName: PeerTalk.PubSub.IMessageRouter
+  nameWithType: IMessageRouter
+- uid: PeerTalk.PubSub.IMessageRouter.InterestedPeers(System.String)
+  name: InterestedPeers(String)
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_InterestedPeers_System_String_
+  commentId: M:PeerTalk.PubSub.IMessageRouter.InterestedPeers(System.String)
+  fullName: PeerTalk.PubSub.IMessageRouter.InterestedPeers(System.String)
+  nameWithType: IMessageRouter.InterestedPeers(String)
+- uid: PeerTalk.PubSub.IMessageRouter.InterestedPeers*
+  name: InterestedPeers
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_InterestedPeers_
+  commentId: Overload:PeerTalk.PubSub.IMessageRouter.InterestedPeers
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.IMessageRouter.InterestedPeers
+  nameWithType: IMessageRouter.InterestedPeers
+- uid: PeerTalk.PubSub.IMessageRouter.JoinTopicAsync(System.String,System.Threading.CancellationToken)
+  name: JoinTopicAsync(String, CancellationToken)
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_JoinTopicAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.IMessageRouter.JoinTopicAsync(System.String,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.IMessageRouter.JoinTopicAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: IMessageRouter.JoinTopicAsync(String, CancellationToken)
+- uid: PeerTalk.PubSub.IMessageRouter.JoinTopicAsync*
+  name: JoinTopicAsync
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_JoinTopicAsync_
+  commentId: Overload:PeerTalk.PubSub.IMessageRouter.JoinTopicAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.IMessageRouter.JoinTopicAsync
+  nameWithType: IMessageRouter.JoinTopicAsync
+- uid: PeerTalk.PubSub.IMessageRouter.LeaveTopicAsync(System.String,System.Threading.CancellationToken)
+  name: LeaveTopicAsync(String, CancellationToken)
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_LeaveTopicAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.IMessageRouter.LeaveTopicAsync(System.String,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.IMessageRouter.LeaveTopicAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: IMessageRouter.LeaveTopicAsync(String, CancellationToken)
+- uid: PeerTalk.PubSub.IMessageRouter.LeaveTopicAsync*
+  name: LeaveTopicAsync
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_LeaveTopicAsync_
+  commentId: Overload:PeerTalk.PubSub.IMessageRouter.LeaveTopicAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.IMessageRouter.LeaveTopicAsync
+  nameWithType: IMessageRouter.LeaveTopicAsync
+- uid: PeerTalk.PubSub.IMessageRouter.MessageReceived
+  name: MessageReceived
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_MessageReceived
+  commentId: E:PeerTalk.PubSub.IMessageRouter.MessageReceived
+  fullName: PeerTalk.PubSub.IMessageRouter.MessageReceived
+  nameWithType: IMessageRouter.MessageReceived
+- uid: PeerTalk.PubSub.IMessageRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage,System.Threading.CancellationToken)
+  name: PublishAsync(PublishedMessage, CancellationToken)
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_PublishAsync_PeerTalk_PubSub_PublishedMessage_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.IMessageRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.IMessageRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage, System.Threading.CancellationToken)
+  nameWithType: IMessageRouter.PublishAsync(PublishedMessage, CancellationToken)
+- uid: PeerTalk.PubSub.IMessageRouter.PublishAsync*
+  name: PublishAsync
+  href: api/PeerTalk.PubSub.IMessageRouter.html#PeerTalk_PubSub_IMessageRouter_PublishAsync_
+  commentId: Overload:PeerTalk.PubSub.IMessageRouter.PublishAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.IMessageRouter.PublishAsync
+  nameWithType: IMessageRouter.PublishAsync
+- uid: PeerTalk.PubSub.LoopbackRouter
+  name: LoopbackRouter
+  href: api/PeerTalk.PubSub.LoopbackRouter.html
+  commentId: T:PeerTalk.PubSub.LoopbackRouter
+  fullName: PeerTalk.PubSub.LoopbackRouter
+  nameWithType: LoopbackRouter
+- uid: PeerTalk.PubSub.LoopbackRouter.InterestedPeers(System.String)
+  name: InterestedPeers(String)
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_InterestedPeers_System_String_
+  commentId: M:PeerTalk.PubSub.LoopbackRouter.InterestedPeers(System.String)
+  fullName: PeerTalk.PubSub.LoopbackRouter.InterestedPeers(System.String)
+  nameWithType: LoopbackRouter.InterestedPeers(String)
+- uid: PeerTalk.PubSub.LoopbackRouter.InterestedPeers*
+  name: InterestedPeers
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_InterestedPeers_
+  commentId: Overload:PeerTalk.PubSub.LoopbackRouter.InterestedPeers
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.LoopbackRouter.InterestedPeers
+  nameWithType: LoopbackRouter.InterestedPeers
+- uid: PeerTalk.PubSub.LoopbackRouter.JoinTopicAsync(System.String,System.Threading.CancellationToken)
+  name: JoinTopicAsync(String, CancellationToken)
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_JoinTopicAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.LoopbackRouter.JoinTopicAsync(System.String,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.LoopbackRouter.JoinTopicAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: LoopbackRouter.JoinTopicAsync(String, CancellationToken)
+- uid: PeerTalk.PubSub.LoopbackRouter.JoinTopicAsync*
+  name: JoinTopicAsync
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_JoinTopicAsync_
+  commentId: Overload:PeerTalk.PubSub.LoopbackRouter.JoinTopicAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.LoopbackRouter.JoinTopicAsync
+  nameWithType: LoopbackRouter.JoinTopicAsync
+- uid: PeerTalk.PubSub.LoopbackRouter.LeaveTopicAsync(System.String,System.Threading.CancellationToken)
+  name: LeaveTopicAsync(String, CancellationToken)
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_LeaveTopicAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.LoopbackRouter.LeaveTopicAsync(System.String,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.LoopbackRouter.LeaveTopicAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: LoopbackRouter.LeaveTopicAsync(String, CancellationToken)
+- uid: PeerTalk.PubSub.LoopbackRouter.LeaveTopicAsync*
+  name: LeaveTopicAsync
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_LeaveTopicAsync_
+  commentId: Overload:PeerTalk.PubSub.LoopbackRouter.LeaveTopicAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.LoopbackRouter.LeaveTopicAsync
+  nameWithType: LoopbackRouter.LeaveTopicAsync
+- uid: PeerTalk.PubSub.LoopbackRouter.MessageReceived
+  name: MessageReceived
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_MessageReceived
+  commentId: E:PeerTalk.PubSub.LoopbackRouter.MessageReceived
+  fullName: PeerTalk.PubSub.LoopbackRouter.MessageReceived
+  nameWithType: LoopbackRouter.MessageReceived
+- uid: PeerTalk.PubSub.LoopbackRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage,System.Threading.CancellationToken)
+  name: PublishAsync(PublishedMessage, CancellationToken)
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_PublishAsync_PeerTalk_PubSub_PublishedMessage_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.LoopbackRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.LoopbackRouter.PublishAsync(PeerTalk.PubSub.PublishedMessage, System.Threading.CancellationToken)
+  nameWithType: LoopbackRouter.PublishAsync(PublishedMessage, CancellationToken)
+- uid: PeerTalk.PubSub.LoopbackRouter.PublishAsync*
+  name: PublishAsync
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_PublishAsync_
+  commentId: Overload:PeerTalk.PubSub.LoopbackRouter.PublishAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.LoopbackRouter.PublishAsync
+  nameWithType: LoopbackRouter.PublishAsync
+- uid: PeerTalk.PubSub.NotificationService
+  name: NotificationService
+  href: api/PeerTalk.PubSub.NotificationService.html
+  commentId: T:PeerTalk.PubSub.NotificationService
+  fullName: PeerTalk.PubSub.NotificationService
+  nameWithType: NotificationService
+- uid: PeerTalk.PubSub.NotificationService.CreateMessage(System.String,System.Byte[])
+  name: CreateMessage(String, Byte[])
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_CreateMessage_System_String_System_Byte___
+  commentId: M:PeerTalk.PubSub.NotificationService.CreateMessage(System.String,System.Byte[])
+  name.vb: CreateMessage(String, Byte())
+  fullName: PeerTalk.PubSub.NotificationService.CreateMessage(System.String, System.Byte[])
+  fullName.vb: PeerTalk.PubSub.NotificationService.CreateMessage(System.String, System.Byte())
+  nameWithType: NotificationService.CreateMessage(String, Byte[])
+  nameWithType.vb: NotificationService.CreateMessage(String, Byte())
+- uid: PeerTalk.PubSub.NotificationService.CreateMessage*
+  name: CreateMessage
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_CreateMessage_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.CreateMessage
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.CreateMessage
+  nameWithType: NotificationService.CreateMessage
+- uid: PeerTalk.PubSub.NotificationService.DuplicateMesssagesReceived
+  name: DuplicateMesssagesReceived
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_DuplicateMesssagesReceived
+  commentId: F:PeerTalk.PubSub.NotificationService.DuplicateMesssagesReceived
+  fullName: PeerTalk.PubSub.NotificationService.DuplicateMesssagesReceived
+  nameWithType: NotificationService.DuplicateMesssagesReceived
+- uid: PeerTalk.PubSub.NotificationService.LocalPeer
+  name: LocalPeer
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_LocalPeer
+  commentId: P:PeerTalk.PubSub.NotificationService.LocalPeer
+  fullName: PeerTalk.PubSub.NotificationService.LocalPeer
+  nameWithType: NotificationService.LocalPeer
+- uid: PeerTalk.PubSub.NotificationService.LocalPeer*
+  name: LocalPeer
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_LocalPeer_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.LocalPeer
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.LocalPeer
+  nameWithType: NotificationService.LocalPeer
+- uid: PeerTalk.PubSub.NotificationService.MesssagesPublished
+  name: MesssagesPublished
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_MesssagesPublished
+  commentId: F:PeerTalk.PubSub.NotificationService.MesssagesPublished
+  fullName: PeerTalk.PubSub.NotificationService.MesssagesPublished
+  nameWithType: NotificationService.MesssagesPublished
+- uid: PeerTalk.PubSub.NotificationService.MesssagesReceived
+  name: MesssagesReceived
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_MesssagesReceived
+  commentId: F:PeerTalk.PubSub.NotificationService.MesssagesReceived
+  fullName: PeerTalk.PubSub.NotificationService.MesssagesReceived
+  nameWithType: NotificationService.MesssagesReceived
+- uid: PeerTalk.PubSub.NotificationService.PeersAsync(System.String,System.Threading.CancellationToken)
+  name: PeersAsync(String, CancellationToken)
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_PeersAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.NotificationService.PeersAsync(System.String,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.NotificationService.PeersAsync(System.String, System.Threading.CancellationToken)
+  nameWithType: NotificationService.PeersAsync(String, CancellationToken)
+- uid: PeerTalk.PubSub.NotificationService.PeersAsync*
+  name: PeersAsync
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_PeersAsync_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.PeersAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.PeersAsync
+  nameWithType: NotificationService.PeersAsync
+- uid: PeerTalk.PubSub.NotificationService.PublishAsync(System.String,System.Byte[],System.Threading.CancellationToken)
+  name: PublishAsync(String, Byte[], CancellationToken)
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_PublishAsync_System_String_System_Byte___System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.NotificationService.PublishAsync(System.String,System.Byte[],System.Threading.CancellationToken)
+  name.vb: PublishAsync(String, Byte(), CancellationToken)
+  fullName: PeerTalk.PubSub.NotificationService.PublishAsync(System.String, System.Byte[], System.Threading.CancellationToken)
+  fullName.vb: PeerTalk.PubSub.NotificationService.PublishAsync(System.String, System.Byte(), System.Threading.CancellationToken)
+  nameWithType: NotificationService.PublishAsync(String, Byte[], CancellationToken)
+  nameWithType.vb: NotificationService.PublishAsync(String, Byte(), CancellationToken)
+- uid: PeerTalk.PubSub.NotificationService.PublishAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  name: PublishAsync(String, Stream, CancellationToken)
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_PublishAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.NotificationService.PublishAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.NotificationService.PublishAsync(System.String, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: NotificationService.PublishAsync(String, Stream, CancellationToken)
+- uid: PeerTalk.PubSub.NotificationService.PublishAsync(System.String,System.String,System.Threading.CancellationToken)
+  name: PublishAsync(String, String, CancellationToken)
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_PublishAsync_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.NotificationService.PublishAsync(System.String,System.String,System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.NotificationService.PublishAsync(System.String, System.String, System.Threading.CancellationToken)
+  nameWithType: NotificationService.PublishAsync(String, String, CancellationToken)
+- uid: PeerTalk.PubSub.NotificationService.PublishAsync*
+  name: PublishAsync
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_PublishAsync_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.PublishAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.PublishAsync
+  nameWithType: NotificationService.PublishAsync
+- uid: PeerTalk.PubSub.NotificationService.Routers
+  name: Routers
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_Routers
+  commentId: P:PeerTalk.PubSub.NotificationService.Routers
+  fullName: PeerTalk.PubSub.NotificationService.Routers
+  nameWithType: NotificationService.Routers
+- uid: PeerTalk.PubSub.NotificationService.Routers*
+  name: Routers
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_Routers_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.Routers
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.Routers
+  nameWithType: NotificationService.Routers
+- uid: PeerTalk.PubSub.NotificationService.StartAsync
+  name: StartAsync()
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_StartAsync
+  commentId: M:PeerTalk.PubSub.NotificationService.StartAsync
+  fullName: PeerTalk.PubSub.NotificationService.StartAsync()
+  nameWithType: NotificationService.StartAsync()
+- uid: PeerTalk.PubSub.NotificationService.StartAsync*
+  name: StartAsync
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_StartAsync_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.StartAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.StartAsync
+  nameWithType: NotificationService.StartAsync
+- uid: PeerTalk.PubSub.NotificationService.StopAsync
+  name: StopAsync()
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_StopAsync
+  commentId: M:PeerTalk.PubSub.NotificationService.StopAsync
+  fullName: PeerTalk.PubSub.NotificationService.StopAsync()
+  nameWithType: NotificationService.StopAsync()
+- uid: PeerTalk.PubSub.NotificationService.StopAsync*
+  name: StopAsync
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_StopAsync_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.StopAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.StopAsync
+  nameWithType: NotificationService.StopAsync
+- uid: PeerTalk.PubSub.NotificationService.SubscribeAsync(System.String,System.Action{Ipfs.IPublishedMessage},System.Threading.CancellationToken)
+  name: SubscribeAsync(String, Action<IPublishedMessage>, CancellationToken)
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_SubscribeAsync_System_String_System_Action_Ipfs_IPublishedMessage__System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.NotificationService.SubscribeAsync(System.String,System.Action{Ipfs.IPublishedMessage},System.Threading.CancellationToken)
+  name.vb: SubscribeAsync(String, Action(Of IPublishedMessage), CancellationToken)
+  fullName: PeerTalk.PubSub.NotificationService.SubscribeAsync(System.String, System.Action<Ipfs.IPublishedMessage>, System.Threading.CancellationToken)
+  fullName.vb: PeerTalk.PubSub.NotificationService.SubscribeAsync(System.String, System.Action(Of Ipfs.IPublishedMessage), System.Threading.CancellationToken)
+  nameWithType: NotificationService.SubscribeAsync(String, Action<IPublishedMessage>, CancellationToken)
+  nameWithType.vb: NotificationService.SubscribeAsync(String, Action(Of IPublishedMessage), CancellationToken)
+- uid: PeerTalk.PubSub.NotificationService.SubscribeAsync*
+  name: SubscribeAsync
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_SubscribeAsync_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.SubscribeAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.SubscribeAsync
+  nameWithType: NotificationService.SubscribeAsync
+- uid: PeerTalk.PubSub.NotificationService.SubscribedTopicsAsync(System.Threading.CancellationToken)
+  name: SubscribedTopicsAsync(CancellationToken)
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_SubscribedTopicsAsync_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PubSub.NotificationService.SubscribedTopicsAsync(System.Threading.CancellationToken)
+  fullName: PeerTalk.PubSub.NotificationService.SubscribedTopicsAsync(System.Threading.CancellationToken)
+  nameWithType: NotificationService.SubscribedTopicsAsync(CancellationToken)
+- uid: PeerTalk.PubSub.NotificationService.SubscribedTopicsAsync*
+  name: SubscribedTopicsAsync
+  href: api/PeerTalk.PubSub.NotificationService.html#PeerTalk_PubSub_NotificationService_SubscribedTopicsAsync_
+  commentId: Overload:PeerTalk.PubSub.NotificationService.SubscribedTopicsAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.NotificationService.SubscribedTopicsAsync
+  nameWithType: NotificationService.SubscribedTopicsAsync
+- uid: PeerTalk.PubSub.PublishedMessage
+  name: PublishedMessage
+  href: api/PeerTalk.PubSub.PublishedMessage.html
+  commentId: T:PeerTalk.PubSub.PublishedMessage
+  fullName: PeerTalk.PubSub.PublishedMessage
+  nameWithType: PublishedMessage
+- uid: PeerTalk.PubSub.PublishedMessage.DataBytes
+  name: DataBytes
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_DataBytes
+  commentId: P:PeerTalk.PubSub.PublishedMessage.DataBytes
+  fullName: PeerTalk.PubSub.PublishedMessage.DataBytes
+  nameWithType: PublishedMessage.DataBytes
+- uid: PeerTalk.PubSub.PublishedMessage.DataBytes*
+  name: DataBytes
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_DataBytes_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.DataBytes
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.DataBytes
+  nameWithType: PublishedMessage.DataBytes
+- uid: PeerTalk.PubSub.PublishedMessage.DataStream
+  name: DataStream
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_DataStream
+  commentId: P:PeerTalk.PubSub.PublishedMessage.DataStream
+  fullName: PeerTalk.PubSub.PublishedMessage.DataStream
+  nameWithType: PublishedMessage.DataStream
+- uid: PeerTalk.PubSub.PublishedMessage.DataStream*
+  name: DataStream
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_DataStream_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.DataStream
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.DataStream
+  nameWithType: PublishedMessage.DataStream
+- uid: PeerTalk.PubSub.PublishedMessage.Forwarder
+  name: Forwarder
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Forwarder
+  commentId: P:PeerTalk.PubSub.PublishedMessage.Forwarder
+  fullName: PeerTalk.PubSub.PublishedMessage.Forwarder
+  nameWithType: PublishedMessage.Forwarder
+- uid: PeerTalk.PubSub.PublishedMessage.Forwarder*
+  name: Forwarder
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Forwarder_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.Forwarder
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.Forwarder
+  nameWithType: PublishedMessage.Forwarder
+- uid: PeerTalk.PubSub.PublishedMessage.Id
+  name: Id
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Id
+  commentId: P:PeerTalk.PubSub.PublishedMessage.Id
+  fullName: PeerTalk.PubSub.PublishedMessage.Id
+  nameWithType: PublishedMessage.Id
+- uid: PeerTalk.PubSub.PublishedMessage.Id*
+  name: Id
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Id_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.Id
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.Id
+  nameWithType: PublishedMessage.Id
+- uid: PeerTalk.PubSub.PublishedMessage.MessageId
+  name: MessageId
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_MessageId
+  commentId: P:PeerTalk.PubSub.PublishedMessage.MessageId
+  fullName: PeerTalk.PubSub.PublishedMessage.MessageId
+  nameWithType: PublishedMessage.MessageId
+- uid: PeerTalk.PubSub.PublishedMessage.MessageId*
+  name: MessageId
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_MessageId_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.MessageId
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.MessageId
+  nameWithType: PublishedMessage.MessageId
+- uid: PeerTalk.PubSub.PublishedMessage.Sender
+  name: Sender
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Sender
+  commentId: P:PeerTalk.PubSub.PublishedMessage.Sender
+  fullName: PeerTalk.PubSub.PublishedMessage.Sender
+  nameWithType: PublishedMessage.Sender
+- uid: PeerTalk.PubSub.PublishedMessage.Sender*
+  name: Sender
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Sender_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.Sender
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.Sender
+  nameWithType: PublishedMessage.Sender
+- uid: PeerTalk.PubSub.PublishedMessage.SequenceNumber
+  name: SequenceNumber
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_SequenceNumber
+  commentId: P:PeerTalk.PubSub.PublishedMessage.SequenceNumber
+  fullName: PeerTalk.PubSub.PublishedMessage.SequenceNumber
+  nameWithType: PublishedMessage.SequenceNumber
+- uid: PeerTalk.PubSub.PublishedMessage.SequenceNumber*
+  name: SequenceNumber
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_SequenceNumber_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.SequenceNumber
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.SequenceNumber
+  nameWithType: PublishedMessage.SequenceNumber
+- uid: PeerTalk.PubSub.PublishedMessage.Size
+  name: Size
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Size
+  commentId: P:PeerTalk.PubSub.PublishedMessage.Size
+  fullName: PeerTalk.PubSub.PublishedMessage.Size
+  nameWithType: PublishedMessage.Size
+- uid: PeerTalk.PubSub.PublishedMessage.Size*
+  name: Size
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Size_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.Size
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.Size
+  nameWithType: PublishedMessage.Size
+- uid: PeerTalk.PubSub.PublishedMessage.Topics
+  name: Topics
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Topics
+  commentId: P:PeerTalk.PubSub.PublishedMessage.Topics
+  fullName: PeerTalk.PubSub.PublishedMessage.Topics
+  nameWithType: PublishedMessage.Topics
+- uid: PeerTalk.PubSub.PublishedMessage.Topics*
+  name: Topics
+  href: api/PeerTalk.PubSub.PublishedMessage.html#PeerTalk_PubSub_PublishedMessage_Topics_
+  commentId: Overload:PeerTalk.PubSub.PublishedMessage.Topics
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.PublishedMessage.Topics
+  nameWithType: PublishedMessage.Topics
+- uid: PeerTalk.PubSub.PubSubMessage
+  name: PubSubMessage
+  href: api/PeerTalk.PubSub.PubSubMessage.html
+  commentId: T:PeerTalk.PubSub.PubSubMessage
+  fullName: PeerTalk.PubSub.PubSubMessage
+  nameWithType: PubSubMessage
+- uid: PeerTalk.PubSub.PubSubMessage.PublishedMessages
+  name: PublishedMessages
+  href: api/PeerTalk.PubSub.PubSubMessage.html#PeerTalk_PubSub_PubSubMessage_PublishedMessages
+  commentId: F:PeerTalk.PubSub.PubSubMessage.PublishedMessages
+  fullName: PeerTalk.PubSub.PubSubMessage.PublishedMessages
+  nameWithType: PubSubMessage.PublishedMessages
+- uid: PeerTalk.PubSub.PubSubMessage.Subscriptions
+  name: Subscriptions
+  href: api/PeerTalk.PubSub.PubSubMessage.html#PeerTalk_PubSub_PubSubMessage_Subscriptions
+  commentId: F:PeerTalk.PubSub.PubSubMessage.Subscriptions
+  fullName: PeerTalk.PubSub.PubSubMessage.Subscriptions
+  nameWithType: PubSubMessage.Subscriptions
+- uid: PeerTalk.PubSub.Subscription
+  name: Subscription
+  href: api/PeerTalk.PubSub.Subscription.html
+  commentId: T:PeerTalk.PubSub.Subscription
+  fullName: PeerTalk.PubSub.Subscription
+  nameWithType: Subscription
+- uid: PeerTalk.PubSub.Subscription.Subscribe
+  name: Subscribe
+  href: api/PeerTalk.PubSub.Subscription.html#PeerTalk_PubSub_Subscription_Subscribe
+  commentId: F:PeerTalk.PubSub.Subscription.Subscribe
+  fullName: PeerTalk.PubSub.Subscription.Subscribe
+  nameWithType: Subscription.Subscribe
+- uid: PeerTalk.PubSub.Subscription.Topic
+  name: Topic
+  href: api/PeerTalk.PubSub.Subscription.html#PeerTalk_PubSub_Subscription_Topic
+  commentId: F:PeerTalk.PubSub.Subscription.Topic
+  fullName: PeerTalk.PubSub.Subscription.Topic
+  nameWithType: Subscription.Topic
+- uid: PeerTalk.PubSub.TopicManager
+  name: TopicManager
+  href: api/PeerTalk.PubSub.TopicManager.html
+  commentId: T:PeerTalk.PubSub.TopicManager
+  fullName: PeerTalk.PubSub.TopicManager
+  nameWithType: TopicManager
+- uid: PeerTalk.PubSub.TopicManager.AddInterest(System.String,Ipfs.Peer)
+  name: AddInterest(String, Peer)
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_AddInterest_System_String_Ipfs_Peer_
+  commentId: M:PeerTalk.PubSub.TopicManager.AddInterest(System.String,Ipfs.Peer)
+  fullName: PeerTalk.PubSub.TopicManager.AddInterest(System.String, Ipfs.Peer)
+  nameWithType: TopicManager.AddInterest(String, Peer)
+- uid: PeerTalk.PubSub.TopicManager.AddInterest*
+  name: AddInterest
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_AddInterest_
+  commentId: Overload:PeerTalk.PubSub.TopicManager.AddInterest
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.TopicManager.AddInterest
+  nameWithType: TopicManager.AddInterest
+- uid: PeerTalk.PubSub.TopicManager.Clear
+  name: Clear()
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_Clear
+  commentId: M:PeerTalk.PubSub.TopicManager.Clear
+  fullName: PeerTalk.PubSub.TopicManager.Clear()
+  nameWithType: TopicManager.Clear()
+- uid: PeerTalk.PubSub.TopicManager.Clear(Ipfs.Peer)
+  name: Clear(Peer)
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_Clear_Ipfs_Peer_
+  commentId: M:PeerTalk.PubSub.TopicManager.Clear(Ipfs.Peer)
+  fullName: PeerTalk.PubSub.TopicManager.Clear(Ipfs.Peer)
+  nameWithType: TopicManager.Clear(Peer)
+- uid: PeerTalk.PubSub.TopicManager.Clear*
+  name: Clear
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_Clear_
+  commentId: Overload:PeerTalk.PubSub.TopicManager.Clear
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.TopicManager.Clear
+  nameWithType: TopicManager.Clear
+- uid: PeerTalk.PubSub.TopicManager.GetPeers(System.String)
+  name: GetPeers(String)
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_GetPeers_System_String_
+  commentId: M:PeerTalk.PubSub.TopicManager.GetPeers(System.String)
+  fullName: PeerTalk.PubSub.TopicManager.GetPeers(System.String)
+  nameWithType: TopicManager.GetPeers(String)
+- uid: PeerTalk.PubSub.TopicManager.GetPeers*
+  name: GetPeers
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_GetPeers_
+  commentId: Overload:PeerTalk.PubSub.TopicManager.GetPeers
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.TopicManager.GetPeers
+  nameWithType: TopicManager.GetPeers
+- uid: PeerTalk.PubSub.TopicManager.GetTopics(Ipfs.Peer)
+  name: GetTopics(Peer)
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_GetTopics_Ipfs_Peer_
+  commentId: M:PeerTalk.PubSub.TopicManager.GetTopics(Ipfs.Peer)
+  fullName: PeerTalk.PubSub.TopicManager.GetTopics(Ipfs.Peer)
+  nameWithType: TopicManager.GetTopics(Peer)
+- uid: PeerTalk.PubSub.TopicManager.GetTopics*
+  name: GetTopics
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_GetTopics_
+  commentId: Overload:PeerTalk.PubSub.TopicManager.GetTopics
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.TopicManager.GetTopics
+  nameWithType: TopicManager.GetTopics
+- uid: PeerTalk.PubSub.TopicManager.RemoveInterest(System.String,Ipfs.Peer)
+  name: RemoveInterest(String, Peer)
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_RemoveInterest_System_String_Ipfs_Peer_
+  commentId: M:PeerTalk.PubSub.TopicManager.RemoveInterest(System.String,Ipfs.Peer)
+  fullName: PeerTalk.PubSub.TopicManager.RemoveInterest(System.String, Ipfs.Peer)
+  nameWithType: TopicManager.RemoveInterest(String, Peer)
+- uid: PeerTalk.PubSub.TopicManager.RemoveInterest*
+  name: RemoveInterest
+  href: api/PeerTalk.PubSub.TopicManager.html#PeerTalk_PubSub_TopicManager_RemoveInterest_
+  commentId: Overload:PeerTalk.PubSub.TopicManager.RemoveInterest
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.TopicManager.RemoveInterest
+  nameWithType: TopicManager.RemoveInterest
 - uid: PeerTalk.Routing
   name: PeerTalk.Routing
   href: api/PeerTalk.Routing.html
