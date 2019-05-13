@@ -892,6 +892,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Discovery.MdnsNext.GetAddresses
   nameWithType: MdnsNext.GetAddresses
+- uid: PeerTalk.Discovery.MdnsNext.SafeLabel(System.String,System.Int32)
+  name: SafeLabel(String, Int32)
+  href: api/PeerTalk.Discovery.MdnsNext.html#PeerTalk_Discovery_MdnsNext_SafeLabel_System_String_System_Int32_
+  commentId: M:PeerTalk.Discovery.MdnsNext.SafeLabel(System.String,System.Int32)
+  fullName: PeerTalk.Discovery.MdnsNext.SafeLabel(System.String, System.Int32)
+  nameWithType: MdnsNext.SafeLabel(String, Int32)
+- uid: PeerTalk.Discovery.MdnsNext.SafeLabel*
+  name: SafeLabel
+  href: api/PeerTalk.Discovery.MdnsNext.html#PeerTalk_Discovery_MdnsNext_SafeLabel_
+  commentId: Overload:PeerTalk.Discovery.MdnsNext.SafeLabel
+  isSpec: "True"
+  fullName: PeerTalk.Discovery.MdnsNext.SafeLabel
+  nameWithType: MdnsNext.SafeLabel
 - uid: PeerTalk.INetworkProtector
   name: INetworkProtector
   href: api/PeerTalk.INetworkProtector.html
