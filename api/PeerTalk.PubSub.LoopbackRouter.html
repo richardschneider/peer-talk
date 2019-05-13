@@ -85,6 +85,7 @@ when a message is published.</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="PeerTalk.PubSub.IMessageRouter.html">IMessageRouter</a></div>
+    <div><a class="xref" href="PeerTalk.IService.html">IService</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -114,7 +115,7 @@ when a message is published.</p>
   <h6><strong>Assembly</strong>: PeerTalk.dll</h6>
   <h5 id="PeerTalk_PubSub_LoopbackRouter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LoopbackRouter : IMessageRouter</code></pre>
+    <pre><code class="lang-csharp hljs">public class LoopbackRouter : IMessageRouter, IService</code></pre>
   </div>
   <h5 id="PeerTalk_PubSub_LoopbackRouter_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>The allows the <a class="xref" href="PeerTalk.PubSub.NotificationService.html">NotificationService</a> to invoke the
@@ -341,6 +342,68 @@ local subscribtion handlers.</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_LoopbackRouter_StartAsync.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.LoopbackRouter.StartAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/LoopbackRouter.cs/#L58">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_LoopbackRouter_StartAsync_" data-uid="PeerTalk.PubSub.LoopbackRouter.StartAsync*"></a>
+  <h4 id="PeerTalk_PubSub_LoopbackRouter_StartAsync" data-uid="PeerTalk.PubSub.LoopbackRouter.StartAsync">StartAsync()</h4>
+  <div class="markdown level1 summary"><p>Start the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StartAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PubSub_LoopbackRouter_StopAsync.md&amp;value=---%0Auid%3A%20PeerTalk.PubSub.LoopbackRouter.StopAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PubSub/LoopbackRouter.cs/#L64">View Source</a>
+  </span>
+  <a id="PeerTalk_PubSub_LoopbackRouter_StopAsync_" data-uid="PeerTalk.PubSub.LoopbackRouter.StopAsync*"></a>
+  <h4 id="PeerTalk_PubSub_LoopbackRouter_StopAsync" data-uid="PeerTalk.PubSub.LoopbackRouter.StopAsync">StopAsync()</h4>
+  <div class="markdown level1 summary"><p>Stop the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StopAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="events">Events
   </h3>
   <span class="small pull-right mobile-hide">
@@ -376,6 +439,9 @@ local subscribtion handlers.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="PeerTalk.PubSub.IMessageRouter.html">IMessageRouter</a>
+  </div>
+  <div>
+      <a class="xref" href="PeerTalk.IService.html">IService</a>
   </div>
 </article>
           </div>

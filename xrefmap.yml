@@ -2857,6 +2857,32 @@ references:
   isSpec: "True"
   fullName: PeerTalk.PubSub.LoopbackRouter.PublishAsync
   nameWithType: LoopbackRouter.PublishAsync
+- uid: PeerTalk.PubSub.LoopbackRouter.StartAsync
+  name: StartAsync()
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_StartAsync
+  commentId: M:PeerTalk.PubSub.LoopbackRouter.StartAsync
+  fullName: PeerTalk.PubSub.LoopbackRouter.StartAsync()
+  nameWithType: LoopbackRouter.StartAsync()
+- uid: PeerTalk.PubSub.LoopbackRouter.StartAsync*
+  name: StartAsync
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_StartAsync_
+  commentId: Overload:PeerTalk.PubSub.LoopbackRouter.StartAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.LoopbackRouter.StartAsync
+  nameWithType: LoopbackRouter.StartAsync
+- uid: PeerTalk.PubSub.LoopbackRouter.StopAsync
+  name: StopAsync()
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_StopAsync
+  commentId: M:PeerTalk.PubSub.LoopbackRouter.StopAsync
+  fullName: PeerTalk.PubSub.LoopbackRouter.StopAsync()
+  nameWithType: LoopbackRouter.StopAsync()
+- uid: PeerTalk.PubSub.LoopbackRouter.StopAsync*
+  name: StopAsync
+  href: api/PeerTalk.PubSub.LoopbackRouter.html#PeerTalk_PubSub_LoopbackRouter_StopAsync_
+  commentId: Overload:PeerTalk.PubSub.LoopbackRouter.StopAsync
+  isSpec: "True"
+  fullName: PeerTalk.PubSub.LoopbackRouter.StopAsync
+  nameWithType: LoopbackRouter.StopAsync
 - uid: PeerTalk.PubSub.NotificationService
   name: NotificationService
   href: api/PeerTalk.PubSub.NotificationService.html
