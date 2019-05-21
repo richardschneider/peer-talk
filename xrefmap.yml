@@ -3623,6 +3623,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Routing.DhtPeerMessage.Addresses
   nameWithType: DhtPeerMessage.Addresses
+- uid: PeerTalk.Routing.DhtPeerMessage.Connection
+  name: Connection
+  href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_Connection
+  commentId: P:PeerTalk.Routing.DhtPeerMessage.Connection
+  fullName: PeerTalk.Routing.DhtPeerMessage.Connection
+  nameWithType: DhtPeerMessage.Connection
+- uid: PeerTalk.Routing.DhtPeerMessage.Connection*
+  name: Connection
+  href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_Connection_
+  commentId: Overload:PeerTalk.Routing.DhtPeerMessage.Connection
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DhtPeerMessage.Connection
+  nameWithType: DhtPeerMessage.Connection
 - uid: PeerTalk.Routing.DhtPeerMessage.Id
   name: Id
   href: api/PeerTalk.Routing.DhtPeerMessage.html#PeerTalk_Routing_DhtPeerMessage_Id
