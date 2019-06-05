@@ -5,11 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace PeerTalk
-   | Peer Talk documentation </title>
+    <title>Private Network | Peer Talk documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace PeerTalk
-   | Peer Talk documentation ">
+    <meta name="title" content="Private Network | Peer Talk documentation ">
     <meta name="generator" content="docfx 2.42.4.0">
     
     <link rel="shortcut icon" href="../images/peertalk.ico">
@@ -68,72 +66,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PeerTalk">
-  
-  <h1 id="PeerTalk" data-uid="PeerTalk" class="text-break">Namespace PeerTalk
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="PeerTalk.AutoDialer.html">AutoDialer</a></h4>
-      <section><p>Maintains a minimum number of peer connections.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.BlackList-1.html">BlackList&lt;T&gt;</a></h4>
-      <section><p>A sequence of targets that are not approved.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.ConnectionManager.html">ConnectionManager</a></h4>
-      <section><p>Manages the peer connections in a <a class="xref" href="PeerTalk.Swarm.html">Swarm</a>.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.MessageTracker.html">MessageTracker</a></h4>
-      <section><p>Maintains a timed cache of message IDs.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.MultiAddressExtensions.html">MultiAddressExtensions</a></h4>
-      <section><p>Extensions to <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html">MultiAddress</a>.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.PeerConnection.html">PeerConnection</a></h4>
-      <section><p>A connection between two peers.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.Policy-1.html">Policy&lt;T&gt;</a></h4>
-      <section><p>A base for defining a policy.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.PolicyAlways-1.html">PolicyAlways&lt;T&gt;</a></h4>
-      <section><p>A rule that always passes.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.PolicyNever-1.html">PolicyNever&lt;T&gt;</a></h4>
-      <section><p>A rule that always fails.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.ProtoBufHelper.html">ProtoBufHelper</a></h4>
-      <section><p>Helper methods for ProtoBuf.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.StatsStream.html">StatsStream</a></h4>
-      <section><p>A simple wrapper around another stream that records statistics.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.Swarm.html">Swarm</a></h4>
-      <section><p>Manages communication with other peers.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.TaskHelper.html">TaskHelper</a></h4>
-      <section><p>Some helpers for tasks.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.WhiteList-1.html">WhiteList&lt;T&gt;</a></h4>
-      <section><p>A sequence of targets that are approved.</p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="PeerTalk.INetworkProtector.html">INetworkProtector</a></h4>
-      <section><p>Provides access to a private network of peers.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.IService.html">IService</a></h4>
-      <section><p>A service is async and can be started and stopped.</p>
-</section>
-</article>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="private-network">Private Network</h1>
+
+<p>A private network is a group of <a href="peer.html">peers</a> that share the same 256-bit 
+<a class="xref" href="../api/PeerTalk.Cryptography.PreSharedKey.html">secret key</a>.  All communication between the
+peers is encryped with the <a href="https://en.wikipedia.org/wiki/Salsa20">XSalsa20 cipher</a>.  The
+specification is at <a href="https://github.com/libp2p/specs/blob/master/pnet/Private-Networks-PSK-V1.md">PSK v1</a>
+and is implemented by the <a class="xref" href="../api/PeerTalk.SecureCommunication.Psk1Protector.html">Psk1Protector</a> class.</p>
+<p>The private network is defined by the symmetric secret key, which is known by all members. 
+All traffic leaving the peer is encrypted and there is no characteristic 
+handshake. The secret key is just a random number; public/private 
+keys and certificates are not needed.</p>
+<h2 id="joining">Joining</h2>
+<p>The local peer becomes a member of the private network by having the
+secret key and adding it to the <a class="xref" href="../api/PeerTalk.Swarm.html#PeerTalk_Swarm_NetworkProtector">Swarm.NetworkProtector</a></p>
+<pre><code class="lang-csharp">var key = new PreSharedKey { Value = &quot;e8d6...&quot;.ToHexBuffer() };
+var protector = new Psk1Protector { Key = key }
+swarm.NetworkProtector = protector;
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/doc/articles/pnet.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -5,11 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace PeerTalk
-   | Peer Talk documentation </title>
+    <title>Peer Discovery | Peer Talk documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace PeerTalk
-   | Peer Talk documentation ">
+    <meta name="title" content="Peer Discovery | Peer Talk documentation ">
     <meta name="generator" content="docfx 2.42.4.0">
     
     <link rel="shortcut icon" href="../images/peertalk.ico">
@@ -68,65 +66,32 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PeerTalk">
-  
-  <h1 id="PeerTalk" data-uid="PeerTalk" class="text-break">Namespace PeerTalk
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="PeerTalk.AutoDialer.html">AutoDialer</a></h4>
-      <section><p>Maintains a minimum number of peer connections.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.BlackList-1.html">BlackList&lt;T&gt;</a></h4>
-      <section><p>A sequence of targets that are not approved.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.ConnectionManager.html">ConnectionManager</a></h4>
-      <section><p>Manages the peer connections in a <a class="xref" href="PeerTalk.Swarm.html">Swarm</a>.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.MessageTracker.html">MessageTracker</a></h4>
-      <section><p>Maintains a timed cache of message IDs.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.MultiAddressExtensions.html">MultiAddressExtensions</a></h4>
-      <section><p>Extensions to <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiAddress.html">MultiAddress</a>.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.PeerConnection.html">PeerConnection</a></h4>
-      <section><p>A connection between two peers.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.Policy-1.html">Policy&lt;T&gt;</a></h4>
-      <section><p>A base for defining a policy.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.PolicyAlways-1.html">PolicyAlways&lt;T&gt;</a></h4>
-      <section><p>A rule that always passes.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.PolicyNever-1.html">PolicyNever&lt;T&gt;</a></h4>
-      <section><p>A rule that always fails.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.ProtoBufHelper.html">ProtoBufHelper</a></h4>
-      <section><p>Helper methods for ProtoBuf.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.StatsStream.html">StatsStream</a></h4>
-      <section><p>A simple wrapper around another stream that records statistics.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.Swarm.html">Swarm</a></h4>
-      <section><p>Manages communication with other peers.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.TaskHelper.html">TaskHelper</a></h4>
-      <section><p>Some helpers for tasks.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.WhiteList-1.html">WhiteList&lt;T&gt;</a></h4>
-      <section><p>A sequence of targets that are approved.</p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="PeerTalk.INetworkProtector.html">INetworkProtector</a></h4>
-      <section><p>Provides access to a private network of peers.</p>
-</section>
-      <h4><a class="xref" href="PeerTalk.IService.html">IService</a></h4>
-      <section><p>A service is async and can be started and stopped.</p>
-</section>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="peer-discovery">Peer Discovery</h1>
+
+<p>Various schemes are used to find other peers in the network. </p>
+<p>To get the discovered peers use the <a class="xref" href="../api/PeerTalk.Swarm.html#PeerTalk_Swarm_KnownPeers">Swarm.KnownPeers</a>
+property.</p>
+<pre><code class="lang-csharp">foreach (var peer in swarm.KnownPeers)
+{
+   Console.WriteLine(peer.Id);
+}
+</code></pre><h2 id="schemes">Schemes</h2>
+<h3 id="multicast-dns">Multicast DNS</h3>
+<p><a class="xref" href="../api/PeerTalk.Discovery.MdnsNext.html">MdnsNext</a> uses <a href="https://tools.ietf.org/html/rfc6762">RFC 6762 - Multicast DNS</a> 
+to locate peers on the local area network with zero configuration. 
+Local area network peers are very useful to peer-to-peer protocols, because of their low latency links.</p>
+<p>The <a href="https://github.com/libp2p/specs/blob/master/discovery/mdns.md">mDNS-discovery</a> specification 
+describes how IPFS uses mDNS to discover other peers; <a href="pnet.html">private networks</a> are also supported.</p>
+<h3 id="bootstrap">Bootstrap</h3>
+<p><a class="xref" href="../api/PeerTalk.Discovery.Bootstrap.html">Bootstrap</a> uses a pre-configured list
+of addresses of highly stable (and somewhat trusted) peers to
+find the rest of the network.  These is sometimes referred to as <code>seed nodes</code>.</p>
+<h3 id="randon-walk">Randon walk</h3>
+<p>The <code>Ipfs.Engine</code> makes random DHT (Distributed Hash Table) <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.CoreApi.IPeerRouting.html#Ipfs_CoreApi_IPeerRouting_FindPeerAsync_">queries</a>
+in order to discover a large number of peers quickly.
+This causes the DHT to converge much faster, at the expense of a small load 
+at the very beginning.</p>
 </article>
           </div>
           
@@ -134,6 +99,9 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/doc/articles/disco.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
