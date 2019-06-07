@@ -3330,6 +3330,70 @@ references:
   commentId: F:PeerTalk.Routing.ConnectionType.NotConnected
   fullName: PeerTalk.Routing.ConnectionType.NotConnected
   nameWithType: ConnectionType.NotConnected
+- uid: PeerTalk.Routing.ContentRouter
+  name: ContentRouter
+  href: api/PeerTalk.Routing.ContentRouter.html
+  commentId: T:PeerTalk.Routing.ContentRouter
+  fullName: PeerTalk.Routing.ContentRouter
+  nameWithType: ContentRouter
+- uid: PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid,Ipfs.MultiHash)
+  name: Add(Cid, MultiHash)
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_Add_Ipfs_Cid_Ipfs_MultiHash_
+  commentId: M:PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid,Ipfs.MultiHash)
+  fullName: PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid, Ipfs.MultiHash)
+  nameWithType: ContentRouter.Add(Cid, MultiHash)
+- uid: PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid,Ipfs.MultiHash,System.DateTime)
+  name: Add(Cid, MultiHash, DateTime)
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_Add_Ipfs_Cid_Ipfs_MultiHash_System_DateTime_
+  commentId: M:PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid,Ipfs.MultiHash,System.DateTime)
+  fullName: PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid, Ipfs.MultiHash, System.DateTime)
+  nameWithType: ContentRouter.Add(Cid, MultiHash, DateTime)
+- uid: PeerTalk.Routing.ContentRouter.Add*
+  name: Add
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_Add_
+  commentId: Overload:PeerTalk.Routing.ContentRouter.Add
+  isSpec: "True"
+  fullName: PeerTalk.Routing.ContentRouter.Add
+  nameWithType: ContentRouter.Add
+- uid: PeerTalk.Routing.ContentRouter.Dispose
+  name: Dispose()
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_Dispose
+  commentId: M:PeerTalk.Routing.ContentRouter.Dispose
+  fullName: PeerTalk.Routing.ContentRouter.Dispose()
+  nameWithType: ContentRouter.Dispose()
+- uid: PeerTalk.Routing.ContentRouter.Dispose*
+  name: Dispose
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_Dispose_
+  commentId: Overload:PeerTalk.Routing.ContentRouter.Dispose
+  isSpec: "True"
+  fullName: PeerTalk.Routing.ContentRouter.Dispose
+  nameWithType: ContentRouter.Dispose
+- uid: PeerTalk.Routing.ContentRouter.Get(Ipfs.Cid)
+  name: Get(Cid)
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_Get_Ipfs_Cid_
+  commentId: M:PeerTalk.Routing.ContentRouter.Get(Ipfs.Cid)
+  fullName: PeerTalk.Routing.ContentRouter.Get(Ipfs.Cid)
+  nameWithType: ContentRouter.Get(Cid)
+- uid: PeerTalk.Routing.ContentRouter.Get*
+  name: Get
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_Get_
+  commentId: Overload:PeerTalk.Routing.ContentRouter.Get
+  isSpec: "True"
+  fullName: PeerTalk.Routing.ContentRouter.Get
+  nameWithType: ContentRouter.Get
+- uid: PeerTalk.Routing.ContentRouter.ProviderTTL
+  name: ProviderTTL
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_ProviderTTL
+  commentId: P:PeerTalk.Routing.ContentRouter.ProviderTTL
+  fullName: PeerTalk.Routing.ContentRouter.ProviderTTL
+  nameWithType: ContentRouter.ProviderTTL
+- uid: PeerTalk.Routing.ContentRouter.ProviderTTL*
+  name: ProviderTTL
+  href: api/PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_ProviderTTL_
+  commentId: Overload:PeerTalk.Routing.ContentRouter.ProviderTTL
+  isSpec: "True"
+  fullName: PeerTalk.Routing.ContentRouter.ProviderTTL
+  nameWithType: ContentRouter.ProviderTTL
 - uid: PeerTalk.Routing.Dht1
   name: Dht1
   href: api/PeerTalk.Routing.Dht1.html
@@ -3349,6 +3413,12 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Routing.Dht1.CloserPeerCount
   nameWithType: Dht1.CloserPeerCount
+- uid: PeerTalk.Routing.Dht1.ContentRouter
+  name: ContentRouter
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ContentRouter
+  commentId: F:PeerTalk.Routing.Dht1.ContentRouter
+  fullName: PeerTalk.Routing.Dht1.ContentRouter
+  nameWithType: Dht1.ContentRouter
 - uid: PeerTalk.Routing.Dht1.FindPeerAsync(Ipfs.MultiHash,System.Threading.CancellationToken)
   name: FindPeerAsync(MultiHash, CancellationToken)
   href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_FindPeerAsync_Ipfs_MultiHash_System_Threading_CancellationToken_
@@ -3391,6 +3461,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Routing.Dht1.Name
   nameWithType: Dht1.Name
+- uid: PeerTalk.Routing.Dht1.ProcessAddProvider(Ipfs.Peer,PeerTalk.Routing.DhtMessage,PeerTalk.Routing.DhtMessage)
+  name: ProcessAddProvider(Peer, DhtMessage, DhtMessage)
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ProcessAddProvider_Ipfs_Peer_PeerTalk_Routing_DhtMessage_PeerTalk_Routing_DhtMessage_
+  commentId: M:PeerTalk.Routing.Dht1.ProcessAddProvider(Ipfs.Peer,PeerTalk.Routing.DhtMessage,PeerTalk.Routing.DhtMessage)
+  fullName: PeerTalk.Routing.Dht1.ProcessAddProvider(Ipfs.Peer, PeerTalk.Routing.DhtMessage, PeerTalk.Routing.DhtMessage)
+  nameWithType: Dht1.ProcessAddProvider(Peer, DhtMessage, DhtMessage)
+- uid: PeerTalk.Routing.Dht1.ProcessAddProvider*
+  name: ProcessAddProvider
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ProcessAddProvider_
+  commentId: Overload:PeerTalk.Routing.Dht1.ProcessAddProvider
+  isSpec: "True"
+  fullName: PeerTalk.Routing.Dht1.ProcessAddProvider
+  nameWithType: Dht1.ProcessAddProvider
 - uid: PeerTalk.Routing.Dht1.ProcessFindNode(PeerTalk.Routing.DhtMessage,PeerTalk.Routing.DhtMessage)
   name: ProcessFindNode(DhtMessage, DhtMessage)
   href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_ProcessFindNode_PeerTalk_Routing_DhtMessage_PeerTalk_Routing_DhtMessage_
@@ -3745,6 +3828,23 @@ references:
   fullName.vb: PeerTalk.Routing.DistributedQuery(Of T)
   nameWithType: DistributedQuery<T>
   nameWithType.vb: DistributedQuery(Of T)
+- uid: PeerTalk.Routing.DistributedQuery`1.AddAnswer(`0)
+  name: AddAnswer(T)
+  href: api/PeerTalk.Routing.DistributedQuery-1.html#PeerTalk_Routing_DistributedQuery_1_AddAnswer__0_
+  commentId: M:PeerTalk.Routing.DistributedQuery`1.AddAnswer(`0)
+  fullName: PeerTalk.Routing.DistributedQuery<T>.AddAnswer(T)
+  fullName.vb: PeerTalk.Routing.DistributedQuery(Of T).AddAnswer(T)
+  nameWithType: DistributedQuery<T>.AddAnswer(T)
+  nameWithType.vb: DistributedQuery(Of T).AddAnswer(T)
+- uid: PeerTalk.Routing.DistributedQuery`1.AddAnswer*
+  name: AddAnswer
+  href: api/PeerTalk.Routing.DistributedQuery-1.html#PeerTalk_Routing_DistributedQuery_1_AddAnswer_
+  commentId: Overload:PeerTalk.Routing.DistributedQuery`1.AddAnswer
+  isSpec: "True"
+  fullName: PeerTalk.Routing.DistributedQuery<T>.AddAnswer
+  fullName.vb: PeerTalk.Routing.DistributedQuery(Of T).AddAnswer
+  nameWithType: DistributedQuery<T>.AddAnswer
+  nameWithType.vb: DistributedQuery(Of T).AddAnswer
 - uid: PeerTalk.Routing.DistributedQuery`1.AnswerObtained
   name: AnswerObtained
   href: api/PeerTalk.Routing.DistributedQuery-1.html#PeerTalk_Routing_DistributedQuery_1_AnswerObtained

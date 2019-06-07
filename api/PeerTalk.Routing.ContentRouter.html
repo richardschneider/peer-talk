@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ContentRouter
+   | Peer Talk documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ContentRouter
+   | Peer Talk documentation ">
+    <meta name="generator" content="docfx 2.42.4.0">
+    
+    <link rel="shortcut icon" href="../images/peertalk.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/peertalk.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PeerTalk.Routing.ContentRouter">
+  
+  
+  <h1 id="PeerTalk_Routing_ContentRouter" data-uid="PeerTalk.Routing.ContentRouter" class="text-break">Class ContentRouter
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a list of content that is provided by multiple peers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ContentRouter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PeerTalk.Routing.html">PeerTalk.Routing</a></h6>
+  <h6><strong>Assembly</strong>: PeerTalk.dll</h6>
+  <h5 id="PeerTalk_Routing_ContentRouter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ContentRouter : IDisposable</code></pre>
+  </div>
+  <h5 id="PeerTalk_Routing_ContentRouter_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A peer is expected to provide content for at least <a class="xref" href="PeerTalk.Routing.ContentRouter.html#PeerTalk_Routing_ContentRouter_ProviderTTL">ProviderTTL</a>.
+After this expires the provider is removed from the list.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_ContentRouter_ProviderTTL.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.ContentRouter.ProviderTTL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/ContentRouter.cs/#L43">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_ContentRouter_ProviderTTL_" data-uid="PeerTalk.Routing.ContentRouter.ProviderTTL*"></a>
+  <h4 id="PeerTalk_Routing_ContentRouter_ProviderTTL" data-uid="PeerTalk.Routing.ContentRouter.ProviderTTL">ProviderTTL</h4>
+  <div class="markdown level1 summary"><p>How long a provider is assumed to provide some content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan ProviderTTL { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><p>Defaults to 24 hours (1 day).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_ContentRouter_Add_Ipfs_Cid_Ipfs_MultiHash_.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid%2CIpfs.MultiHash)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/ContentRouter.cs/#L54">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_ContentRouter_Add_" data-uid="PeerTalk.Routing.ContentRouter.Add*"></a>
+  <h4 id="PeerTalk_Routing_ContentRouter_Add_Ipfs_Cid_Ipfs_MultiHash_" data-uid="PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid,Ipfs.MultiHash)">Add(Cid, MultiHash)</h4>
+  <div class="markdown level1 summary"><p>Adds the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a> and <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a> to the content routing system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(Cid cid, MultiHash provider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a></td>
+        <td><span class="parametername">cid</span></td>
+        <td><p>The ID of some content that the <code data-dev-comment-type="paramref" class="paramref">provider</code> contains.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html">MultiHash</a></td>
+        <td><span class="parametername">provider</span></td>
+        <td><p>The peer ID that contains the <code data-dev-comment-type="paramref" class="paramref">cid</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_ContentRouter_Add_Ipfs_Cid_Ipfs_MultiHash_System_DateTime_.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid%2CIpfs.MultiHash%2CSystem.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/ContentRouter.cs/#L73">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_ContentRouter_Add_" data-uid="PeerTalk.Routing.ContentRouter.Add*"></a>
+  <h4 id="PeerTalk_Routing_ContentRouter_Add_Ipfs_Cid_Ipfs_MultiHash_System_DateTime_" data-uid="PeerTalk.Routing.ContentRouter.Add(Ipfs.Cid,Ipfs.MultiHash,System.DateTime)">Add(Cid, MultiHash, DateTime)</h4>
+  <div class="markdown level1 summary"><p>Adds the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a> and <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Peer.html">Peer</a> to the content 
+routing system at the specified <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(Cid cid, MultiHash provider, DateTime now)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a></td>
+        <td><span class="parametername">cid</span></td>
+        <td><p>The ID of some content that the <code data-dev-comment-type="paramref" class="paramref">provider</code> contains.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html">MultiHash</a></td>
+        <td><span class="parametername">provider</span></td>
+        <td><p>The peer ID that contains the <code data-dev-comment-type="paramref" class="paramref">cid</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">now</span></td>
+        <td><p>The local time that the <code data-dev-comment-type="paramref" class="paramref">provider</code> started to provide
+the <code data-dev-comment-type="paramref" class="paramref">cid</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_ContentRouter_Dispose.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.ContentRouter.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/ContentRouter.cs/#L123">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_ContentRouter_Dispose_" data-uid="PeerTalk.Routing.ContentRouter.Dispose*"></a>
+  <h4 id="PeerTalk_Routing_ContentRouter_Dispose" data-uid="PeerTalk.Routing.ContentRouter.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_ContentRouter_Get_Ipfs_Cid_.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.ContentRouter.Get(Ipfs.Cid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/ContentRouter.cs/#L110">View Source</a>
+  </span>
+  <a id="PeerTalk_Routing_ContentRouter_Get_" data-uid="PeerTalk.Routing.ContentRouter.Get*"></a>
+  <h4 id="PeerTalk_Routing_ContentRouter_Get_Ipfs_Cid_" data-uid="PeerTalk.Routing.ContentRouter.Get(Ipfs.Cid)">Get(Cid)</h4>
+  <div class="markdown level1 summary"><p>Gets the providers for the <a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;MultiHash&gt; Get(Cid cid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.Cid.html">Cid</a></td>
+        <td><span class="parametername">cid</span></td>
+        <td><p>The ID of some content.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://richardschneider.github.io/net-ipfs-core/api/Ipfs.MultiHash.html">MultiHash</a>&gt;</td>
+        <td><p>A sequence of peer IDs (providers) that contain the <code data-dev-comment-type="paramref" class="paramref">cid</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_Routing_ContentRouter.md&amp;value=---%0Auid%3A%20PeerTalk.Routing.ContentRouter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/Routing/ContentRouter.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -608,11 +608,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Routing.ContentRouter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Routing.ContentRouter.html",
+          "hash": "bQxJVO3KSvMG1fl4bSrP4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PeerTalk.Routing.Dht1.yml",
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Routing.Dht1.html",
-          "hash": "UQWqMCtTv1KgdYib4V0VhA=="
+          "hash": "bM+saLURtKJiygOlaEDWeg=="
         }
       },
       "is_incremental": false,
@@ -660,7 +672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Routing.DistributedQuery-1.html",
-          "hash": "fYL/OfmIFTDl//GQZIM9wQ=="
+          "hash": "/DUAEurrvkJLDSxA7uTmMw=="
         }
       },
       "is_incremental": false,
@@ -696,7 +708,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Routing.html",
-          "hash": "ImS2CjbkgJtbRRR26k76NQ=="
+          "hash": "M8wUSGnU1dO03OfZwOl+cA=="
         }
       },
       "is_incremental": false,
@@ -876,7 +888,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "MvoDutMc+nBuV13nRb4PKQ=="
+          "hash": "Zo/fm9CduYEfOOuqx09v9Q=="
         }
       },
       "is_incremental": false,
@@ -1080,17 +1092,17 @@
           "total_file_count": 6,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 73,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 72,
           "skipped_file_count": 0
         }
       }
