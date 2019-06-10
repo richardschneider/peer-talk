@@ -3400,6 +3400,19 @@ references:
   commentId: T:PeerTalk.Routing.Dht1
   fullName: PeerTalk.Routing.Dht1
   nameWithType: Dht1
+- uid: PeerTalk.Routing.Dht1.Advertise(Ipfs.Cid)
+  name: Advertise(Cid)
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_Advertise_Ipfs_Cid_
+  commentId: M:PeerTalk.Routing.Dht1.Advertise(Ipfs.Cid)
+  fullName: PeerTalk.Routing.Dht1.Advertise(Ipfs.Cid)
+  nameWithType: Dht1.Advertise(Cid)
+- uid: PeerTalk.Routing.Dht1.Advertise*
+  name: Advertise
+  href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_Advertise_
+  commentId: Overload:PeerTalk.Routing.Dht1.Advertise
+  isSpec: "True"
+  fullName: PeerTalk.Routing.Dht1.Advertise
+  nameWithType: Dht1.Advertise
 - uid: PeerTalk.Routing.Dht1.CloserPeerCount
   name: CloserPeerCount
   href: api/PeerTalk.Routing.Dht1.html#PeerTalk_Routing_Dht1_CloserPeerCount
