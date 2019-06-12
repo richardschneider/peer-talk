@@ -1,18 +1,16 @@
-﻿using Common.Logging;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using Common.Logging;
 using Google.Protobuf;
 using Ipfs;
 using Ipfs.CoreApi;
 using PeerTalk.Protocols;
 using ProtoBuf;
 using Semver;
-using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 
 namespace PeerTalk.Routing
@@ -22,7 +20,7 @@ namespace PeerTalk.Routing
     /// </summary>
     public class Dht1 : IPeerProtocol, IService, IPeerRouting, IContentRouting
     {
-        static ILog log = LogManager.GetLogger(typeof(Dht1));
+        private static readonly ILog log = LogManager.GetLogger(typeof(Dht1));
 
         /// <inheritdoc />
         public string Name { get; } = "ipfs/kad";
@@ -138,7 +136,7 @@ namespace PeerTalk.Routing
         /// <summary>
         ///   The swarm has discovered a new peer, update the routing table.
         /// </summary>
-        void Swarm_PeerDiscovered(object sender, Peer e)
+        private void Swarm_PeerDiscovered(object sender, Peer e)
         {
             RoutingTable.Add(e);
         }
@@ -148,12 +146,16 @@ namespace PeerTalk.Routing
         {
             // Can always find self.
             if (Swarm.LocalPeer.Id == id)
+            {
                 return Swarm.LocalPeer;
+            }
 
             // Maybe the swarm knows about it.
             var found = Swarm.KnownPeers.FirstOrDefault(p => p.Id == id);
             if (found != null && found.Addresses.Count() > 0)
+            {
                 return found;
+            }
 
             // Ask our peers for information on the requested peer.
             var dquery = new DistributedQuery<Peer>
@@ -177,7 +179,7 @@ namespace PeerTalk.Routing
         /// <inheritdoc />
         public Task ProvideAsync(Cid cid, bool advertise = true, CancellationToken cancel = default(CancellationToken))
         {
-            ContentRouter.Add(cid, this.Swarm.LocalPeer.Id);
+            ContentRouter.Add(cid, Swarm.LocalPeer.Id);
             if (advertise)
             {
                 Advertise(cid);
@@ -260,13 +262,15 @@ namespace PeerTalk.Routing
                 {
                     try
                     {
-                        using (var stream = await Swarm.DialAsync(peer, this.ToString()))
+                        using (var stream = await Swarm.DialAsync(peer, ToString()))
                         {
                             ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, message, PrefixStyle.Base128);
                             stream.Flush();
                         }
                         if (--advertsNeeded == 0)
+                        {
                             break;
+                        }
                     }
                     catch (Exception)
                     {
@@ -282,7 +286,7 @@ namespace PeerTalk.Routing
         /// <remarks>
         ///   Simply return the <paramref name="request"/>.
         /// </remarks>
-        DhtMessage ProcessPing(DhtMessage request, DhtMessage response)
+        private DhtMessage ProcessPing(DhtMessage request, DhtMessage response)
         {
             return request;
         }
@@ -333,7 +337,10 @@ namespace PeerTalk.Routing
             }
 
             if (log.IsDebugEnabled)
+            {
                 log.Debug($"returning {response.CloserPeers.Count} closer peers");
+            }
+
             return response;
         }
 
@@ -383,7 +390,7 @@ namespace PeerTalk.Routing
                 return null;
             }
             var providers = request.ProviderPeers
-                .Select(p => p.TryToPeer(out Peer peer) ? peer : (Peer)null)
+                .Select(p => p.TryToPeer(out Peer peer) ? peer : null)
                 .Where(p => p != null)
                 .Where(p => p == remotePeer)
                 .Where(p => p.Addresses.Count() > 0);

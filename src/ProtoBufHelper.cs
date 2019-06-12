@@ -1,11 +1,7 @@
-﻿using Ipfs;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using Ipfs;
 
 namespace PeerTalk
 {
@@ -34,7 +30,8 @@ namespace PeerTalk
         {
             var length = await stream.ReadVarint32Async(cancel).ConfigureAwait(false);
             var bytes = new byte[length];
-            for (int offset = 0; offset < length;) {
+            for (int offset = 0; offset < length;)
+            {
                 offset += await stream.ReadAsync(bytes, offset, length - offset, cancel).ConfigureAwait(false);
             }
 

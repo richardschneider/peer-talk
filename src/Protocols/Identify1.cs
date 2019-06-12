@@ -1,14 +1,11 @@
-﻿using Common.Logging;
-using Ipfs;
-using ProtoBuf;
-using Semver;
-using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Common.Logging;
+using Google.Protobuf;
+using Ipfs;
+using Semver;
 
 namespace PeerTalk.Protocols
 {
@@ -17,7 +14,7 @@ namespace PeerTalk.Protocols
     /// </summary>
     public class Identify1 : IPeerProtocol
     {
-        static ILog log = LogManager.GetLogger(typeof(Identify1));
+        private static readonly ILog log = LogManager.GetLogger(typeof(Identify1));
 
         /// <inheritdoc />
         public string Name { get; } = "ipfs/id";
@@ -40,20 +37,30 @@ namespace PeerTalk.Protocols
             var peer = connection.LocalPeer;
             var res = new Identify
             {
-                ProtocolVersion = peer.ProtocolVersion,
-                AgentVersion = peer.AgentVersion,
-                ListenAddresses = peer?.Addresses
-                     .Select(a => a.WithoutPeerId().ToArray())
-                     .ToArray(),
-                ObservedAddress = connection.RemoteAddress?.ToArray(),
-                Protocols = null, // no longer sent
+                ProtocolVersion = peer.ProtocolVersion ?? string.Empty,
+                AgentVersion = peer.AgentVersion ?? string.Empty,
             };
-            if (peer.PublicKey != null)
+
+            if (connection.RemoteAddress != null)
             {
-                res.PublicKey = Convert.FromBase64String(peer.PublicKey);
+                res.ObservedAddress = ByteString.CopyFrom(connection.RemoteAddress.ToArray());
             }
 
-            ProtoBuf.Serializer.SerializeWithLengthPrefix<Identify>(stream, res, PrefixStyle.Base128);
+            if (peer?.Addresses != null)
+            {
+                foreach (var address in peer?.Addresses)
+                {
+                    res.ListenAddresses.Add(ByteString.CopyFrom(address.WithoutPeerId().ToArray()));
+                }
+            }
+
+            if (peer?.PublicKey != null)
+            {
+                res.PublicKey = ByteString.FromBase64(peer.PublicKey);
+            }
+
+            res.WriteDelimitedTo(stream);
+
             await stream.FlushAsync().ConfigureAwait(false);
         }
 
@@ -75,7 +82,7 @@ namespace PeerTalk.Protocols
                 await connection.EstablishProtocolAsync("/multistream/", stream, cancel).ConfigureAwait(false);
                 await connection.EstablishProtocolAsync("/ipfs/id/", stream, cancel).ConfigureAwait(false);
 
-                var info = await ProtoBufHelper.ReadMessageAsync<Identify>(stream, cancel).ConfigureAwait(false);
+                var info = Identify.Parser.ParseDelimitedFrom(stream);
                 if (remote == null)
                 {
                     remote = new Peer();
@@ -88,21 +95,23 @@ namespace PeerTalk.Protocols
                 {
                     throw new InvalidDataException("Public key is missing.");
                 }
-                remote.PublicKey = Convert.ToBase64String(info.PublicKey);
+                remote.PublicKey = info.PublicKey.ToBase64();
                 if (remote.Id == null)
                 {
-                    remote.Id = MultiHash.ComputeHash(info.PublicKey);
+                    remote.Id = MultiHash.ComputeHash(info.PublicKey.ToByteArray());
                 }
- 
+
                 if (info.ListenAddresses != null)
                 {
                     remote.Addresses = info.ListenAddresses
-                        .Select(b => MultiAddress.TryCreate(b))
+                        .Select(b => MultiAddress.TryCreate(b.ToByteArray()))
                         .Where(a => a != null)
                         .ToList();
                 }
                 if (remote.Addresses.Count() == 0)
+                {
                     log.Warn($"No listen address for {remote}");
+                }
             }
 
             // TODO: Verify the Peer ID
@@ -112,23 +121,5 @@ namespace PeerTalk.Protocols
             log.Debug($"Peer id '{remote}' of {connection.RemoteAddress}");
             return remote;
         }
-
-        [ProtoContract]
-        class Identify
-        {
-            [ProtoMember(5)]
-            public string ProtocolVersion;
-            [ProtoMember(6)]
-            public string AgentVersion;
-            [ProtoMember(1)]
-            public byte[] PublicKey;
-            [ProtoMember(2, IsRequired = true)]
-            public byte[][] ListenAddresses;
-            [ProtoMember(4)]
-            public byte[] ObservedAddress;
-            [ProtoMember(3)]
-            public string[] Protocols;
-        }
-
     }
 }
