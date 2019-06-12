@@ -182,9 +182,9 @@ namespace PeerTalk.Routing
                     using (var stream = await Dht.Swarm.DialAsync(peer, Dht.ToString(), cts.Token).ConfigureAwait(false))
                     {
                         // Send the KAD query and get a response.
-                        ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, queryMessage, PrefixStyle.Base128);
+                        queryMessage.WriteDelimitedTo(stream);
                         await stream.FlushAsync(cts.Token).ConfigureAwait(false);
-                        var response = await ProtoBufHelper.ReadMessageAsync<DhtMessage>(stream, cts.Token).ConfigureAwait(false);
+                        var response = DhtMessage.Parser.ParseDelimitedFrom(stream);
 
                         // Process answer
                         ProcessProviders(response.ProviderPeers);

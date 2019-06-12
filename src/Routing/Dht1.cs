@@ -68,7 +68,7 @@ namespace PeerTalk.Routing
         {
             while (true)
             {
-                var request = await ProtoBufHelper.ReadMessageAsync<DhtMessage>(stream, cancel).ConfigureAwait(false);
+                var request = DhtMessage.Parser.ParseDelimitedFrom(stream);
 
                 log.Debug($"got {request.Type} from {connection.RemotePeer}");
                 var response = new DhtMessage
@@ -97,7 +97,7 @@ namespace PeerTalk.Routing
                 }
                 if (response != null)
                 {
-                    ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, response, PrefixStyle.Base128);
+                    response.WriteDelimitedTo(stream);
                     await stream.FlushAsync(cancel).ConfigureAwait(false);
                 }
             }
@@ -264,7 +264,7 @@ namespace PeerTalk.Routing
                     {
                         using (var stream = await Swarm.DialAsync(peer, ToString()))
                         {
-                            ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, message, PrefixStyle.Base128);
+                            message.WriteDelimitedTo(stream);
                             stream.Flush();
                         }
                         if (--advertsNeeded == 0)

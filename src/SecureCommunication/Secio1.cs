@@ -64,12 +64,12 @@ namespace PeerTalk.SecureCommunication
                 PublicKey = ByteString.FromBase64(localPeer.PublicKey),
             };
 
-            ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, localProposal, PrefixStyle.Fixed32BigEndian);
+            localProposal.WriteDelimitedTo(stream);
             await stream.FlushAsync().ConfigureAwait(false);
 
             // =============================================================================
             // step 1.1 Identify -- get identity from their key
-            var remoteProposal = ProtoBuf.Serializer.DeserializeWithLengthPrefix<Secio1Propose>(stream, PrefixStyle.Fixed32BigEndian);
+            var remoteProposal = Secio1Propose.Parser.ParseDelimitedFrom(stream);
             var ridAlg = (remoteProposal.PublicKey.Length <= 48) ? "identity" : "sha2-256";
             var remoteId = MultiHash.ComputeHash(remoteProposal.PublicKey.ToByteArray(), ridAlg);
             if (remotePeer.Id == null)
@@ -141,12 +141,12 @@ namespace PeerTalk.SecureCommunication
                 localExchange.Signature = ByteString.CopyFrom(connection.LocalPeerKey.Sign(ms.ToArray()));
             }
             localExchange.EPublicKey = ByteString.CopyFrom(localEphemeralPublicKey);
-            ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, localExchange, PrefixStyle.Fixed32BigEndian);
+            localExchange.WriteDelimitedTo(stream);
             await stream.FlushAsync(cancel).ConfigureAwait(false);
 
             // Receive their Exchange packet.  If nothing, then most likely the
             // remote has closed the connection because it does not like us.
-            var remoteExchange = ProtoBuf.Serializer.DeserializeWithLengthPrefix<Secio1Exchange>(stream, PrefixStyle.Fixed32BigEndian);
+            var remoteExchange = Secio1Exchange.Parser.ParseDelimitedFrom(stream);
             if (remoteExchange == null)
             {
                 throw new Exception("Remote refuses the SECIO exchange.");
