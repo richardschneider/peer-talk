@@ -6,6 +6,11 @@ namespace PeerTalk.Routing
 {
     public partial class DhtPeerMessage
     {
+        /// <summary>
+        /// Construct <see cref="DhtPeerMessage"/>. from <see cref="Peer"/>.
+        /// </summary>
+        /// <param name="peer">peer</param>
+        /// <returns></returns>
         public static DhtPeerMessage FromPeer(Peer peer)
         {
             var proto = new DhtPeerMessage
@@ -24,6 +29,11 @@ namespace PeerTalk.Routing
             return proto;
         }
 
+        /// <summary>
+        /// Construct <see cref="DhtPeerMessage"/>. from <see cref="Swarm"/>.
+        /// </summary>
+        /// <param name="swarm">swarm</param>
+        /// <returns></returns>
         public static DhtPeerMessage FromSwarm(Swarm swarm)
         {
             var proto = new DhtPeerMessage
