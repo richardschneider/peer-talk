@@ -1,4 +1,5 @@
 ﻿using Common.Logging;
+using Google.Protobuf;
 using Ipfs;
 using ProtoBuf;
 using System;
@@ -115,8 +116,12 @@ namespace PeerTalk.Routing
             queryMessage = new DhtMessage
             {
                 Type = QueryType,
-                Key = QueryKey?.ToArray(),
             };
+
+            if (QueryKey != null)
+            {
+                queryMessage.Key = ByteString.CopyFrom(QueryKey.ToArray());
+            }
 
             var tasks = Enumerable
                 .Range(1, ConcurrencyLevel)
@@ -202,7 +207,7 @@ namespace PeerTalk.Routing
             }
         }
 
-        void ProcessProviders(DhtPeerMessage[] providers)
+        void ProcessProviders(IList<DhtPeerMessage> providers)
         {
             if (providers == null)
                 return;
@@ -228,7 +233,7 @@ namespace PeerTalk.Routing
             }
         }
 
-        void ProcessCloserPeers(DhtPeerMessage[] closerPeers)
+        void ProcessCloserPeers(IList<DhtPeerMessage> closerPeers)
         {
             if (closerPeers == null)
                 return;

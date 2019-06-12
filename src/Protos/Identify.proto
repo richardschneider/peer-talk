@@ -1,7 +1,9 @@
+
 syntax = "proto3";
 package PeerTalk.Protocols;
 
-message Identify {
+message Identify 
+{
     bytes PublicKey = 1;
     repeated bytes ListenAddresses = 2;
     repeated string Protocols = 3;

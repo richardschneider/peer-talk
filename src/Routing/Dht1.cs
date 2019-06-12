@@ -1,4 +1,5 @@
 ﻿using Common.Logging;
+using Google.Protobuf;
 using Ipfs;
 using Ipfs.CoreApi;
 using PeerTalk.Protocols;
@@ -246,21 +247,15 @@ namespace PeerTalk.Routing
                 var message = new DhtMessage
                 {
                     Type = MessageType.AddProvider,
-                    Key = cid.Hash.ToArray(),
-                    ProviderPeers = new DhtPeerMessage[]
-                    {
-                        new DhtPeerMessage
-                        {
-                            Id = Swarm.LocalPeer.Id.ToArray(),
-                            Addresses = Swarm.LocalPeer.Addresses
-                                .Select(a => a.WithoutPeerId().ToArray())
-                                .ToArray()
-                        }
-                    }
+                    Key = ByteString.CopyFrom(cid.Hash.ToArray()),
                 };
+
+                message.ProviderPeers.Add(DhtPeerMessage.FromSwarm(Swarm));
+
                 var peers = RoutingTable
                     .NearestPeers(cid.Hash)
-                    .Where(p => p != Swarm.LocalPeer);   
+                    .Where(p => p != Swarm.LocalPeer);
+
                 foreach (var peer in peers)
                 {
                     try
@@ -301,12 +296,12 @@ namespace PeerTalk.Routing
             MultiHash peerId;
             try
             {
-                peerId = new MultiHash(request.Key);
+                peerId = new MultiHash(request.Key.ToByteArray());
             }
             catch (Exception)
             {
-                log.Error($"Bad FindNode request key {request.Key.ToHexString()}");
-                peerId = MultiHash.ComputeHash(request.Key);
+                log.Error($"Bad FindNode request key {request.Key.ToByteArray().ToHexString()}");
+                peerId = MultiHash.ComputeHash(request.Key.ToByteArray());
             }
 
             // Do we know the peer?.
@@ -332,16 +327,13 @@ namespace PeerTalk.Routing
             }
 
             // Build the response.
-            response.CloserPeers = closerPeers
-                .Select(peer => new DhtPeerMessage
-                {
-                    Id = peer.Id.ToArray(),
-                    Addresses = peer.Addresses.Select(a => a.WithoutPeerId().ToArray()).ToArray()
-                })
-                .ToArray();
+            foreach (var peer in closerPeers)
+            {
+                response.CloserPeers.Add(DhtPeerMessage.FromPeer(peer));
+            }
 
             if (log.IsDebugEnabled)
-                log.Debug($"returning {response.CloserPeers.Length} closer peers");
+                log.Debug($"returning {response.CloserPeers.Count} closer peers");
             return response;
         }
 
@@ -351,22 +343,21 @@ namespace PeerTalk.Routing
         public DhtMessage ProcessGetProviders(DhtMessage request, DhtMessage response)
         {
             // Find providers for the content.
-            var cid = new Cid { Hash = new MultiHash(request.Key) };
-            response.ProviderPeers = ContentRouter
+            var cid = new Cid { Hash = new MultiHash(request.Key.ToByteArray()) };
+            foreach (var peerMessage in ContentRouter
                 .Get(cid)
                 .Select(pid =>
                 {
                     var peer = (pid == Swarm.LocalPeer.Id)
                          ? Swarm.LocalPeer
                          : Swarm.RegisterPeer(new Peer { Id = pid });
-                    return new DhtPeerMessage
-                    {
-                        Id = peer.Id.ToArray(),
-                        Addresses = peer.Addresses.Select(a => a.ToArray()).ToArray()
-                    };
+
+                    return DhtPeerMessage.FromPeer(peer);
                 })
-                .Take(20)
-                .ToArray();
+                .Take(20))
+            {
+                response.ProviderPeers.Add(peerMessage);
+            }
 
             // Also return the closest peers
             return ProcessFindNode(request, response);
@@ -384,11 +375,11 @@ namespace PeerTalk.Routing
             Cid cid;
             try
             {
-                cid = new Cid { Hash = new MultiHash(request.Key) };
+                cid = new Cid { Hash = new MultiHash(request.Key.ToByteArray()) };
             }
             catch (Exception)
             {
-                log.Error($"Bad AddProvider request key {request.Key.ToHexString()}");
+                log.Error($"Bad AddProvider request key {request.Key.ToByteArray().ToHexString()}");
                 return null;
             }
             var providers = request.ProviderPeers

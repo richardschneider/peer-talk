@@ -1,0 +1,47 @@
+
+syntax = "proto3";
+package PeerTalk.Routing;
+
+enum MessageType
+{
+    PutValue = 0;
+    GetValue = 1;
+    AddProvider = 2;
+    GetProviders = 3;
+    FindNode = 4;
+    Ping = 5;
+}
+
+enum ConnectionType
+{
+    NotConnected = 0;
+    Connected = 1;
+    CanConnect = 2;
+    CannotConnect = 3;
+}
+
+message DhtRecordMessage
+{
+    bytes Key = 1;
+    bytes Value = 2;
+    bytes Author = 3;
+    bytes Signature = 4;
+    string TimeReceived = 5;
+}
+
+message DhtPeerMessage
+{
+    bytes Id = 1;
+    repeated bytes Addresses = 2;
+    ConnectionType Connection = 3;    
+}
+
+message DhtMessage
+{
+    MessageType Type = 1;
+    bytes Key = 2;
+    DhtRecordMessage Record = 3;
+    repeated DhtPeerMessage CloserPeers = 8;
+    repeated DhtPeerMessage ProviderPeers = 9;
+    int32 ClusterLevelRaw = 10;
+}

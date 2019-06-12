@@ -136,16 +136,5 @@ namespace PeerTalk.Cryptography
 
             return key;
         }
-
-#if false
-        [ProtoContract]
-        class PrivateKeyMessage
-        {
-            [ProtoMember(1, IsRequired = true)]
-            public KeyType Type;
-            [ProtoMember(2, IsRequired = true)]
-            public byte[] Data;
-        }
-#endif
     }
 }
