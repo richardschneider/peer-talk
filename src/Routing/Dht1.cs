@@ -9,7 +9,6 @@ using Google.Protobuf;
 using Ipfs;
 using Ipfs.CoreApi;
 using PeerTalk.Protocols;
-using ProtoBuf;
 using Semver;
 
 

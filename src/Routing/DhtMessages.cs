@@ -4,6 +4,9 @@ using Ipfs;
 
 namespace PeerTalk.Routing
 {
+    /// <summary>
+    /// DhtPeerMessage
+    /// </summary>
     public partial class DhtPeerMessage
     {
         /// <summary>

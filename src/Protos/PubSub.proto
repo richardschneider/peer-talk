@@ -2,22 +2,22 @@
 syntax = "proto3";
 package PeerTalk.PubSub;
 
-message PubSubMessageProto
+message PubSubMessage
 {
-    repeated SubscriptionProto Subscriptions = 1;
-    repeated PublishedMessageProto PublishedMessages = 2;
+    repeated Subscription Subscriptions = 1;
+    repeated PublishedMessage PublishedMessages = 2;
 }
 
-message SubscriptionProto
+message Subscription
 {
     bool Subscribe = 1;
     string Topic = 2;    
 }
 
-message PublishedMessageProto
+message PublishedMessage
 {
     bytes From = 1;
-    bytes DataBytes = 2;
-    bytes SequenceNumber = 3;
-    repeated string Topics = 4;
+    bytes DataBytesProto = 2;
+    bytes SequenceNumberProto = 3;
+    repeated string TopicsProto = 4;
 }

@@ -1,4 +1,5 @@
 ﻿using Common.Logging;
+using Google.Protobuf;
 using Ipfs;
 using Ipfs.CoreApi;
 using System;
@@ -28,11 +29,11 @@ namespace PeerTalk.PubSub
             public string Topic;
             public Action<IPublishedMessage> Handler;
         }
-        
+
         long nextSequenceNumber;
         List<TopicHandler> topicHandlers;
         MessageTracker tracker = new MessageTracker();
-        
+
         // TODO: A general purpose CancellationTokenSource that stops publishing of
         // messages when this service is stopped.
 
@@ -121,13 +122,17 @@ namespace PeerTalk.PubSub
             {
                 seqno = seqno.Reverse().ToArray();
             }
-            return new PublishedMessage
+
+            var msg = new PublishedMessage
             {
-                Topics = new string[] { topic },
                 Sender = LocalPeer,
-                SequenceNumber = seqno,
-                DataBytes = data
+                SequenceNumberProto = ByteString.CopyFrom(seqno),
+                DataBytesProto = ByteString.CopyFrom(data),
             };
+
+            msg.TopicsProto.Add(topic);
+
+            return msg;
         }
 
         /// <inheritdoc />

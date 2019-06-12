@@ -1,15 +1,14 @@
-﻿using Common.Logging;
-using Ipfs;
-using PeerTalk.Protocols;
-using ProtoBuf;
-using Semver;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Common.Logging;
+using Google.Protobuf;
+using Ipfs;
+using PeerTalk.Protocols;
+using Semver;
 
 namespace PeerTalk.PubSub
 {
@@ -18,10 +17,9 @@ namespace PeerTalk.PubSub
     /// </summary>
     public class FloodRouter : IPeerProtocol, IMessageRouter
     {
-        static ILog log = LogManager.GetLogger(typeof(FloodRouter));
-
-        MessageTracker tracker = new MessageTracker();
-        List<string> localTopics = new List<string>();
+        private static readonly ILog log = LogManager.GetLogger(typeof(FloodRouter));
+        private readonly MessageTracker tracker = new MessageTracker();
+        private readonly List<string> localTopics = new List<string>();
 
         /// <summary>
         ///   The topics of interest of other peers.
@@ -78,7 +76,7 @@ namespace PeerTalk.PubSub
         {
             while (true)
             {
-                var request = await ProtoBufHelper.ReadMessageAsync<PubSubMessage>(stream, cancel).ConfigureAwait(false); ;
+                var request = PubSubMessage.Parser.ParseDelimitedFrom(stream);
                 log.Debug($"got message from {connection.RemotePeer}");
 
                 if (request.Subscriptions != null)
@@ -93,7 +91,7 @@ namespace PeerTalk.PubSub
                 {
                     foreach (var msg in request.PublishedMessages)
                     {
-                        log.Debug($"Message for '{String.Join(", ", msg.Topics)}' fowarded by {connection.RemotePeer}");
+                        log.Debug($"Message for '{string.Join(", ", msg.Topics)}' fowarded by {connection.RemotePeer}");
                         msg.Forwarder = connection.RemotePeer;
                         MessageReceived?.Invoke(this, msg);
                         await PublishAsync(msg, cancel).ConfigureAwait(false);
@@ -139,17 +137,13 @@ namespace PeerTalk.PubSub
         public async Task JoinTopicAsync(string topic, CancellationToken cancel)
         {
             localTopics.Add(topic);
-            var msg = new PubSubMessage
+            var msg = new PubSubMessage();
+            msg.Subscriptions.Add(new Subscription
             {
-                Subscriptions = new Subscription[]
-                {
-                    new Subscription
-                    {
-                        Topic = topic,
-                        Subscribe = true
-                    }
-                }
-            };
+                Topic = topic,
+                Subscribe = true,
+            });
+
             try
             {
                 var peers = Swarm.KnownPeers.Where(p => p.ConnectedAddress != null);
@@ -165,17 +159,13 @@ namespace PeerTalk.PubSub
         public async Task LeaveTopicAsync(string topic, CancellationToken cancel)
         {
             localTopics.Remove(topic);
-            var msg = new PubSubMessage
+            var msg = new PubSubMessage();
+            msg.Subscriptions.Add(new Subscription
             {
-                Subscriptions = new Subscription[]
-                {
-                    new Subscription
-                    {
-                        Topic = topic,
-                        Subscribe = false
-                    }
-                }
-            };
+                Topic = topic,
+                Subscribe = false
+            });
+
             try
             {
                 var peers = Swarm.KnownPeers.Where(p => p.ConnectedAddress != null);
@@ -191,7 +181,9 @@ namespace PeerTalk.PubSub
         public Task PublishAsync(PublishedMessage message, CancellationToken cancel)
         {
             if (tracker.RecentlySeen(message.MessageId))
+            {
                 return Task.CompletedTask;
+            }
 
             // Find a set of peers that are interested in the topic(s).
             // Exclude author and sender
@@ -201,32 +193,30 @@ namespace PeerTalk.PubSub
                 .Where(peer => peer != message.Forwarder);
 
             // Forward the message.
-            var forward = new PubSubMessage
-            {
-                PublishedMessages = new PublishedMessage[] { message }
-            };
+            var forward = new PubSubMessage();
+            forward.PublishedMessages.Add(message);
 
             return SendAsync(forward, peers, cancel);
         }
 
-        Task SendAsync(PubSubMessage msg, IEnumerable<Peer> peers, CancellationToken cancel)
+        private Task SendAsync(PubSubMessage msg, IEnumerable<Peer> peers, CancellationToken cancel)
         {
             // Get binary representation
             byte[] bin;
             using (var ms = new MemoryStream())
             {
-                Serializer.SerializeWithLengthPrefix(ms, msg, PrefixStyle.Base128);
+                msg.WriteDelimitedTo(ms);
                 bin = ms.ToArray();
             }
 
             return Task.WhenAll(peers.Select(p => SendAsync(bin, p, cancel)));
         }
 
-        async Task SendAsync(byte[] message, Peer peer, CancellationToken cancel)
+        private async Task SendAsync(byte[] message, Peer peer, CancellationToken cancel)
         {
             try
             {
-                using (var stream = await Swarm.DialAsync(peer, this.ToString(), cancel).ConfigureAwait(false))
+                using (var stream = await Swarm.DialAsync(peer, ToString(), cancel).ConfigureAwait(false))
                 {
                     await stream.WriteAsync(message, 0, message.Length, cancel).ConfigureAwait(false);
                     await stream.FlushAsync(cancel).ConfigureAwait(false);
@@ -249,23 +239,23 @@ namespace PeerTalk.PubSub
         ///   Sends the hello message to the remote peer.  The message contains
         ///   all topics that are of interest to the local peer.
         /// </remarks>
-        async void Swarm_ConnectionEstablished(object sender, PeerConnection connection)
+        private async void Swarm_ConnectionEstablished(object sender, PeerConnection connection)
         {
             if (localTopics.Count == 0)
+            {
                 return;
+            }
 
             try
             {
-                var hello = new PubSubMessage
-                {
-                    Subscriptions = localTopics
-                        .Select(topic => new Subscription
-                        {
-                            Subscribe = true,
-                            Topic = topic
-                        })
-                        .ToArray()
-                };
+                var hello = new PubSubMessage();
+                hello.Subscriptions.AddRange(localTopics
+                    .Select(topic => new Subscription
+                    {
+                        Subscribe = true,
+                        Topic = topic
+                    }));
+
                 await SendAsync(hello, new Peer[] { connection.RemotePeer }, CancellationToken.None).ConfigureAwait(false);
             }
             catch (Exception e)
@@ -283,7 +273,7 @@ namespace PeerTalk.PubSub
         ///   Removes the <paramref name="peer"/> from the
         ///   <see cref="RemoteTopics"/>.
         /// </remarks>
-        void Swarm_PeerDisconnected(object sender, Peer peer)
+        private void Swarm_PeerDisconnected(object sender, Peer peer)
         {
             RemoteTopics.Clear(peer);
         }

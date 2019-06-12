@@ -1,20 +1,15 @@
-﻿using Ipfs;
+﻿using System.Linq;
+using Ipfs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProtoBuf;
-using System;
-using System.IO;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace PeerTalk.PubSub
 {
-    
+
     [TestClass]
     public class TopicManagerTest
     {
-        Peer a = new Peer { Id = "QmXK9VBxaXFuuT29AaPUTgW3jBWZ9JgLVZYdMYTHC6LLAH" };
-        Peer b = new Peer { Id = "QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ" };
+        private readonly Peer a = new Peer { Id = "QmXK9VBxaXFuuT29AaPUTgW3jBWZ9JgLVZYdMYTHC6LLAH" };
+        private readonly Peer b = new Peer { Id = "QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ" };
 
         [TestMethod]
         public void Adding()

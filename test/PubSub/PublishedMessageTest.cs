@@ -1,35 +1,35 @@
-﻿using Ipfs;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProtoBuf;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+using Ipfs;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Google.Protobuf;
 
 namespace PeerTalk.PubSub
 {
-    
+
     [TestClass]
     public class PublishedMessageTest
     {
-        Peer self = new Peer { Id = "QmXK9VBxaXFuuT29AaPUTgW3jBWZ9JgLVZYdMYTHC6LLAH" };
-        Peer other = new Peer { Id = "QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ" };
+        private readonly Peer self = new Peer { Id = "QmXK9VBxaXFuuT29AaPUTgW3jBWZ9JgLVZYdMYTHC6LLAH" };
+        private readonly Peer other = new Peer { Id = "QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ" };
 
         [TestMethod]
         public void RoundTrip()
         {
             var a = new PublishedMessage
             {
-                Topics = new string[] { "topic" },
                 Sender = self,
-                SequenceNumber = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8},
-                DataBytes = new byte[] { 0, 1, 0xfe, 0xff }
+                SequenceNumberProto = ByteString.CopyFrom(new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 }),
+                DataBytesProto = ByteString.CopyFrom(new byte[] { 0, 1, 0xfe, 0xff }),
             };
+
+            a.TopicsProto.Add("topic");
+
             var ms = new MemoryStream();
-            Serializer.Serialize(ms, a);
+            a.WriteDelimitedTo(ms);
             ms.Position = 0;
-            var b = Serializer.Deserialize<PublishedMessage>(ms); ;
+            var b = PublishedMessage.Parser.ParseDelimitedFrom(ms);
 
             CollectionAssert.AreEqual(a.Topics.ToArray(), b.Topics.ToArray());
             Assert.AreEqual(a.Sender, b.Sender);
@@ -44,18 +44,21 @@ namespace PeerTalk.PubSub
         {
             var a = new PublishedMessage
             {
-                Topics = new string[] { "topic" },
                 Sender = self,
-                SequenceNumber = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                DataBytes = new byte[] { 0, 1, 0xfe, 0xff }
+                SequenceNumberProto = ByteString.CopyFrom(new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 }),
+                DataBytesProto = ByteString.CopyFrom(new byte[] { 0, 1, 0xfe, 0xff }),
             };
+
+            a.TopicsProto.Add("topic");
+
             var b = new PublishedMessage
             {
-                Topics = new string[] { "topic" },
                 Sender = other,
-                SequenceNumber = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                DataBytes = new byte[] { 0, 1, 0xfe, 0xff }
+                SequenceNumberProto = ByteString.CopyFrom(new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 }),
+                DataBytesProto = ByteString.CopyFrom(new byte[] { 0, 1, 0xfe, 0xff }),
             };
+
+            b.TopicsProto.Add("topic");
 
             Assert.AreNotEqual(a.MessageId, b.MessageId);
         }
@@ -70,7 +73,11 @@ namespace PeerTalk.PubSub
         [TestMethod]
         public void DataStream()
         {
-            var msg = new PublishedMessage { DataBytes = new byte[] { 1 } };
+            var msg = new PublishedMessage
+            {
+                DataBytesProto = ByteString.CopyFrom(new byte[] { 1 }),
+            };
+
             Assert.AreEqual(1, msg.DataStream.ReadByte());
         }
     }

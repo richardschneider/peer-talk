@@ -1,26 +1,25 @@
-﻿using Ipfs;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProtoBuf;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Ipfs;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PeerTalk.PubSub
 {
-    
+
     [TestClass]
     public class NotificationServiceTest
     {
-        Peer self = new Peer
+        private readonly Peer self = new Peer
         {
             AgentVersion = "self",
             Id = "QmXK9VBxaXFuuT29AaPUTgW3jBWZ9JgLVZYdMYTHC6LLAH",
             PublicKey = "CAASXjBcMA0GCSqGSIb3DQEBAQUAA0sAMEgCQQCC5r4nQBtnd9qgjnG8fBN5+gnqIeWEIcUFUdCG4su/vrbQ1py8XGKNUBuDjkyTv25Gd3hlrtNJV3eOKZVSL8ePAgMBAAE="
         };
-        Peer other1 = new Peer { Id = "QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ" };
-        Peer other2 = new Peer { Id = "QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvUJ" };
+        private readonly Peer other1 = new Peer { Id = "QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ" };
+        private readonly Peer other2 = new Peer { Id = "QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvUJ" };
 
         [TestMethod]
         public async Task MessageID_Increments()

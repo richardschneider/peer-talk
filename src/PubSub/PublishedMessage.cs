@@ -1,11 +1,7 @@
-﻿using Ipfs;
-using ProtoBuf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Ipfs;
 
 namespace PeerTalk.PubSub
 {
@@ -17,50 +13,46 @@ namespace PeerTalk.PubSub
     ///   TODO: Sender should really be called Author.
     ///   
     /// </remarks>
-    [ProtoContract]
-    public class PublishedMessage : IPublishedMessage
+    public partial class PublishedMessage : IPublishedMessage
     {
-        string messageId;
-
+        private Peer _sender;
         /// <inheritdoc />
-        public Peer Sender { get; set; }
+        public Peer Sender
+        {
+            get
+            {
+                if (_sender == null)
+                {
+                    _sender = new Peer { Id = new MultiHash(From.ToByteArray()) };
+                }
+
+                return _sender;
+            }
+            set => _sender = value;
+        }
 
         /// <summary>
         ///   Who sent the the message.
         /// </summary>
-        public Peer Forwarder {get; set; }
+        public Peer Forwarder { get; set; }
 
-        [ProtoMember(1)]
-        byte[] From
+        private string _messageId;
+        /// <summary>
+        ///   A universally unique id for the message.
+        /// </summary>
+        /// <value>
+        ///   The sender's ID concatenated with the <see cref="SequenceNumber"/>.
+        /// </value>
+        public string MessageId
         {
             get
             {
-                return Sender?.Id.ToArray();
-            }
-            set
-            {
-                Sender = new Peer { Id = new MultiHash(value) };
-            }
-        }
+                if (_messageId == null)
+                {
+                    _messageId = Sender.Id.ToBase58() + SequenceNumber.ToHexString();
+                }
 
-        /// <inheritdoc />
-        [ProtoMember(4)]
-        public IEnumerable<string> Topics { get; set; }
-
-        /// <inheritdoc />
-        [ProtoMember(3)]
-        public byte[] SequenceNumber { get; set; }
-
-        /// <inheritdoc />
-        [ProtoMember(2)]
-        public byte[] DataBytes { get;  set; }
-
-        /// <inheritdoc />
-        public Stream DataStream
-        {
-            get
-            {
-                return new MemoryStream(DataBytes, false);
+                return _messageId;
             }
         }
 
@@ -72,28 +64,19 @@ namespace PeerTalk.PubSub
         /// </exception>
         public Cid Id => throw new NotSupportedException();
 
-        /// <summary>
-        ///   A universally unique id for the message.
-        /// </summary>
-        /// <value>
-        ///   The sender's ID concatenated with the <see cref="SequenceNumber"/>.
-        /// </value>
-        public string MessageId
-        {
-            get
-            {
-                if (messageId == null)
-                {
-                    messageId = Sender.Id.ToBase58() + SequenceNumber.ToHexString();
-                }
-                return messageId;
-            }
-        }
+        /// <inheritdoc />
+        public Stream DataStream => new MemoryStream(DataBytes, false);
 
         /// <inheritdoc />
-        public long Size
-        {
-            get { return DataBytes.Length; }
-        }
+        public long Size => DataBytes.Length;
+
+        /// <inheritdoc />
+        public byte[] SequenceNumber => SequenceNumberProto.ToByteArray();
+
+        /// <inheritdoc />
+        public byte[] DataBytes => DataBytesProto.ToByteArray();
+
+        /// <inheritdoc />
+        public IEnumerable<string> Topics => TopicsProto;
     }
 }
