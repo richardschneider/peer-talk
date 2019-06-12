@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Google.Protobuf;
 using Ipfs;
 
 namespace PeerTalk.PubSub
@@ -21,14 +22,19 @@ namespace PeerTalk.PubSub
         {
             get
             {
-                if (_sender == null)
+                if (_sender == null
+                    && From?.Length > 0)
                 {
                     _sender = new Peer { Id = new MultiHash(From.ToByteArray()) };
                 }
 
                 return _sender;
             }
-            set => _sender = value;
+            set
+            {
+                _sender = value;
+                From = ByteString.CopyFrom(_sender.Id.ToArray());
+            }
         }
 
         /// <summary>
