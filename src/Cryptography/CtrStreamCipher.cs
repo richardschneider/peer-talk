@@ -1,6 +1,6 @@
 ﻿using System;
-using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Crypto;
+using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Utilities;
 
 namespace PeerTalk.Cryptography
@@ -32,10 +32,10 @@ namespace PeerTalk.Cryptography
         public CtrStreamCipher(IBlockCipher cipher)
         {
             this.cipher = cipher;
-            this.blockSize = cipher.GetBlockSize();
-            this.counter = new byte[blockSize];
-            this.counterOut = new byte[blockSize];
-            this.IV = new byte[blockSize];
+            blockSize = cipher.GetBlockSize();
+            counter = new byte[blockSize];
+            counterOut = new byte[blockSize];
+            IV = new byte[blockSize];
         }
 
         /// <summary>
@@ -61,16 +61,22 @@ namespace PeerTalk.Cryptography
         {
             ParametersWithIV ivParam = parameters as ParametersWithIV;
             if (ivParam == null)
+            {
                 throw new ArgumentException("CTR mode requires ParametersWithIV", "parameters");
+            }
 
-            this.IV = Arrays.Clone(ivParam.GetIV());
+            IV = Arrays.Clone(ivParam.GetIV());
 
             if (blockSize < IV.Length)
+            {
                 throw new ArgumentException("CTR mode requires IV no greater than: " + blockSize + " bytes.");
+            }
 
             int maxCounterSize = System.Math.Min(8, blockSize / 2);
             if (blockSize - IV.Length > maxCounterSize)
+            {
                 throw new ArgumentException("CTR mode requires IV of at least: " + (blockSize - maxCounterSize) + " bytes.");
+            }
 
             // if null it's an IV changed only.
             if (ivParam.Parameters != null)
@@ -85,7 +91,7 @@ namespace PeerTalk.Cryptography
         public void Reset()
         {
             byteCount = 0;
-            Arrays.Fill(counter, (byte)0);
+            Arrays.Fill(counter, 0);
             Array.Copy(IV, 0, counter, 0, IV.Length);
             cipher.Reset();
         }

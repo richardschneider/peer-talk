@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using Ipfs;
-using Ipfs.Registry;
 using Org.BouncyCastle.Crypto.Engines;
 using Org.BouncyCastle.Crypto.Parameters;
 
@@ -21,7 +17,7 @@ namespace PeerTalk.Cryptography
     /// <seealso href="https://github.com/libp2p/specs/blob/master/pnet/Private-Networks-PSK-V1.md"/>
     public class PreSharedKey
     {
-        const string codecName = "/key/swarm/psk/1.0.0/";
+        private const string codecName = "/key/swarm/psk/1.0.0/";
 
         /// <summary>
         ///   The key value.
@@ -37,7 +33,7 @@ namespace PeerTalk.Cryptography
         /// <value>
         ///   The length in bits.
         /// </value>
-        public int Length { get { return Value?.Length * 8 ?? 0; } }
+        public int Length => Value?.Length * 8 ?? 0;
 
         /// <summary>
         ///   Gets an ID for the key.
@@ -56,7 +52,7 @@ namespace PeerTalk.Cryptography
             var encrypted = new byte[64];
             var nonce = Encoding.ASCII.GetBytes("finprint");
             var cipher = new Salsa20Engine();
-            cipher.Init(true, new ParametersWithIV(new KeyParameter(this.Value), nonce));
+            cipher.Init(true, new ParametersWithIV(new KeyParameter(Value), nonce));
             cipher.ProcessBytes(encrypted, 0, encrypted.Length, encrypted, 0);
 
             // Then do Shake-128 hash to reduce its length.
@@ -64,7 +60,7 @@ namespace PeerTalk.Cryptography
             // attacker has only half of the bytes necessary to recreate psk.
             return MultiHash
                 .GetHashAlgorithm("shake-128")
-                .ComputeHash(encrypted); 
+                .ComputeHash(encrypted);
         }
 
         /// <summary>
@@ -130,7 +126,10 @@ namespace PeerTalk.Cryptography
         public void Import(TextReader text)
         {
             if (text.ReadLine() != codecName)
+            {
                 throw new FormatException($"Expected '{codecName}'.");
+            }
+
             switch (text.ReadLine())
             {
                 case "/base16/":
