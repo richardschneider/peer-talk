@@ -140,8 +140,8 @@ namespace PeerTalk.SecureCommunication
             var localExchange = new Secio1Exchange();
             using (var ms = new MemoryStream())
             {
-                localProposal.WriteTo(stream);
-                remoteProposal.WriteTo(stream);
+                localProposal.WriteTo(ms);
+                remoteProposal.WriteTo(ms);
                 ms.Write(localEphemeralPublicKey, 0, localEphemeralPublicKey.Length);
                 localExchange.Signature = ByteString.CopyFrom(connection.LocalPeerKey.Sign(ms.ToArray()));
             }
@@ -162,8 +162,8 @@ namespace PeerTalk.SecureCommunication
             var remotePeerKey = Key.CreatePublicKeyFromIpfs(remoteProposal.PublicKey.ToByteArray());
             using (var ms = new MemoryStream())
             {
-                remoteProposal.WriteTo(stream);
-                localProposal.WriteTo(stream);
+                remoteProposal.WriteTo(ms);
+                localProposal.WriteTo(ms);
                 ms.Write(remoteExchange.EPublicKey.ToByteArray(), 0, remoteExchange.EPublicKey.Length);
                 remotePeerKey.Verify(ms.ToArray(), remoteExchange.Signature.ToByteArray());
             }

@@ -16,24 +16,24 @@ namespace PeerTalk.PubSub
     /// </remarks>
     public partial class PublishedMessage : IPublishedMessage
     {
-        private Peer _sender;
+        private Peer sender;
         /// <inheritdoc />
         public Peer Sender
         {
             get
             {
-                if (_sender == null
+                if (sender == null
                     && From?.Length > 0)
                 {
-                    _sender = new Peer { Id = new MultiHash(From.ToByteArray()) };
+                    sender = new Peer { Id = new MultiHash(From.ToByteArray()) };
                 }
 
-                return _sender;
+                return sender;
             }
             set
             {
-                _sender = value;
-                From = ByteString.CopyFrom(_sender.Id.ToArray());
+                sender = value;
+                From = ByteString.CopyFrom(sender.Id.ToArray());
             }
         }
 
@@ -42,7 +42,7 @@ namespace PeerTalk.PubSub
         /// </summary>
         public Peer Forwarder { get; set; }
 
-        private string _messageId;
+        private string messageId;
         /// <summary>
         ///   A universally unique id for the message.
         /// </summary>
@@ -53,12 +53,12 @@ namespace PeerTalk.PubSub
         {
             get
             {
-                if (_messageId == null)
+                if (messageId == null)
                 {
-                    _messageId = Sender.Id.ToBase58() + SequenceNumber.ToHexString();
+                    messageId = Sender.Id.ToBase58() + SequenceNumber.ToHexString();
                 }
 
-                return _messageId;
+                return messageId;
             }
         }
 
