@@ -1,0 +1,11 @@
+syntax = "proto3";
+package PeerTalk.Protocols;
+
+message Identify {
+    bytes PublicKey = 1;
+    repeated bytes ListenAddresses = 2;
+    repeated string Protocols = 3;
+    bytes ObservedAddress = 4;
+    string ProtocolVersion = 5;
+    string AgentVersion = 6;
+}
