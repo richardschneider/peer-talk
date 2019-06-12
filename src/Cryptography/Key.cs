@@ -2,7 +2,6 @@
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
-using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,7 +26,6 @@ namespace PeerTalk.Cryptography
 
         private Key()
         {
-
         }
 
         /// <summary>
@@ -82,20 +80,20 @@ namespace PeerTalk.Cryptography
             var key = new Key();
 
             var ms = new MemoryStream(bytes, false);
-            var ipfsKey = ProtoBuf.Serializer.Deserialize<PublicKeyMessage>(ms);
+            var ipfsKey = PublicKeyMessage.Parser.ParseFrom(bytes);
 
             switch (ipfsKey.Type)
             {
-                case KeyType.RSA:
-                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data);
+                case KeyType.Rsa:
+                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data.ToByteArray());
                     key.signingAlgorithmName = RsaSigningAlgorithmName;
                     break;
                 case KeyType.Ed25519:
-                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data);
+                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data.ToByteArray());
                     key.signingAlgorithmName = Ed25519SigningAlgorithmName;
                     break;
-                case KeyType.Secp256k1:
-                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data);
+                case KeyType.Secp256K1:
+                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data.ToByteArray());
                     key.signingAlgorithmName = EcSigningAlgorithmName;
                     break;
                 default:
@@ -137,23 +135,6 @@ namespace PeerTalk.Cryptography
                 throw new NotSupportedException($"The key type {privateKey.GetType().Name} is not supported.");
 
             return key;
-        }
-
-        enum KeyType
-        {
-            RSA = 0,
-            Ed25519 = 1,
-            Secp256k1 = 2,
-            ECDH = 4,
-        }
-
-        [ProtoContract]
-        class PublicKeyMessage
-        {
-            [ProtoMember(1, IsRequired = true)]
-            public KeyType Type { get; set; }
-            [ProtoMember(2, IsRequired = true)]
-            public byte[] Data { get; set; }
         }
 
 #if false
