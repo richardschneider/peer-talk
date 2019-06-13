@@ -11,12 +11,13 @@ namespace PeerTalk.Cryptography
     /// </summary>
     public class Key
     {
-        private const string RsaSigningAlgorithmName = "SHA-256withRSA";
-        private const string EcSigningAlgorithmName = "SHA-256withECDSA";
+        const string RsaSigningAlgorithmName = "SHA-256withRSA";
+        const string EcSigningAlgorithmName = "SHA-256withECDSA";
         private const string Ed25519SigningAlgorithmName = "Ed25519";
-        private AsymmetricKeyParameter publicKey;
-        private AsymmetricKeyParameter privateKey;
-        private string signingAlgorithmName;
+
+        AsymmetricKeyParameter publicKey;
+        AsymmetricKeyParameter privateKey;
+        string signingAlgorithmName;
 
         private Key()
         {

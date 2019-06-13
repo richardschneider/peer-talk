@@ -126,8 +126,8 @@ namespace PeerTalk.PubSub
             var msg = new PublishedMessage
             {
                 Sender = LocalPeer,
-                SequenceNumberProto = ByteString.CopyFrom(seqno),
-                DataBytesProto = ByteString.CopyFrom(data),
+                SequenceNumber = seqno,
+                DataBytes = data,
             };
 
             msg.TopicsProto.Add(topic);

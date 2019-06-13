@@ -82,7 +82,10 @@ namespace PeerTalk.PubSub
             get => SequenceNumberProto.ToByteArray();
             set
             {
-                SequenceNumberProto = ByteString.CopyFrom(value);
+                if (value?.Length > 0)
+                {
+                    SequenceNumberProto = ByteString.CopyFrom(value);
+                }
             }
         }
 
@@ -92,7 +95,10 @@ namespace PeerTalk.PubSub
             get => DataBytesProto.ToByteArray();
             set
             {
-                DataBytesProto = ByteString.CopyFrom(value);
+                if (value?.Length > 0)
+                {
+                    DataBytesProto = ByteString.CopyFrom(value);
+                }
             }
         }
 

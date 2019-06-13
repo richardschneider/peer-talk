@@ -14,7 +14,7 @@ namespace PeerTalk.Protocols
     /// </summary>
     public class Identify1 : IPeerProtocol
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(Identify1));
+        static readonly ILog log = LogManager.GetLogger(typeof(Identify1));
 
         /// <inheritdoc />
         public string Name { get; } = "ipfs/id";

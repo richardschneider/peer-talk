@@ -17,9 +17,9 @@ namespace PeerTalk.PubSub
     /// </summary>
     public class FloodRouter : IPeerProtocol, IMessageRouter
     {
-        private static readonly ILog log = LogManager.GetLogger(typeof(FloodRouter));
-        private readonly MessageTracker tracker = new MessageTracker();
-        private readonly List<string> localTopics = new List<string>();
+        static readonly ILog log = LogManager.GetLogger(typeof(FloodRouter));
+        readonly MessageTracker tracker = new MessageTracker();
+        readonly List<string> localTopics = new List<string>();
 
         /// <summary>
         ///   The topics of interest of other peers.
@@ -199,7 +199,7 @@ namespace PeerTalk.PubSub
             return SendAsync(forward, peers, cancel);
         }
 
-        private Task SendAsync(PubSubMessage msg, IEnumerable<Peer> peers, CancellationToken cancel)
+        Task SendAsync(PubSubMessage msg, IEnumerable<Peer> peers, CancellationToken cancel)
         {
             // Get binary representation
             byte[] bin;
@@ -212,7 +212,7 @@ namespace PeerTalk.PubSub
             return Task.WhenAll(peers.Select(p => SendAsync(bin, p, cancel)));
         }
 
-        private async Task SendAsync(byte[] message, Peer peer, CancellationToken cancel)
+        async Task SendAsync(byte[] message, Peer peer, CancellationToken cancel)
         {
             try
             {
@@ -239,7 +239,7 @@ namespace PeerTalk.PubSub
         ///   Sends the hello message to the remote peer.  The message contains
         ///   all topics that are of interest to the local peer.
         /// </remarks>
-        private async void Swarm_ConnectionEstablished(object sender, PeerConnection connection)
+        async void Swarm_ConnectionEstablished(object sender, PeerConnection connection)
         {
             if (localTopics.Count == 0)
             {
@@ -273,10 +273,9 @@ namespace PeerTalk.PubSub
         ///   Removes the <paramref name="peer"/> from the
         ///   <see cref="RemoteTopics"/>.
         /// </remarks>
-        private void Swarm_PeerDisconnected(object sender, Peer peer)
+        void Swarm_PeerDisconnected(object sender, Peer peer)
         {
             RemoteTopics.Clear(peer);
         }
-
     }
 }

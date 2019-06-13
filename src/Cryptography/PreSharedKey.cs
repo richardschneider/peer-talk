@@ -17,7 +17,7 @@ namespace PeerTalk.Cryptography
     /// <seealso href="https://github.com/libp2p/specs/blob/master/pnet/Private-Networks-PSK-V1.md"/>
     public class PreSharedKey
     {
-        private const string codecName = "/key/swarm/psk/1.0.0/";
+        const string codecName = "/key/swarm/psk/1.0.0/";
 
         /// <summary>
         ///   The key value.
