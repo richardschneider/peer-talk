@@ -5,7 +5,6 @@
     <AssemblyName>PeerTalk</AssemblyName>
     <RootNamespace>PeerTalk</RootNamespace>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-    <DebugType>portable</DebugType>
 
     <!-- developer build is always 0.42 -->
     <AssemblyVersion>0.42.0</AssemblyVersion>

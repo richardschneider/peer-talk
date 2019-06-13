@@ -77,10 +77,24 @@ namespace PeerTalk.PubSub
         public long Size => DataBytes.Length;
 
         /// <inheritdoc />
-        public byte[] SequenceNumber => SequenceNumberProto.ToByteArray();
+        public byte[] SequenceNumber
+        {
+            get => SequenceNumberProto.ToByteArray();
+            set
+            {
+                SequenceNumberProto = ByteString.CopyFrom(value);
+            }
+        }
 
         /// <inheritdoc />
-        public byte[] DataBytes => DataBytesProto.ToByteArray();
+        public byte[] DataBytes
+        {
+            get => DataBytesProto.ToByteArray();
+            set
+            {
+                DataBytesProto = ByteString.CopyFrom(value);
+            }
+        }
 
         /// <inheritdoc />
         public IEnumerable<string> Topics => TopicsProto;

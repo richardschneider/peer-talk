@@ -45,8 +45,8 @@ namespace PeerTalk.PubSub
             var a = new PublishedMessage
             {
                 Sender = self,
-                SequenceNumberProto = ByteString.CopyFrom(new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 }),
-                DataBytesProto = ByteString.CopyFrom(new byte[] { 0, 1, 0xfe, 0xff }),
+                SequenceNumber = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                DataBytes = new byte[] { 0, 1, 0xfe, 0xff },
             };
 
             a.TopicsProto.Add("topic");
@@ -54,8 +54,8 @@ namespace PeerTalk.PubSub
             var b = new PublishedMessage
             {
                 Sender = other,
-                SequenceNumberProto = ByteString.CopyFrom(new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 }),
-                DataBytesProto = ByteString.CopyFrom(new byte[] { 0, 1, 0xfe, 0xff }),
+                SequenceNumber = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                DataBytes = new byte[] { 0, 1, 0xfe, 0xff },
             };
 
             b.TopicsProto.Add("topic");
@@ -75,7 +75,7 @@ namespace PeerTalk.PubSub
         {
             var msg = new PublishedMessage
             {
-                DataBytesProto = ByteString.CopyFrom(new byte[] { 1 }),
+                DataBytes = new byte[] { 1 },
             };
 
             Assert.AreEqual(1, msg.DataStream.ReadByte());
