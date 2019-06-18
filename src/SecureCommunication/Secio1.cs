@@ -60,12 +60,12 @@ namespace PeerTalk.SecureCommunication
                 PublicKey = ByteString.FromBase64(localPeer.PublicKey),
             };
 
-            localProposal.WriteDelimitedTo(stream);
+            localProposal.WriteFixed32BigEndianDelimitedTo(stream);
             await stream.FlushAsync().ConfigureAwait(false);
 
             // =============================================================================
             // step 1.1 Identify -- get identity from their key
-            var remoteProposal = Secio1Propose.Parser.ParseDelimitedFrom(stream);
+            var remoteProposal = Secio1Propose.Parser.ParseFixed32BigEndianDelimitedFrom(stream);
             var ridAlg = (remoteProposal.PublicKey.Length <= 48) ? "identity" : "sha2-256";
             var remoteId = MultiHash.ComputeHash(remoteProposal.PublicKey.ToByteArray(), ridAlg);
             if (remotePeer.Id == null)
@@ -146,12 +146,12 @@ namespace PeerTalk.SecureCommunication
                 localExchange.Signature = ByteString.CopyFrom(connection.LocalPeerKey.Sign(ms.ToArray()));
             }
             localExchange.EPublicKey = ByteString.CopyFrom(localEphemeralPublicKey);
-            localExchange.WriteDelimitedTo(stream);
+            localExchange.WriteFixed32BigEndianDelimitedTo(stream);
             await stream.FlushAsync(cancel).ConfigureAwait(false);
 
             // Receive their Exchange packet.  If nothing, then most likely the
             // remote has closed the connection because it does not like us.
-            var remoteExchange = Secio1Exchange.Parser.ParseDelimitedFrom(stream);
+            var remoteExchange = Secio1Exchange.Parser.ParseFixed32BigEndianDelimitedFrom(stream);
             if (remoteExchange == null)
             {
                 throw new Exception("Remote refuses the SECIO exchange.");
