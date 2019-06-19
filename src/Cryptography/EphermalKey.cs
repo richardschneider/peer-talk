@@ -1,15 +1,9 @@
-﻿using Org.BouncyCastle.Asn1.X9;
-using Org.BouncyCastle.Crypto;
+﻿using System;
+using System.Collections.Generic;
+using Org.BouncyCastle.Asn1.X9;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 using Org.BouncyCastle.Utilities;
-using ProtoBuf;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeerTalk.Cryptography
 {
@@ -73,7 +67,10 @@ namespace PeerTalk.Cryptography
         {
             X9ECParameters ecP = ECNamedCurveTable.GetByName(curveName);
             if (ecP == null)
+            {
                 throw new KeyNotFoundException($"Unknown curve name '{curveName}'.");
+            }
+
             var domain = new ECDomainParameters(ecP.Curve, ecP.G, ecP.N, ecP.H, ecP.GetSeed());
             var q = ecP.Curve.DecodePoint(bytes);
             return new EphermalKey
@@ -96,7 +93,10 @@ namespace PeerTalk.Cryptography
         {
             X9ECParameters ecP = ECNamedCurveTable.GetByName(curveName);
             if (ecP == null)
+            {
                 throw new Exception($"Unknown curve name '{curveName}'.");
+            }
+
             var domain = new ECDomainParameters(ecP.Curve, ecP.G, ecP.N, ecP.H, ecP.GetSeed());
             var g = GeneratorUtilities.GetKeyPairGenerator("EC");
             g.Init(new ECKeyGenerationParameters(domain, new SecureRandom()));

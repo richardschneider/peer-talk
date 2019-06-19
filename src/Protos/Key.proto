@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+package PeerTalk.Cryptography;
+
+enum KeyType
+{
+    RSA = 0;
+    Ed25519 = 1;
+    Secp256k1 = 2;
+    ECDH = 4;
+}
+
+message PublicKeyMessage {
+    KeyType Type = 1;
+    bytes Data = 2;
+}

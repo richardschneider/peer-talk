@@ -1,11 +1,8 @@
-﻿using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Crypto.Macs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Text;
-using System.Threading.Tasks;
+using Org.BouncyCastle.Crypto.Macs;
 using Org.BouncyCastle.Crypto.Parameters;
+using Org.BouncyCastle.Security;
 
 namespace PeerTalk.Cryptography
 {
@@ -83,7 +80,10 @@ namespace PeerTalk.Cryptography
 
                 var todo = b.Length;
                 if (j + todo > need)
+                {
                     todo = need - j;
+                }
+
                 Buffer.BlockCopy(b, 0, result, j, todo);
                 j += todo;
 

@@ -1,11 +1,8 @@
-﻿using Ipfs;
-using ProtoBuf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Google.Protobuf;
+using Ipfs;
 
 namespace PeerTalk.PubSub
 {
@@ -17,61 +14,35 @@ namespace PeerTalk.PubSub
     ///   TODO: Sender should really be called Author.
     ///   
     /// </remarks>
-    [ProtoContract]
-    public class PublishedMessage : IPublishedMessage
+    public partial class PublishedMessage : IPublishedMessage
     {
-        string messageId;
-
+        private Peer sender;
         /// <inheritdoc />
-        public Peer Sender { get; set; }
+        public Peer Sender
+        {
+            get
+            {
+                if (sender == null
+                    && From?.Length > 0)
+                {
+                    sender = new Peer { Id = new MultiHash(From.ToByteArray()) };
+                }
+
+                return sender;
+            }
+            set
+            {
+                sender = value;
+                From = ByteString.CopyFrom(sender.Id.ToArray());
+            }
+        }
 
         /// <summary>
         ///   Who sent the the message.
         /// </summary>
-        public Peer Forwarder {get; set; }
+        public Peer Forwarder { get; set; }
 
-        [ProtoMember(1)]
-        byte[] From
-        {
-            get
-            {
-                return Sender?.Id.ToArray();
-            }
-            set
-            {
-                Sender = new Peer { Id = new MultiHash(value) };
-            }
-        }
-
-        /// <inheritdoc />
-        [ProtoMember(4)]
-        public IEnumerable<string> Topics { get; set; }
-
-        /// <inheritdoc />
-        [ProtoMember(3)]
-        public byte[] SequenceNumber { get; set; }
-
-        /// <inheritdoc />
-        [ProtoMember(2)]
-        public byte[] DataBytes { get;  set; }
-
-        /// <inheritdoc />
-        public Stream DataStream
-        {
-            get
-            {
-                return new MemoryStream(DataBytes, false);
-            }
-        }
-
-        /// <summary>>
-        ///   NOT SUPPORTED, use <see cref="MessageId"/>.
-        /// </summary>
-        /// <exception cref="NotSupportedException">
-        ///   A published message does not have a content id.
-        /// </exception>
-        public Cid Id => throw new NotSupportedException();
-
+        private string messageId;
         /// <summary>
         ///   A universally unique id for the message.
         /// </summary>
@@ -86,14 +57,52 @@ namespace PeerTalk.PubSub
                 {
                     messageId = Sender.Id.ToBase58() + SequenceNumber.ToHexString();
                 }
+
                 return messageId;
             }
         }
 
+        /// <summary>>
+        ///   NOT SUPPORTED, use <see cref="MessageId"/>.
+        /// </summary>
+        /// <exception cref="NotSupportedException">
+        ///   A published message does not have a content id.
+        /// </exception>
+        public Cid Id => throw new NotSupportedException();
+
         /// <inheritdoc />
-        public long Size
+        public Stream DataStream => new MemoryStream(DataBytes, false);
+
+        /// <inheritdoc />
+        public long Size => DataBytes.Length;
+
+        /// <inheritdoc />
+        public byte[] SequenceNumber
         {
-            get { return DataBytes.Length; }
+            get => SequenceNumberProto.ToByteArray();
+            set
+            {
+                if (value?.Length > 0)
+                {
+                    SequenceNumberProto = ByteString.CopyFrom(value);
+                }
+            }
         }
+
+        /// <inheritdoc />
+        public byte[] DataBytes
+        {
+            get => DataBytesProto.ToByteArray();
+            set
+            {
+                if (value?.Length > 0)
+                {
+                    DataBytesProto = ByteString.CopyFrom(value);
+                }
+            }
+        }
+
+        /// <inheritdoc />
+        public IEnumerable<string> Topics => TopicsProto;
     }
 }

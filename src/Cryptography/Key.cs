@@ -1,14 +1,8 @@
-﻿using Org.BouncyCastle.Asn1.X9;
+﻿using System;
+using System.IO;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
-using ProtoBuf;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeerTalk.Cryptography
 {
@@ -19,7 +13,7 @@ namespace PeerTalk.Cryptography
     {
         const string RsaSigningAlgorithmName = "SHA-256withRSA";
         const string EcSigningAlgorithmName = "SHA-256withECDSA";
-        const string Ed25519SigningAlgorithmName = "Ed25519";
+        private const string Ed25519SigningAlgorithmName = "Ed25519";
 
         AsymmetricKeyParameter publicKey;
         AsymmetricKeyParameter privateKey;
@@ -27,7 +21,6 @@ namespace PeerTalk.Cryptography
 
         private Key()
         {
-
         }
 
         /// <summary>
@@ -48,7 +41,9 @@ namespace PeerTalk.Cryptography
             signer.Init(false, publicKey);
             signer.BlockUpdate(data, 0, data.Length);
             if (!signer.VerifySignature(signature))
+            {
                 throw new InvalidDataException("Data does not match the signature.");
+            }
         }
 
         /// <summary>
@@ -80,28 +75,26 @@ namespace PeerTalk.Cryptography
         public static Key CreatePublicKeyFromIpfs(byte[] bytes)
         {
             var key = new Key();
-
-            var ms = new MemoryStream(bytes, false);
-            var ipfsKey = ProtoBuf.Serializer.Deserialize<PublicKeyMessage>(ms);
+            var ipfsKey = PublicKeyMessage.Parser.ParseFrom(bytes);
 
             switch (ipfsKey.Type)
             {
-                case KeyType.RSA:
-                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data);
+                case KeyType.Rsa:
+                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data.ToByteArray());
                     key.signingAlgorithmName = RsaSigningAlgorithmName;
                     break;
                 case KeyType.Ed25519:
-                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data);
+                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data.ToByteArray());
                     key.signingAlgorithmName = Ed25519SigningAlgorithmName;
                     break;
-                case KeyType.Secp256k1:
-                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data);
+                case KeyType.Secp256K1:
+                    key.publicKey = PublicKeyFactory.CreateKey(ipfsKey.Data.ToByteArray());
                     key.signingAlgorithmName = EcSigningAlgorithmName;
                     break;
                 default:
                     throw new InvalidDataException($"Unknown key type of {ipfsKey.Type}.");
             }
-            
+
             return key;
         }
 
@@ -113,8 +106,10 @@ namespace PeerTalk.Cryptography
         /// </param>
         public static Key CreatePrivateKey(AsymmetricKeyParameter privateKey)
         {
-            var key = new Key();
-            key.privateKey = privateKey;
+            var key = new Key
+            {
+                privateKey = privateKey
+            };
 
             // Get the public key from the private key.
             if (privateKey is RsaPrivateCrtKeyParameters rsa)
@@ -134,37 +129,11 @@ namespace PeerTalk.Cryptography
                 key.signingAlgorithmName = EcSigningAlgorithmName;
             }
             if (key.publicKey == null)
+            {
                 throw new NotSupportedException($"The key type {privateKey.GetType().Name} is not supported.");
+            }
 
             return key;
         }
-
-        enum KeyType
-        {
-            RSA = 0,
-            Ed25519 = 1,
-            Secp256k1 = 2,
-            ECDH = 4,
-        }
-
-        [ProtoContract]
-        class PublicKeyMessage
-        {
-            [ProtoMember(1, IsRequired = true)]
-            public KeyType Type { get; set; }
-            [ProtoMember(2, IsRequired = true)]
-            public byte[] Data { get; set; }
-        }
-
-#if false
-        [ProtoContract]
-        class PrivateKeyMessage
-        {
-            [ProtoMember(1, IsRequired = true)]
-            public KeyType Type;
-            [ProtoMember(2, IsRequired = true)]
-            public byte[] Data;
-        }
-#endif
     }
 }

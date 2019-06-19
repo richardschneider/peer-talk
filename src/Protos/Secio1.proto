@@ -1,0 +1,20 @@
+
+syntax = "proto3";
+package PeerTalk.SecureCommunication;
+
+// https://github.com/libp2p/js-libp2p-secio/blob/master/src/handshake/secio.proto.js
+
+message Secio1Propose
+{
+    bytes Nonce = 1;
+    bytes PublicKey = 2;
+    string Exchanges = 3;
+    string Ciphers = 4;
+    string Hashes = 5;
+}
+
+message Secio1Exchange
+{
+    bytes EPublicKey = 1;
+    bytes Signature = 2;
+}

@@ -1,18 +1,15 @@
-﻿using Common.Logging;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using Common.Logging;
+using Google.Protobuf;
 using Ipfs;
-using Ipfs.Registry;
 using Org.BouncyCastle.Security;
 using PeerTalk.Cryptography;
 using PeerTalk.Protocols;
-using ProtoBuf;
 using Semver;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace PeerTalk.SecureCommunication
 {
@@ -21,7 +18,7 @@ namespace PeerTalk.SecureCommunication
     /// </summary>
     public class Secio1 : IEncryptionProtocol
     {
-        static ILog log = LogManager.GetLogger(typeof(Secio1));
+        private static readonly ILog log = LogManager.GetLogger(typeof(Secio1));
 
         /// <inheritdoc />
         public string Name { get; } = "secio";
@@ -56,21 +53,21 @@ namespace PeerTalk.SecureCommunication
             rng.NextBytes(localNonce);
             var localProposal = new Secio1Propose
             {
-                Nonce = localNonce,
+                Nonce = ByteString.CopyFrom(localNonce),
                 Exchanges = "P-256,P-384,P-521",
                 Ciphers = "AES-256,AES-128",
                 Hashes = "SHA256,SHA512",
-                PublicKey = Convert.FromBase64String(localPeer.PublicKey)
+                PublicKey = ByteString.FromBase64(localPeer.PublicKey),
             };
 
-            ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, localProposal, PrefixStyle.Fixed32BigEndian);
+            localProposal.WriteFixed32BigEndianDelimitedTo(stream);
             await stream.FlushAsync().ConfigureAwait(false);
 
             // =============================================================================
             // step 1.1 Identify -- get identity from their key
-            var remoteProposal = ProtoBuf.Serializer.DeserializeWithLengthPrefix<Secio1Propose>(stream, PrefixStyle.Fixed32BigEndian);
+            var remoteProposal = Secio1Propose.Parser.ParseFixed32BigEndianDelimitedFrom(stream);
             var ridAlg = (remoteProposal.PublicKey.Length <= 48) ? "identity" : "sha2-256";
-            var remoteId = MultiHash.ComputeHash(remoteProposal.PublicKey, ridAlg);
+            var remoteId = MultiHash.ComputeHash(remoteProposal.PublicKey.ToByteArray(), ridAlg);
             if (remotePeer.Id == null)
             {
                 remotePeer.Id = remoteId;
@@ -91,16 +88,16 @@ namespace PeerTalk.SecureCommunication
             using (var hasher = MultiHash.GetHashAlgorithm("sha2-256"))
             using (var ms = new MemoryStream())
             {
-                ms.Write(remoteProposal.PublicKey, 0, remoteProposal.PublicKey.Length);
-                ms.Write(localProposal.Nonce, 0, localProposal.Nonce.Length);
+                ms.Write(remoteProposal.PublicKey.ToByteArray(), 0, remoteProposal.PublicKey.Length);
+                ms.Write(localProposal.Nonce.ToByteArray(), 0, localProposal.Nonce.Length);
                 ms.Position = 0;
                 oh1 = hasher.ComputeHash(ms);
             }
             using (var hasher = MultiHash.GetHashAlgorithm("sha2-256"))
             using (var ms = new MemoryStream())
             {
-                ms.Write(localProposal.PublicKey, 0, localProposal.PublicKey.Length);
-                ms.Write(remoteProposal.Nonce, 0, remoteProposal.Nonce.Length);
+                ms.Write(localProposal.PublicKey.ToByteArray(), 0, localProposal.PublicKey.Length);
+                ms.Write(remoteProposal.Nonce.ToByteArray(), 0, remoteProposal.Nonce.Length);
                 ms.Position = 0;
                 oh2 = hasher.ComputeHash(ms);
             }
@@ -110,18 +107,27 @@ namespace PeerTalk.SecureCommunication
                 order = oh1[i].CompareTo(oh2[i]);
             }
             if (order == 0)
+            {
                 throw new Exception("Same keys and nonces; talking to self");
+            }
+
             var curveName = SelectBest(order, localProposal.Exchanges, remoteProposal.Exchanges);
             if (curveName == null)
+            {
                 throw new Exception("Cannot agree on a key exchange.");
+            }
 
             var cipherName = SelectBest(order, localProposal.Ciphers, remoteProposal.Ciphers);
             if (cipherName == null)
+            {
                 throw new Exception("Cannot agree on a chipher.");
+            }
 
             var hashName = SelectBest(order, localProposal.Hashes, remoteProposal.Hashes);
             if (hashName == null)
+            {
                 throw new Exception("Cannot agree on a hash.");
+            }
 
             // =============================================================================
             // step 2. Exchange -- exchange (signed) ephemeral keys. verify signatures.
@@ -134,18 +140,18 @@ namespace PeerTalk.SecureCommunication
             var localExchange = new Secio1Exchange();
             using (var ms = new MemoryStream())
             {
-                ProtoBuf.Serializer.Serialize(ms, localProposal);
-                ProtoBuf.Serializer.Serialize(ms, remoteProposal);
+                localProposal.WriteTo(ms);
+                remoteProposal.WriteTo(ms);
                 ms.Write(localEphemeralPublicKey, 0, localEphemeralPublicKey.Length);
-                localExchange.Signature = connection.LocalPeerKey.Sign(ms.ToArray());
+                localExchange.Signature = ByteString.CopyFrom(connection.LocalPeerKey.Sign(ms.ToArray()));
             }
-            localExchange.EPublicKey = localEphemeralPublicKey;
-            ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, localExchange, PrefixStyle.Fixed32BigEndian);
+            localExchange.EPublicKey = ByteString.CopyFrom(localEphemeralPublicKey);
+            localExchange.WriteFixed32BigEndianDelimitedTo(stream);
             await stream.FlushAsync(cancel).ConfigureAwait(false);
 
             // Receive their Exchange packet.  If nothing, then most likely the
             // remote has closed the connection because it does not like us.
-            var remoteExchange = ProtoBuf.Serializer.DeserializeWithLengthPrefix<Secio1Exchange>(stream, PrefixStyle.Fixed32BigEndian);
+            var remoteExchange = Secio1Exchange.Parser.ParseFixed32BigEndianDelimitedFrom(stream);
             if (remoteExchange == null)
             {
                 throw new Exception("Remote refuses the SECIO exchange.");
@@ -153,15 +159,15 @@ namespace PeerTalk.SecureCommunication
 
             // =============================================================================
             // step 2.1. Verify -- verify their exchange packet is good.
-            var remotePeerKey = Key.CreatePublicKeyFromIpfs(remoteProposal.PublicKey);
+            var remotePeerKey = Key.CreatePublicKeyFromIpfs(remoteProposal.PublicKey.ToByteArray());
             using (var ms = new MemoryStream())
             {
-                ProtoBuf.Serializer.Serialize(ms, remoteProposal);
-                ProtoBuf.Serializer.Serialize(ms, localProposal);
-                ms.Write(remoteExchange.EPublicKey, 0, remoteExchange.EPublicKey.Length);
-                remotePeerKey.Verify(ms.ToArray(), remoteExchange.Signature);
+                remoteProposal.WriteTo(ms);
+                localProposal.WriteTo(ms);
+                ms.Write(remoteExchange.EPublicKey.ToByteArray(), 0, remoteExchange.EPublicKey.Length);
+                remotePeerKey.Verify(ms.ToArray(), remoteExchange.Signature.ToByteArray());
             }
-            var remoteEphemeralKey = EphermalKey.CreatePublicKeyFromIpfs(curveName, remoteExchange.EPublicKey);
+            var remoteEphemeralKey = EphermalKey.CreatePublicKeyFromIpfs(curveName, remoteExchange.EPublicKey.ToByteArray());
 
             // =============================================================================
             // step 2.2. Keys -- generate keys for mac + encryption
@@ -182,7 +188,7 @@ namespace PeerTalk.SecureCommunication
             // step 3. Finish -- send expected message to verify encryption works (send local nonce)
 
             // Send thier nonce,
-            await secureStream.WriteAsync(remoteProposal.Nonce, 0, remoteProposal.Nonce.Length, cancel).ConfigureAwait(false);
+            await secureStream.WriteAsync(remoteProposal.Nonce.ToByteArray(), 0, remoteProposal.Nonce.Length, cancel).ConfigureAwait(false);
             await secureStream.FlushAsync(cancel).ConfigureAwait(false);
 
             // Receive our nonce.
@@ -196,7 +202,7 @@ namespace PeerTalk.SecureCommunication
             log.Debug($"Secure session with {remotePeer}");
 
             // Fill in the remote peer
-            remotePeer.PublicKey = Convert.ToBase64String(remoteProposal.PublicKey);
+            remotePeer.PublicKey = Convert.ToBase64String(remoteProposal.PublicKey.ToByteArray());
 
             // Set secure task done
             connection.Stream = secureStream;
@@ -204,7 +210,7 @@ namespace PeerTalk.SecureCommunication
             return secureStream;
         }
 
-        string SelectBest(int order, string local, string remote)
+        private string SelectBest(int order, string local, string remote)
         {
             var first = order < 0 ? remote.Split(',') : local.Split(',');
             string[] second = order < 0 ? local.Split(',') : remote.Split(',');

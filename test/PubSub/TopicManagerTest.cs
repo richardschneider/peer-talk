@@ -1,15 +1,10 @@
-﻿using Ipfs;
+﻿using System.Linq;
+using Ipfs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProtoBuf;
-using System;
-using System.IO;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace PeerTalk.PubSub
 {
-    
+
     [TestClass]
     public class TopicManagerTest
     {

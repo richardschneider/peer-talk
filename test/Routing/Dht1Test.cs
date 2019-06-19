@@ -1,4 +1,5 @@
-﻿using Ipfs;
+﻿using Google.Protobuf;
+using Ipfs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PeerTalk.Routing
 {
-    
+
     [TestClass]
     public class Dht1Test
     {
@@ -34,7 +35,7 @@ namespace PeerTalk.Routing
             var swarm = new Swarm { LocalPeer = self };
             var dht = new Dht1 { Swarm = swarm };
             bool stopped = false;
-            dht.Stopped += (s, e) => { stopped = true;  };
+            dht.Stopped += (s, e) => { stopped = true; };
             await dht.StartAsync();
             await dht.StopAsync();
             Assert.IsTrue(stopped);
@@ -85,10 +86,10 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.FindNode,
-                    Key = self.Id.ToArray()
+                    Key = ByteString.CopyFrom(self.Id.ToArray()),
                 };
                 var response = dht.ProcessFindNode(request, new DhtMessage());
-                Assert.AreEqual(1, response.CloserPeers.Length);
+                Assert.AreEqual(1, response.CloserPeers.Count);
                 var ok = response.CloserPeers[0].TryToPeer(out Peer found);
                 Assert.IsTrue(ok);
                 Assert.AreEqual(self, found);
@@ -111,14 +112,14 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.FindNode,
-                    Key = other.Id.ToArray()
+                    Key = ByteString.CopyFrom(other.Id.ToArray()),
                 };
                 var response = dht.ProcessFindNode(request, new DhtMessage());
-                Assert.AreEqual(1, response.CloserPeers.Length);
+                Assert.AreEqual(1, response.CloserPeers.Count);
                 var ok = response.CloserPeers[0].TryToPeer(out Peer found);
                 Assert.IsTrue(ok);
                 Assert.AreEqual(other, found);
-                CollectionAssert.AreEqual(other.Addresses.ToArray(), 
+                CollectionAssert.AreEqual(other.Addresses.ToArray(),
                     found.Addresses.Select(a => a.WithoutPeerId()).ToArray());
             }
             finally
@@ -140,10 +141,10 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.FindNode,
-                    Key = other.Id.ToArray()
+                    Key = ByteString.CopyFrom(other.Id.ToArray()),
                 };
                 var response = dht.ProcessFindNode(request, new DhtMessage());
-                Assert.AreEqual(1, response.CloserPeers.Length);
+                Assert.AreEqual(1, response.CloserPeers.Count);
                 var ok = response.CloserPeers[0].TryToPeer(out Peer found);
                 Assert.IsTrue(ok);
                 Assert.AreEqual(other, found);
@@ -174,10 +175,10 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.FindNode,
-                    Key = other.Id.ToArray()
+                    Key = ByteString.CopyFrom(other.Id.ToArray()),
                 };
                 var response = dht.ProcessFindNode(request, new DhtMessage());
-                Assert.AreEqual(3, response.CloserPeers.Length);
+                Assert.AreEqual(3, response.CloserPeers.Count);
             }
             finally
             {
@@ -202,10 +203,10 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.FindNode,
-                    Key = new byte[] {0xFF, 1, 2, 3 }
+                    Key = ByteString.CopyFrom(new byte[] { 0xFF, 1, 2, 3 }),
                 };
                 var response = dht.ProcessFindNode(request, new DhtMessage());
-                Assert.AreEqual(3, response.CloserPeers.Length);
+                Assert.AreEqual(3, response.CloserPeers.Count);
             }
             finally
             {
@@ -224,10 +225,10 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.FindNode,
-                    Key = new MultiHash("QmdpwjdB94eNm2Lcvp9JqoCxswo3AKQqjLuNZyLixmCM1h").ToArray()
+                    Key = ByteString.CopyFrom(new MultiHash("QmdpwjdB94eNm2Lcvp9JqoCxswo3AKQqjLuNZyLixmCM1h").ToArray()),
                 };
                 var response = dht.ProcessFindNode(request, new DhtMessage());
-                Assert.AreEqual(0, response.CloserPeers.Length);
+                Assert.AreEqual(0, response.CloserPeers.Count);
             }
             finally
             {
@@ -248,10 +249,10 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.GetProviders,
-                    Key = cid.Hash.ToArray()
+                    Key = ByteString.CopyFrom(cid.Hash.ToArray()),
                 };
                 var response = dht.ProcessGetProviders(request, new DhtMessage());
-                Assert.AreNotEqual(0, response.CloserPeers.Length);
+                Assert.AreNotEqual(0, response.CloserPeers.Count);
             }
             finally
             {
@@ -273,10 +274,10 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.GetProviders,
-                    Key = cid.Hash.ToArray()
+                    Key = ByteString.CopyFrom(cid.Hash.ToArray()),
                 };
                 var response = dht.ProcessGetProviders(request, new DhtMessage());
-                Assert.AreEqual(1, response.ProviderPeers.Length);
+                Assert.AreEqual(1, response.ProviderPeers.Count);
                 response.ProviderPeers[0].TryToPeer(out Peer found);
                 Assert.AreEqual(other, found);
                 Assert.AreNotEqual(0, found.Addresses.Count());
@@ -299,16 +300,11 @@ namespace PeerTalk.Routing
                 var request = new DhtMessage
                 {
                     Type = MessageType.AddProvider,
-                    Key = cid.Hash.ToArray(),
-                    ProviderPeers = new DhtPeerMessage[]
-                    {
-                        new DhtPeerMessage
-                        {
-                            Id = other.Id.ToArray(),
-                            Addresses = other.Addresses.Select(a => a.ToArray()).ToArray()
-                        }
-                    }
+                    Key = ByteString.CopyFrom(cid.Hash.ToArray()),
                 };
+
+                request.ProviderPeers.Add(DhtPeerMessage.FromPeer(other));
+
                 var response = dht.ProcessAddProvider(other, request, new DhtMessage());
                 Assert.IsNull(response);
                 var providers = dht.ContentRouter.Get(cid).ToArray();

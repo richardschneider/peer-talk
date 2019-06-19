@@ -4,7 +4,6 @@
     <TargetFrameworks>net461;netcoreapp1.1;netcoreapp2.1</TargetFrameworks>
 
     <IsPackable>false</IsPackable>
-    <DebugType>portable</DebugType>
     <RootNamespace>PeerTalk</RootNamespace>
   </PropertyGroup>
   
@@ -20,6 +19,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1" PrivateAssets="all" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" PrivateAssets="all" />
     <PackageReference Include="MSTest.TestFramework" Version="1.4.0" PrivateAssets="all" />
+    <PackageReference Include="FluentAssertions" Version="5.7.0" PrivateAssets="all" />
     <PackageReference Include="coverlet.msbuild" Version="2.6.2" PrivateAssets="all" />
   </ItemGroup>
 
