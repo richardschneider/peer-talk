@@ -42,23 +42,18 @@ namespace PeerTalk
         /// <returns>The parsed message.</returns>
         public static T ParseFixed32BigEndianDelimitedFrom<T>(this MessageParser<T> parser, Stream input) where T : IMessage<T>
         {
-            using (var ms = new MemoryStream())
+            var lengthBuffer = new byte[4];
+            input.Read(lengthBuffer, 0, lengthBuffer.Length);
+            if (BitConverter.IsLittleEndian)
             {
-                input.CopyTo(ms);
-                ms.Position = 0;
-
-                var bytes = ms.ToArray();
-                Span<byte> span = bytes;
-                var lenghSlice = span.Slice(0, 4);
-                if (BitConverter.IsLittleEndian)
-                {
-                    lenghSlice.Reverse();
-                }
-
-                var length = (int)BitConverter.ToUInt32(bytes, 0);
-
-                return parser.ParseFrom(bytes, 4, length);
+                Span<byte> lengthSpan = lengthBuffer;
+                lengthSpan.Reverse();
             }
+
+            var length = (int)BitConverter.ToUInt32(lengthBuffer, 0);
+            var dataBuffer = new byte[length];
+            input.Read(dataBuffer, 0, length);
+            return parser.ParseFrom(dataBuffer, 0, length);
         }
     }
 }
