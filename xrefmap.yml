@@ -2063,6 +2063,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Protocols.Identify1.ToString
   nameWithType: Identify1.ToString
+- uid: PeerTalk.Protocols.Identify1.UpdateRemotePeerAsync(Ipfs.Peer,System.IO.Stream,System.Threading.CancellationToken)
+  name: UpdateRemotePeerAsync(Peer, Stream, CancellationToken)
+  href: api/PeerTalk.Protocols.Identify1.html#PeerTalk_Protocols_Identify1_UpdateRemotePeerAsync_Ipfs_Peer_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.Protocols.Identify1.UpdateRemotePeerAsync(Ipfs.Peer,System.IO.Stream,System.Threading.CancellationToken)
+  fullName: PeerTalk.Protocols.Identify1.UpdateRemotePeerAsync(Ipfs.Peer, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: Identify1.UpdateRemotePeerAsync(Peer, Stream, CancellationToken)
+- uid: PeerTalk.Protocols.Identify1.UpdateRemotePeerAsync*
+  name: UpdateRemotePeerAsync
+  href: api/PeerTalk.Protocols.Identify1.html#PeerTalk_Protocols_Identify1_UpdateRemotePeerAsync_
+  commentId: Overload:PeerTalk.Protocols.Identify1.UpdateRemotePeerAsync
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Identify1.UpdateRemotePeerAsync
+  nameWithType: Identify1.UpdateRemotePeerAsync
 - uid: PeerTalk.Protocols.Identify1.Version
   name: Version
   href: api/PeerTalk.Protocols.Identify1.html#PeerTalk_Protocols_Identify1_Version
