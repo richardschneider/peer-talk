@@ -5288,6 +5288,12 @@ references:
   commentId: E:PeerTalk.Swarm.PeerDiscovered
   fullName: PeerTalk.Swarm.PeerDiscovered
   nameWithType: Swarm.PeerDiscovered
+- uid: PeerTalk.Swarm.PeerNotReachable
+  name: PeerNotReachable
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_PeerNotReachable
+  commentId: E:PeerTalk.Swarm.PeerNotReachable
+  fullName: PeerTalk.Swarm.PeerNotReachable
+  nameWithType: Swarm.PeerNotReachable
 - uid: PeerTalk.Swarm.PeerRemoved
   name: PeerRemoved
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_PeerRemoved
