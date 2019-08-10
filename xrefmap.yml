@@ -5108,6 +5108,19 @@ references:
   commentId: E:PeerTalk.Swarm.ConnectionEstablished
   fullName: PeerTalk.Swarm.ConnectionEstablished
   nameWithType: Swarm.ConnectionEstablished
+- uid: PeerTalk.Swarm.DeregisterPeer(Ipfs.Peer)
+  name: DeregisterPeer(Peer)
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_DeregisterPeer_Ipfs_Peer_
+  commentId: M:PeerTalk.Swarm.DeregisterPeer(Ipfs.Peer)
+  fullName: PeerTalk.Swarm.DeregisterPeer(Ipfs.Peer)
+  nameWithType: Swarm.DeregisterPeer(Peer)
+- uid: PeerTalk.Swarm.DeregisterPeer*
+  name: DeregisterPeer
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_DeregisterPeer_
+  commentId: Overload:PeerTalk.Swarm.DeregisterPeer
+  isSpec: "True"
+  fullName: PeerTalk.Swarm.DeregisterPeer
+  nameWithType: Swarm.DeregisterPeer
 - uid: PeerTalk.Swarm.DialAsync(Ipfs.Peer,System.String,System.Threading.CancellationToken)
   name: DialAsync(Peer, String, CancellationToken)
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_DialAsync_Ipfs_Peer_System_String_System_Threading_CancellationToken_
@@ -5275,6 +5288,12 @@ references:
   commentId: E:PeerTalk.Swarm.PeerDiscovered
   fullName: PeerTalk.Swarm.PeerDiscovered
   nameWithType: Swarm.PeerDiscovered
+- uid: PeerTalk.Swarm.PeerRemoved
+  name: PeerRemoved
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_PeerRemoved
+  commentId: E:PeerTalk.Swarm.PeerRemoved
+  fullName: PeerTalk.Swarm.PeerRemoved
+  nameWithType: Swarm.PeerRemoved
 - uid: PeerTalk.Swarm.RegisterPeer(Ipfs.Peer)
   name: RegisterPeer(Peer)
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_RegisterPeer_Ipfs_Peer_
