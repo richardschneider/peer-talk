@@ -233,11 +233,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.MultiAddressBlackList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.MultiAddressBlackList.html",
+          "hash": "e79N2zWwBVu06/ZYD8EgMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PeerTalk.MultiAddressExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.MultiAddressExtensions.html",
           "hash": "OCnc2C9nCj5i8kyfD2sjhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.MultiAddressWhiteList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.MultiAddressWhiteList.html",
+          "hash": "/e0LYcbZn7kuJlZ2KHt2hg=="
         }
       },
       "is_incremental": false,
@@ -789,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Swarm.html",
-          "hash": "/z04WMm4HwjhG0hkFAnldw=="
+          "hash": "YoaOGw/Fl5pPGwSalct7Qg=="
         }
       },
       "is_incremental": false,
@@ -873,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.html",
-          "hash": "EtKq52lMGXKYffBUTOwmig=="
+          "hash": "dW1u6n5rjXhJLng09loiog=="
         }
       },
       "is_incremental": false,
@@ -885,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Zo/fm9CduYEfOOuqx09v9Q=="
+          "hash": "OMTup36HQMFg7fMQuIu5Ig=="
         }
       },
       "is_incremental": false,
@@ -1092,7 +1116,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 73,
+          "total_file_count": 75,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

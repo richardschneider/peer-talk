@@ -1004,6 +1004,38 @@ references:
   isSpec: "True"
   fullName: PeerTalk.MessageTracker.RecentlySeen
   nameWithType: MessageTracker.RecentlySeen
+- uid: PeerTalk.MultiAddressBlackList
+  name: MultiAddressBlackList
+  href: api/PeerTalk.MultiAddressBlackList.html
+  commentId: T:PeerTalk.MultiAddressBlackList
+  fullName: PeerTalk.MultiAddressBlackList
+  nameWithType: MultiAddressBlackList
+- uid: PeerTalk.MultiAddressBlackList.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  name: IsAllowedAsync(MultiAddress, CancellationToken)
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.MultiAddressBlackList.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  fullName: PeerTalk.MultiAddressBlackList.IsAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
+  nameWithType: MultiAddressBlackList.IsAllowedAsync(MultiAddress, CancellationToken)
+- uid: PeerTalk.MultiAddressBlackList.IsAllowedAsync*
+  name: IsAllowedAsync
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsAllowedAsync_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.IsAllowedAsync
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.IsAllowedAsync
+  nameWithType: MultiAddressBlackList.IsAllowedAsync
+- uid: PeerTalk.MultiAddressBlackList.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  name: IsNotAllowedAsync(MultiAddress, CancellationToken)
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsNotAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.MultiAddressBlackList.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  fullName: PeerTalk.MultiAddressBlackList.IsNotAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
+  nameWithType: MultiAddressBlackList.IsNotAllowedAsync(MultiAddress, CancellationToken)
+- uid: PeerTalk.MultiAddressBlackList.IsNotAllowedAsync*
+  name: IsNotAllowedAsync
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsNotAllowedAsync_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.IsNotAllowedAsync
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.IsNotAllowedAsync
+  nameWithType: MultiAddressBlackList.IsNotAllowedAsync
 - uid: PeerTalk.MultiAddressExtensions
   name: MultiAddressExtensions
   href: api/PeerTalk.MultiAddressExtensions.html
@@ -1036,6 +1068,38 @@ references:
   isSpec: "True"
   fullName: PeerTalk.MultiAddressExtensions.ResolveAsync
   nameWithType: MultiAddressExtensions.ResolveAsync
+- uid: PeerTalk.MultiAddressWhiteList
+  name: MultiAddressWhiteList
+  href: api/PeerTalk.MultiAddressWhiteList.html
+  commentId: T:PeerTalk.MultiAddressWhiteList
+  fullName: PeerTalk.MultiAddressWhiteList
+  nameWithType: MultiAddressWhiteList
+- uid: PeerTalk.MultiAddressWhiteList.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  name: IsAllowedAsync(MultiAddress, CancellationToken)
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.MultiAddressWhiteList.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  fullName: PeerTalk.MultiAddressWhiteList.IsAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
+  nameWithType: MultiAddressWhiteList.IsAllowedAsync(MultiAddress, CancellationToken)
+- uid: PeerTalk.MultiAddressWhiteList.IsAllowedAsync*
+  name: IsAllowedAsync
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsAllowedAsync_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.IsAllowedAsync
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.IsAllowedAsync
+  nameWithType: MultiAddressWhiteList.IsAllowedAsync
+- uid: PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  name: IsNotAllowedAsync(MultiAddress, CancellationToken)
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsNotAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
+  fullName: PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
+  nameWithType: MultiAddressWhiteList.IsNotAllowedAsync(MultiAddress, CancellationToken)
+- uid: PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync*
+  name: IsNotAllowedAsync
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsNotAllowedAsync_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync
+  nameWithType: MultiAddressWhiteList.IsNotAllowedAsync
 - uid: PeerTalk.Multiplex
   name: PeerTalk.Multiplex
   href: api/PeerTalk.Multiplex.html
