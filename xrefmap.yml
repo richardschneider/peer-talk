@@ -73,40 +73,23 @@ references:
   fullName.vb: PeerTalk.BlackList(Of T)
   nameWithType: BlackList<T>
   nameWithType.vb: BlackList(Of T)
-- uid: PeerTalk.BlackList`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  name: IsAllowedAsync(T, CancellationToken)
-  href: api/PeerTalk.BlackList-1.html#PeerTalk_BlackList_1_IsAllowedAsync__0_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.BlackList`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  fullName: PeerTalk.BlackList<T>.IsAllowedAsync(T, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.BlackList(Of T).IsAllowedAsync(T, System.Threading.CancellationToken)
-  nameWithType: BlackList<T>.IsAllowedAsync(T, CancellationToken)
-  nameWithType.vb: BlackList(Of T).IsAllowedAsync(T, CancellationToken)
-- uid: PeerTalk.BlackList`1.IsAllowedAsync*
-  name: IsAllowedAsync
-  href: api/PeerTalk.BlackList-1.html#PeerTalk_BlackList_1_IsAllowedAsync_
-  commentId: Overload:PeerTalk.BlackList`1.IsAllowedAsync
+- uid: PeerTalk.BlackList`1.IsAllowed(`0)
+  name: IsAllowed(T)
+  href: api/PeerTalk.BlackList-1.html#PeerTalk_BlackList_1_IsAllowed__0_
+  commentId: M:PeerTalk.BlackList`1.IsAllowed(`0)
+  fullName: PeerTalk.BlackList<T>.IsAllowed(T)
+  fullName.vb: PeerTalk.BlackList(Of T).IsAllowed(T)
+  nameWithType: BlackList<T>.IsAllowed(T)
+  nameWithType.vb: BlackList(Of T).IsAllowed(T)
+- uid: PeerTalk.BlackList`1.IsAllowed*
+  name: IsAllowed
+  href: api/PeerTalk.BlackList-1.html#PeerTalk_BlackList_1_IsAllowed_
+  commentId: Overload:PeerTalk.BlackList`1.IsAllowed
   isSpec: "True"
-  fullName: PeerTalk.BlackList<T>.IsAllowedAsync
-  fullName.vb: PeerTalk.BlackList(Of T).IsAllowedAsync
-  nameWithType: BlackList<T>.IsAllowedAsync
-  nameWithType.vb: BlackList(Of T).IsAllowedAsync
-- uid: PeerTalk.BlackList`1.IsNotAllowedAsync(`0,System.Threading.CancellationToken)
-  name: IsNotAllowedAsync(T, CancellationToken)
-  href: api/PeerTalk.BlackList-1.html#PeerTalk_BlackList_1_IsNotAllowedAsync__0_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.BlackList`1.IsNotAllowedAsync(`0,System.Threading.CancellationToken)
-  fullName: PeerTalk.BlackList<T>.IsNotAllowedAsync(T, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.BlackList(Of T).IsNotAllowedAsync(T, System.Threading.CancellationToken)
-  nameWithType: BlackList<T>.IsNotAllowedAsync(T, CancellationToken)
-  nameWithType.vb: BlackList(Of T).IsNotAllowedAsync(T, CancellationToken)
-- uid: PeerTalk.BlackList`1.IsNotAllowedAsync*
-  name: IsNotAllowedAsync
-  href: api/PeerTalk.BlackList-1.html#PeerTalk_BlackList_1_IsNotAllowedAsync_
-  commentId: Overload:PeerTalk.BlackList`1.IsNotAllowedAsync
-  isSpec: "True"
-  fullName: PeerTalk.BlackList<T>.IsNotAllowedAsync
-  fullName.vb: PeerTalk.BlackList(Of T).IsNotAllowedAsync
-  nameWithType: BlackList<T>.IsNotAllowedAsync
-  nameWithType.vb: BlackList(Of T).IsNotAllowedAsync
+  fullName: PeerTalk.BlackList<T>.IsAllowed
+  fullName.vb: PeerTalk.BlackList(Of T).IsAllowed
+  nameWithType: BlackList<T>.IsAllowed
+  nameWithType.vb: BlackList(Of T).IsAllowed
 - uid: PeerTalk.ConnectionManager
   name: ConnectionManager
   href: api/PeerTalk.ConnectionManager.html
@@ -572,6 +555,51 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Cryptography.StretchedKey.MacKey
   nameWithType: StretchedKey.MacKey
+- uid: PeerTalk.DeadPeer
+  name: DeadPeer
+  href: api/PeerTalk.DeadPeer.html
+  commentId: T:PeerTalk.DeadPeer
+  fullName: PeerTalk.DeadPeer
+  nameWithType: DeadPeer
+- uid: PeerTalk.DeadPeer.Backoff
+  name: Backoff
+  href: api/PeerTalk.DeadPeer.html#PeerTalk_DeadPeer_Backoff
+  commentId: P:PeerTalk.DeadPeer.Backoff
+  fullName: PeerTalk.DeadPeer.Backoff
+  nameWithType: DeadPeer.Backoff
+- uid: PeerTalk.DeadPeer.Backoff*
+  name: Backoff
+  href: api/PeerTalk.DeadPeer.html#PeerTalk_DeadPeer_Backoff_
+  commentId: Overload:PeerTalk.DeadPeer.Backoff
+  isSpec: "True"
+  fullName: PeerTalk.DeadPeer.Backoff
+  nameWithType: DeadPeer.Backoff
+- uid: PeerTalk.DeadPeer.NextAttempt
+  name: NextAttempt
+  href: api/PeerTalk.DeadPeer.html#PeerTalk_DeadPeer_NextAttempt
+  commentId: P:PeerTalk.DeadPeer.NextAttempt
+  fullName: PeerTalk.DeadPeer.NextAttempt
+  nameWithType: DeadPeer.NextAttempt
+- uid: PeerTalk.DeadPeer.NextAttempt*
+  name: NextAttempt
+  href: api/PeerTalk.DeadPeer.html#PeerTalk_DeadPeer_NextAttempt_
+  commentId: Overload:PeerTalk.DeadPeer.NextAttempt
+  isSpec: "True"
+  fullName: PeerTalk.DeadPeer.NextAttempt
+  nameWithType: DeadPeer.NextAttempt
+- uid: PeerTalk.DeadPeer.Peer
+  name: Peer
+  href: api/PeerTalk.DeadPeer.html#PeerTalk_DeadPeer_Peer
+  commentId: P:PeerTalk.DeadPeer.Peer
+  fullName: PeerTalk.DeadPeer.Peer
+  nameWithType: DeadPeer.Peer
+- uid: PeerTalk.DeadPeer.Peer*
+  name: Peer
+  href: api/PeerTalk.DeadPeer.html#PeerTalk_DeadPeer_Peer_
+  commentId: Overload:PeerTalk.DeadPeer.Peer
+  isSpec: "True"
+  fullName: PeerTalk.DeadPeer.Peer
+  nameWithType: DeadPeer.Peer
 - uid: PeerTalk.Discovery
   name: PeerTalk.Discovery
   href: api/PeerTalk.Discovery.html
@@ -1010,32 +1038,143 @@ references:
   commentId: T:PeerTalk.MultiAddressBlackList
   fullName: PeerTalk.MultiAddressBlackList
   nameWithType: MultiAddressBlackList
-- uid: PeerTalk.MultiAddressBlackList.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: IsAllowedAsync(MultiAddress, CancellationToken)
-  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.MultiAddressBlackList.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: PeerTalk.MultiAddressBlackList.IsAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: MultiAddressBlackList.IsAllowedAsync(MultiAddress, CancellationToken)
-- uid: PeerTalk.MultiAddressBlackList.IsAllowedAsync*
-  name: IsAllowedAsync
-  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsAllowedAsync_
-  commentId: Overload:PeerTalk.MultiAddressBlackList.IsAllowedAsync
+- uid: PeerTalk.MultiAddressBlackList.Add(Ipfs.MultiAddress)
+  name: Add(MultiAddress)
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Add_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.MultiAddressBlackList.Add(Ipfs.MultiAddress)
+  fullName: PeerTalk.MultiAddressBlackList.Add(Ipfs.MultiAddress)
+  nameWithType: MultiAddressBlackList.Add(MultiAddress)
+- uid: PeerTalk.MultiAddressBlackList.Add*
+  name: Add
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Add_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.Add
   isSpec: "True"
-  fullName: PeerTalk.MultiAddressBlackList.IsAllowedAsync
-  nameWithType: MultiAddressBlackList.IsAllowedAsync
-- uid: PeerTalk.MultiAddressBlackList.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: IsNotAllowedAsync(MultiAddress, CancellationToken)
-  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsNotAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.MultiAddressBlackList.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: PeerTalk.MultiAddressBlackList.IsNotAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: MultiAddressBlackList.IsNotAllowedAsync(MultiAddress, CancellationToken)
-- uid: PeerTalk.MultiAddressBlackList.IsNotAllowedAsync*
-  name: IsNotAllowedAsync
-  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsNotAllowedAsync_
-  commentId: Overload:PeerTalk.MultiAddressBlackList.IsNotAllowedAsync
+  fullName: PeerTalk.MultiAddressBlackList.Add
+  nameWithType: MultiAddressBlackList.Add
+- uid: PeerTalk.MultiAddressBlackList.Clear
+  name: Clear()
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Clear
+  commentId: M:PeerTalk.MultiAddressBlackList.Clear
+  fullName: PeerTalk.MultiAddressBlackList.Clear()
+  nameWithType: MultiAddressBlackList.Clear()
+- uid: PeerTalk.MultiAddressBlackList.Clear*
+  name: Clear
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Clear_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.Clear
   isSpec: "True"
-  fullName: PeerTalk.MultiAddressBlackList.IsNotAllowedAsync
-  nameWithType: MultiAddressBlackList.IsNotAllowedAsync
+  fullName: PeerTalk.MultiAddressBlackList.Clear
+  nameWithType: MultiAddressBlackList.Clear
+- uid: PeerTalk.MultiAddressBlackList.Contains(Ipfs.MultiAddress)
+  name: Contains(MultiAddress)
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Contains_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.MultiAddressBlackList.Contains(Ipfs.MultiAddress)
+  fullName: PeerTalk.MultiAddressBlackList.Contains(Ipfs.MultiAddress)
+  nameWithType: MultiAddressBlackList.Contains(MultiAddress)
+- uid: PeerTalk.MultiAddressBlackList.Contains*
+  name: Contains
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Contains_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.Contains
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.Contains
+  nameWithType: MultiAddressBlackList.Contains
+- uid: PeerTalk.MultiAddressBlackList.CopyTo(Ipfs.MultiAddress[],System.Int32)
+  name: CopyTo(MultiAddress[], Int32)
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_CopyTo_Ipfs_MultiAddress___System_Int32_
+  commentId: M:PeerTalk.MultiAddressBlackList.CopyTo(Ipfs.MultiAddress[],System.Int32)
+  name.vb: CopyTo(MultiAddress(), Int32)
+  fullName: PeerTalk.MultiAddressBlackList.CopyTo(Ipfs.MultiAddress[], System.Int32)
+  fullName.vb: PeerTalk.MultiAddressBlackList.CopyTo(Ipfs.MultiAddress(), System.Int32)
+  nameWithType: MultiAddressBlackList.CopyTo(MultiAddress[], Int32)
+  nameWithType.vb: MultiAddressBlackList.CopyTo(MultiAddress(), Int32)
+- uid: PeerTalk.MultiAddressBlackList.CopyTo*
+  name: CopyTo
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_CopyTo_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.CopyTo
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.CopyTo
+  nameWithType: MultiAddressBlackList.CopyTo
+- uid: PeerTalk.MultiAddressBlackList.Count
+  name: Count
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Count
+  commentId: P:PeerTalk.MultiAddressBlackList.Count
+  fullName: PeerTalk.MultiAddressBlackList.Count
+  nameWithType: MultiAddressBlackList.Count
+- uid: PeerTalk.MultiAddressBlackList.Count*
+  name: Count
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Count_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.Count
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.Count
+  nameWithType: MultiAddressBlackList.Count
+- uid: PeerTalk.MultiAddressBlackList.GetEnumerator
+  name: GetEnumerator()
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_GetEnumerator
+  commentId: M:PeerTalk.MultiAddressBlackList.GetEnumerator
+  fullName: PeerTalk.MultiAddressBlackList.GetEnumerator()
+  nameWithType: MultiAddressBlackList.GetEnumerator()
+- uid: PeerTalk.MultiAddressBlackList.GetEnumerator*
+  name: GetEnumerator
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_GetEnumerator_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.GetEnumerator
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.GetEnumerator
+  nameWithType: MultiAddressBlackList.GetEnumerator
+- uid: PeerTalk.MultiAddressBlackList.IsAllowed(Ipfs.MultiAddress)
+  name: IsAllowed(MultiAddress)
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsAllowed_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.MultiAddressBlackList.IsAllowed(Ipfs.MultiAddress)
+  fullName: PeerTalk.MultiAddressBlackList.IsAllowed(Ipfs.MultiAddress)
+  nameWithType: MultiAddressBlackList.IsAllowed(MultiAddress)
+- uid: PeerTalk.MultiAddressBlackList.IsAllowed*
+  name: IsAllowed
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsAllowed_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.IsAllowed
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.IsAllowed
+  nameWithType: MultiAddressBlackList.IsAllowed
+- uid: PeerTalk.MultiAddressBlackList.IsReadOnly
+  name: IsReadOnly
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsReadOnly
+  commentId: P:PeerTalk.MultiAddressBlackList.IsReadOnly
+  fullName: PeerTalk.MultiAddressBlackList.IsReadOnly
+  nameWithType: MultiAddressBlackList.IsReadOnly
+- uid: PeerTalk.MultiAddressBlackList.IsReadOnly*
+  name: IsReadOnly
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_IsReadOnly_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.IsReadOnly
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.IsReadOnly
+  nameWithType: MultiAddressBlackList.IsReadOnly
+- uid: PeerTalk.MultiAddressBlackList.Remove(Ipfs.MultiAddress)
+  name: Remove(MultiAddress)
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Remove_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.MultiAddressBlackList.Remove(Ipfs.MultiAddress)
+  fullName: PeerTalk.MultiAddressBlackList.Remove(Ipfs.MultiAddress)
+  nameWithType: MultiAddressBlackList.Remove(MultiAddress)
+- uid: PeerTalk.MultiAddressBlackList.Remove*
+  name: Remove
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_Remove_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.Remove
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressBlackList.Remove
+  nameWithType: MultiAddressBlackList.Remove
+- uid: PeerTalk.MultiAddressBlackList.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:PeerTalk.MultiAddressBlackList.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: PeerTalk.MultiAddressBlackList.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: MultiAddressBlackList.IEnumerable.GetEnumerator()
+  nameWithType.vb: MultiAddressBlackList.System.Collections.IEnumerable.GetEnumerator()
+- uid: PeerTalk.MultiAddressBlackList.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/PeerTalk.MultiAddressBlackList.html#PeerTalk_MultiAddressBlackList_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:PeerTalk.MultiAddressBlackList.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: PeerTalk.MultiAddressBlackList.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: MultiAddressBlackList.IEnumerable.GetEnumerator
+  nameWithType.vb: MultiAddressBlackList.System.Collections.IEnumerable.GetEnumerator
 - uid: PeerTalk.MultiAddressExtensions
   name: MultiAddressExtensions
   href: api/PeerTalk.MultiAddressExtensions.html
@@ -1074,32 +1213,143 @@ references:
   commentId: T:PeerTalk.MultiAddressWhiteList
   fullName: PeerTalk.MultiAddressWhiteList
   nameWithType: MultiAddressWhiteList
-- uid: PeerTalk.MultiAddressWhiteList.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: IsAllowedAsync(MultiAddress, CancellationToken)
-  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.MultiAddressWhiteList.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: PeerTalk.MultiAddressWhiteList.IsAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: MultiAddressWhiteList.IsAllowedAsync(MultiAddress, CancellationToken)
-- uid: PeerTalk.MultiAddressWhiteList.IsAllowedAsync*
-  name: IsAllowedAsync
-  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsAllowedAsync_
-  commentId: Overload:PeerTalk.MultiAddressWhiteList.IsAllowedAsync
+- uid: PeerTalk.MultiAddressWhiteList.Add(Ipfs.MultiAddress)
+  name: Add(MultiAddress)
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Add_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.MultiAddressWhiteList.Add(Ipfs.MultiAddress)
+  fullName: PeerTalk.MultiAddressWhiteList.Add(Ipfs.MultiAddress)
+  nameWithType: MultiAddressWhiteList.Add(MultiAddress)
+- uid: PeerTalk.MultiAddressWhiteList.Add*
+  name: Add
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Add_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.Add
   isSpec: "True"
-  fullName: PeerTalk.MultiAddressWhiteList.IsAllowedAsync
-  nameWithType: MultiAddressWhiteList.IsAllowedAsync
-- uid: PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: IsNotAllowedAsync(MultiAddress, CancellationToken)
-  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsNotAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: MultiAddressWhiteList.IsNotAllowedAsync(MultiAddress, CancellationToken)
-- uid: PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync*
-  name: IsNotAllowedAsync
-  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsNotAllowedAsync_
-  commentId: Overload:PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync
+  fullName: PeerTalk.MultiAddressWhiteList.Add
+  nameWithType: MultiAddressWhiteList.Add
+- uid: PeerTalk.MultiAddressWhiteList.Clear
+  name: Clear()
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Clear
+  commentId: M:PeerTalk.MultiAddressWhiteList.Clear
+  fullName: PeerTalk.MultiAddressWhiteList.Clear()
+  nameWithType: MultiAddressWhiteList.Clear()
+- uid: PeerTalk.MultiAddressWhiteList.Clear*
+  name: Clear
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Clear_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.Clear
   isSpec: "True"
-  fullName: PeerTalk.MultiAddressWhiteList.IsNotAllowedAsync
-  nameWithType: MultiAddressWhiteList.IsNotAllowedAsync
+  fullName: PeerTalk.MultiAddressWhiteList.Clear
+  nameWithType: MultiAddressWhiteList.Clear
+- uid: PeerTalk.MultiAddressWhiteList.Contains(Ipfs.MultiAddress)
+  name: Contains(MultiAddress)
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Contains_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.MultiAddressWhiteList.Contains(Ipfs.MultiAddress)
+  fullName: PeerTalk.MultiAddressWhiteList.Contains(Ipfs.MultiAddress)
+  nameWithType: MultiAddressWhiteList.Contains(MultiAddress)
+- uid: PeerTalk.MultiAddressWhiteList.Contains*
+  name: Contains
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Contains_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.Contains
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.Contains
+  nameWithType: MultiAddressWhiteList.Contains
+- uid: PeerTalk.MultiAddressWhiteList.CopyTo(Ipfs.MultiAddress[],System.Int32)
+  name: CopyTo(MultiAddress[], Int32)
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_CopyTo_Ipfs_MultiAddress___System_Int32_
+  commentId: M:PeerTalk.MultiAddressWhiteList.CopyTo(Ipfs.MultiAddress[],System.Int32)
+  name.vb: CopyTo(MultiAddress(), Int32)
+  fullName: PeerTalk.MultiAddressWhiteList.CopyTo(Ipfs.MultiAddress[], System.Int32)
+  fullName.vb: PeerTalk.MultiAddressWhiteList.CopyTo(Ipfs.MultiAddress(), System.Int32)
+  nameWithType: MultiAddressWhiteList.CopyTo(MultiAddress[], Int32)
+  nameWithType.vb: MultiAddressWhiteList.CopyTo(MultiAddress(), Int32)
+- uid: PeerTalk.MultiAddressWhiteList.CopyTo*
+  name: CopyTo
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_CopyTo_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.CopyTo
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.CopyTo
+  nameWithType: MultiAddressWhiteList.CopyTo
+- uid: PeerTalk.MultiAddressWhiteList.Count
+  name: Count
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Count
+  commentId: P:PeerTalk.MultiAddressWhiteList.Count
+  fullName: PeerTalk.MultiAddressWhiteList.Count
+  nameWithType: MultiAddressWhiteList.Count
+- uid: PeerTalk.MultiAddressWhiteList.Count*
+  name: Count
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Count_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.Count
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.Count
+  nameWithType: MultiAddressWhiteList.Count
+- uid: PeerTalk.MultiAddressWhiteList.GetEnumerator
+  name: GetEnumerator()
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_GetEnumerator
+  commentId: M:PeerTalk.MultiAddressWhiteList.GetEnumerator
+  fullName: PeerTalk.MultiAddressWhiteList.GetEnumerator()
+  nameWithType: MultiAddressWhiteList.GetEnumerator()
+- uid: PeerTalk.MultiAddressWhiteList.GetEnumerator*
+  name: GetEnumerator
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_GetEnumerator_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.GetEnumerator
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.GetEnumerator
+  nameWithType: MultiAddressWhiteList.GetEnumerator
+- uid: PeerTalk.MultiAddressWhiteList.IsAllowed(Ipfs.MultiAddress)
+  name: IsAllowed(MultiAddress)
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsAllowed_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.MultiAddressWhiteList.IsAllowed(Ipfs.MultiAddress)
+  fullName: PeerTalk.MultiAddressWhiteList.IsAllowed(Ipfs.MultiAddress)
+  nameWithType: MultiAddressWhiteList.IsAllowed(MultiAddress)
+- uid: PeerTalk.MultiAddressWhiteList.IsAllowed*
+  name: IsAllowed
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsAllowed_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.IsAllowed
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.IsAllowed
+  nameWithType: MultiAddressWhiteList.IsAllowed
+- uid: PeerTalk.MultiAddressWhiteList.IsReadOnly
+  name: IsReadOnly
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsReadOnly
+  commentId: P:PeerTalk.MultiAddressWhiteList.IsReadOnly
+  fullName: PeerTalk.MultiAddressWhiteList.IsReadOnly
+  nameWithType: MultiAddressWhiteList.IsReadOnly
+- uid: PeerTalk.MultiAddressWhiteList.IsReadOnly*
+  name: IsReadOnly
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_IsReadOnly_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.IsReadOnly
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.IsReadOnly
+  nameWithType: MultiAddressWhiteList.IsReadOnly
+- uid: PeerTalk.MultiAddressWhiteList.Remove(Ipfs.MultiAddress)
+  name: Remove(MultiAddress)
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Remove_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.MultiAddressWhiteList.Remove(Ipfs.MultiAddress)
+  fullName: PeerTalk.MultiAddressWhiteList.Remove(Ipfs.MultiAddress)
+  nameWithType: MultiAddressWhiteList.Remove(MultiAddress)
+- uid: PeerTalk.MultiAddressWhiteList.Remove*
+  name: Remove
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_Remove_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.Remove
+  isSpec: "True"
+  fullName: PeerTalk.MultiAddressWhiteList.Remove
+  nameWithType: MultiAddressWhiteList.Remove
+- uid: PeerTalk.MultiAddressWhiteList.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:PeerTalk.MultiAddressWhiteList.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: PeerTalk.MultiAddressWhiteList.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: MultiAddressWhiteList.IEnumerable.GetEnumerator()
+  nameWithType.vb: MultiAddressWhiteList.System.Collections.IEnumerable.GetEnumerator()
+- uid: PeerTalk.MultiAddressWhiteList.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/PeerTalk.MultiAddressWhiteList.html#PeerTalk_MultiAddressWhiteList_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:PeerTalk.MultiAddressWhiteList.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: PeerTalk.MultiAddressWhiteList.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: MultiAddressWhiteList.IEnumerable.GetEnumerator
+  nameWithType.vb: MultiAddressWhiteList.System.Collections.IEnumerable.GetEnumerator
 - uid: PeerTalk.Multiplex
   name: PeerTalk.Multiplex
   href: api/PeerTalk.Multiplex.html
@@ -1946,6 +2196,95 @@ references:
   isSpec: "True"
   fullName: PeerTalk.PeerConnection.Stream
   nameWithType: PeerConnection.Stream
+- uid: PeerTalk.PeerManager
+  name: PeerManager
+  href: api/PeerTalk.PeerManager.html
+  commentId: T:PeerTalk.PeerManager
+  fullName: PeerTalk.PeerManager
+  nameWithType: PeerManager
+- uid: PeerTalk.PeerManager.DeadPeers
+  name: DeadPeers
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_DeadPeers
+  commentId: F:PeerTalk.PeerManager.DeadPeers
+  fullName: PeerTalk.PeerManager.DeadPeers
+  nameWithType: PeerManager.DeadPeers
+- uid: PeerTalk.PeerManager.InitialBackoff
+  name: InitialBackoff
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_InitialBackoff
+  commentId: F:PeerTalk.PeerManager.InitialBackoff
+  fullName: PeerTalk.PeerManager.InitialBackoff
+  nameWithType: PeerManager.InitialBackoff
+- uid: PeerTalk.PeerManager.MaxBackoff
+  name: MaxBackoff
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_MaxBackoff
+  commentId: F:PeerTalk.PeerManager.MaxBackoff
+  fullName: PeerTalk.PeerManager.MaxBackoff
+  nameWithType: PeerManager.MaxBackoff
+- uid: PeerTalk.PeerManager.SetNotReachable(Ipfs.Peer)
+  name: SetNotReachable(Peer)
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_SetNotReachable_Ipfs_Peer_
+  commentId: M:PeerTalk.PeerManager.SetNotReachable(Ipfs.Peer)
+  fullName: PeerTalk.PeerManager.SetNotReachable(Ipfs.Peer)
+  nameWithType: PeerManager.SetNotReachable(Peer)
+- uid: PeerTalk.PeerManager.SetNotReachable*
+  name: SetNotReachable
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_SetNotReachable_
+  commentId: Overload:PeerTalk.PeerManager.SetNotReachable
+  isSpec: "True"
+  fullName: PeerTalk.PeerManager.SetNotReachable
+  nameWithType: PeerManager.SetNotReachable
+- uid: PeerTalk.PeerManager.SetReachable(Ipfs.Peer)
+  name: SetReachable(Peer)
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_SetReachable_Ipfs_Peer_
+  commentId: M:PeerTalk.PeerManager.SetReachable(Ipfs.Peer)
+  fullName: PeerTalk.PeerManager.SetReachable(Ipfs.Peer)
+  nameWithType: PeerManager.SetReachable(Peer)
+- uid: PeerTalk.PeerManager.SetReachable*
+  name: SetReachable
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_SetReachable_
+  commentId: Overload:PeerTalk.PeerManager.SetReachable
+  isSpec: "True"
+  fullName: PeerTalk.PeerManager.SetReachable
+  nameWithType: PeerManager.SetReachable
+- uid: PeerTalk.PeerManager.StartAsync
+  name: StartAsync()
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_StartAsync
+  commentId: M:PeerTalk.PeerManager.StartAsync
+  fullName: PeerTalk.PeerManager.StartAsync()
+  nameWithType: PeerManager.StartAsync()
+- uid: PeerTalk.PeerManager.StartAsync*
+  name: StartAsync
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_StartAsync_
+  commentId: Overload:PeerTalk.PeerManager.StartAsync
+  isSpec: "True"
+  fullName: PeerTalk.PeerManager.StartAsync
+  nameWithType: PeerManager.StartAsync
+- uid: PeerTalk.PeerManager.StopAsync
+  name: StopAsync()
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_StopAsync
+  commentId: M:PeerTalk.PeerManager.StopAsync
+  fullName: PeerTalk.PeerManager.StopAsync()
+  nameWithType: PeerManager.StopAsync()
+- uid: PeerTalk.PeerManager.StopAsync*
+  name: StopAsync
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_StopAsync_
+  commentId: Overload:PeerTalk.PeerManager.StopAsync
+  isSpec: "True"
+  fullName: PeerTalk.PeerManager.StopAsync
+  nameWithType: PeerManager.StopAsync
+- uid: PeerTalk.PeerManager.Swarm
+  name: Swarm
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_Swarm
+  commentId: P:PeerTalk.PeerManager.Swarm
+  fullName: PeerTalk.PeerManager.Swarm
+  nameWithType: PeerManager.Swarm
+- uid: PeerTalk.PeerManager.Swarm*
+  name: Swarm
+  href: api/PeerTalk.PeerManager.html#PeerTalk_PeerManager_Swarm_
+  commentId: Overload:PeerTalk.PeerManager.Swarm
+  isSpec: "True"
+  fullName: PeerTalk.PeerManager.Swarm
+  nameWithType: PeerManager.Swarm
 - uid: PeerTalk.Policy`1
   name: Policy<T>
   href: api/PeerTalk.Policy-1.html
@@ -1955,40 +2294,40 @@ references:
   fullName.vb: PeerTalk.Policy(Of T)
   nameWithType: Policy<T>
   nameWithType.vb: Policy(Of T)
-- uid: PeerTalk.Policy`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  name: IsAllowedAsync(T, CancellationToken)
-  href: api/PeerTalk.Policy-1.html#PeerTalk_Policy_1_IsAllowedAsync__0_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.Policy`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  fullName: PeerTalk.Policy<T>.IsAllowedAsync(T, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.Policy(Of T).IsAllowedAsync(T, System.Threading.CancellationToken)
-  nameWithType: Policy<T>.IsAllowedAsync(T, CancellationToken)
-  nameWithType.vb: Policy(Of T).IsAllowedAsync(T, CancellationToken)
-- uid: PeerTalk.Policy`1.IsAllowedAsync*
-  name: IsAllowedAsync
-  href: api/PeerTalk.Policy-1.html#PeerTalk_Policy_1_IsAllowedAsync_
-  commentId: Overload:PeerTalk.Policy`1.IsAllowedAsync
+- uid: PeerTalk.Policy`1.IsAllowed(`0)
+  name: IsAllowed(T)
+  href: api/PeerTalk.Policy-1.html#PeerTalk_Policy_1_IsAllowed__0_
+  commentId: M:PeerTalk.Policy`1.IsAllowed(`0)
+  fullName: PeerTalk.Policy<T>.IsAllowed(T)
+  fullName.vb: PeerTalk.Policy(Of T).IsAllowed(T)
+  nameWithType: Policy<T>.IsAllowed(T)
+  nameWithType.vb: Policy(Of T).IsAllowed(T)
+- uid: PeerTalk.Policy`1.IsAllowed*
+  name: IsAllowed
+  href: api/PeerTalk.Policy-1.html#PeerTalk_Policy_1_IsAllowed_
+  commentId: Overload:PeerTalk.Policy`1.IsAllowed
   isSpec: "True"
-  fullName: PeerTalk.Policy<T>.IsAllowedAsync
-  fullName.vb: PeerTalk.Policy(Of T).IsAllowedAsync
-  nameWithType: Policy<T>.IsAllowedAsync
-  nameWithType.vb: Policy(Of T).IsAllowedAsync
-- uid: PeerTalk.Policy`1.IsNotAllowedAsync(`0,System.Threading.CancellationToken)
-  name: IsNotAllowedAsync(T, CancellationToken)
-  href: api/PeerTalk.Policy-1.html#PeerTalk_Policy_1_IsNotAllowedAsync__0_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.Policy`1.IsNotAllowedAsync(`0,System.Threading.CancellationToken)
-  fullName: PeerTalk.Policy<T>.IsNotAllowedAsync(T, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.Policy(Of T).IsNotAllowedAsync(T, System.Threading.CancellationToken)
-  nameWithType: Policy<T>.IsNotAllowedAsync(T, CancellationToken)
-  nameWithType.vb: Policy(Of T).IsNotAllowedAsync(T, CancellationToken)
-- uid: PeerTalk.Policy`1.IsNotAllowedAsync*
-  name: IsNotAllowedAsync
-  href: api/PeerTalk.Policy-1.html#PeerTalk_Policy_1_IsNotAllowedAsync_
-  commentId: Overload:PeerTalk.Policy`1.IsNotAllowedAsync
+  fullName: PeerTalk.Policy<T>.IsAllowed
+  fullName.vb: PeerTalk.Policy(Of T).IsAllowed
+  nameWithType: Policy<T>.IsAllowed
+  nameWithType.vb: Policy(Of T).IsAllowed
+- uid: PeerTalk.Policy`1.IsNotAllowed(`0)
+  name: IsNotAllowed(T)
+  href: api/PeerTalk.Policy-1.html#PeerTalk_Policy_1_IsNotAllowed__0_
+  commentId: M:PeerTalk.Policy`1.IsNotAllowed(`0)
+  fullName: PeerTalk.Policy<T>.IsNotAllowed(T)
+  fullName.vb: PeerTalk.Policy(Of T).IsNotAllowed(T)
+  nameWithType: Policy<T>.IsNotAllowed(T)
+  nameWithType.vb: Policy(Of T).IsNotAllowed(T)
+- uid: PeerTalk.Policy`1.IsNotAllowed*
+  name: IsNotAllowed
+  href: api/PeerTalk.Policy-1.html#PeerTalk_Policy_1_IsNotAllowed_
+  commentId: Overload:PeerTalk.Policy`1.IsNotAllowed
   isSpec: "True"
-  fullName: PeerTalk.Policy<T>.IsNotAllowedAsync
-  fullName.vb: PeerTalk.Policy(Of T).IsNotAllowedAsync
-  nameWithType: Policy<T>.IsNotAllowedAsync
-  nameWithType.vb: Policy(Of T).IsNotAllowedAsync
+  fullName: PeerTalk.Policy<T>.IsNotAllowed
+  fullName.vb: PeerTalk.Policy(Of T).IsNotAllowed
+  nameWithType: Policy<T>.IsNotAllowed
+  nameWithType.vb: Policy(Of T).IsNotAllowed
 - uid: PeerTalk.PolicyAlways`1
   name: PolicyAlways<T>
   href: api/PeerTalk.PolicyAlways-1.html
@@ -1998,23 +2337,23 @@ references:
   fullName.vb: PeerTalk.PolicyAlways(Of T)
   nameWithType: PolicyAlways<T>
   nameWithType.vb: PolicyAlways(Of T)
-- uid: PeerTalk.PolicyAlways`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  name: IsAllowedAsync(T, CancellationToken)
-  href: api/PeerTalk.PolicyAlways-1.html#PeerTalk_PolicyAlways_1_IsAllowedAsync__0_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.PolicyAlways`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  fullName: PeerTalk.PolicyAlways<T>.IsAllowedAsync(T, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.PolicyAlways(Of T).IsAllowedAsync(T, System.Threading.CancellationToken)
-  nameWithType: PolicyAlways<T>.IsAllowedAsync(T, CancellationToken)
-  nameWithType.vb: PolicyAlways(Of T).IsAllowedAsync(T, CancellationToken)
-- uid: PeerTalk.PolicyAlways`1.IsAllowedAsync*
-  name: IsAllowedAsync
-  href: api/PeerTalk.PolicyAlways-1.html#PeerTalk_PolicyAlways_1_IsAllowedAsync_
-  commentId: Overload:PeerTalk.PolicyAlways`1.IsAllowedAsync
+- uid: PeerTalk.PolicyAlways`1.IsAllowed(`0)
+  name: IsAllowed(T)
+  href: api/PeerTalk.PolicyAlways-1.html#PeerTalk_PolicyAlways_1_IsAllowed__0_
+  commentId: M:PeerTalk.PolicyAlways`1.IsAllowed(`0)
+  fullName: PeerTalk.PolicyAlways<T>.IsAllowed(T)
+  fullName.vb: PeerTalk.PolicyAlways(Of T).IsAllowed(T)
+  nameWithType: PolicyAlways<T>.IsAllowed(T)
+  nameWithType.vb: PolicyAlways(Of T).IsAllowed(T)
+- uid: PeerTalk.PolicyAlways`1.IsAllowed*
+  name: IsAllowed
+  href: api/PeerTalk.PolicyAlways-1.html#PeerTalk_PolicyAlways_1_IsAllowed_
+  commentId: Overload:PeerTalk.PolicyAlways`1.IsAllowed
   isSpec: "True"
-  fullName: PeerTalk.PolicyAlways<T>.IsAllowedAsync
-  fullName.vb: PeerTalk.PolicyAlways(Of T).IsAllowedAsync
-  nameWithType: PolicyAlways<T>.IsAllowedAsync
-  nameWithType.vb: PolicyAlways(Of T).IsAllowedAsync
+  fullName: PeerTalk.PolicyAlways<T>.IsAllowed
+  fullName.vb: PeerTalk.PolicyAlways(Of T).IsAllowed
+  nameWithType: PolicyAlways<T>.IsAllowed
+  nameWithType.vb: PolicyAlways(Of T).IsAllowed
 - uid: PeerTalk.PolicyNever`1
   name: PolicyNever<T>
   href: api/PeerTalk.PolicyNever-1.html
@@ -2024,23 +2363,23 @@ references:
   fullName.vb: PeerTalk.PolicyNever(Of T)
   nameWithType: PolicyNever<T>
   nameWithType.vb: PolicyNever(Of T)
-- uid: PeerTalk.PolicyNever`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  name: IsAllowedAsync(T, CancellationToken)
-  href: api/PeerTalk.PolicyNever-1.html#PeerTalk_PolicyNever_1_IsAllowedAsync__0_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.PolicyNever`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  fullName: PeerTalk.PolicyNever<T>.IsAllowedAsync(T, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.PolicyNever(Of T).IsAllowedAsync(T, System.Threading.CancellationToken)
-  nameWithType: PolicyNever<T>.IsAllowedAsync(T, CancellationToken)
-  nameWithType.vb: PolicyNever(Of T).IsAllowedAsync(T, CancellationToken)
-- uid: PeerTalk.PolicyNever`1.IsAllowedAsync*
-  name: IsAllowedAsync
-  href: api/PeerTalk.PolicyNever-1.html#PeerTalk_PolicyNever_1_IsAllowedAsync_
-  commentId: Overload:PeerTalk.PolicyNever`1.IsAllowedAsync
+- uid: PeerTalk.PolicyNever`1.IsAllowed(`0)
+  name: IsAllowed(T)
+  href: api/PeerTalk.PolicyNever-1.html#PeerTalk_PolicyNever_1_IsAllowed__0_
+  commentId: M:PeerTalk.PolicyNever`1.IsAllowed(`0)
+  fullName: PeerTalk.PolicyNever<T>.IsAllowed(T)
+  fullName.vb: PeerTalk.PolicyNever(Of T).IsAllowed(T)
+  nameWithType: PolicyNever<T>.IsAllowed(T)
+  nameWithType.vb: PolicyNever(Of T).IsAllowed(T)
+- uid: PeerTalk.PolicyNever`1.IsAllowed*
+  name: IsAllowed
+  href: api/PeerTalk.PolicyNever-1.html#PeerTalk_PolicyNever_1_IsAllowed_
+  commentId: Overload:PeerTalk.PolicyNever`1.IsAllowed
   isSpec: "True"
-  fullName: PeerTalk.PolicyNever<T>.IsAllowedAsync
-  fullName.vb: PeerTalk.PolicyNever(Of T).IsAllowedAsync
-  nameWithType: PolicyNever<T>.IsAllowedAsync
-  nameWithType.vb: PolicyNever(Of T).IsAllowedAsync
+  fullName: PeerTalk.PolicyNever<T>.IsAllowed
+  fullName.vb: PeerTalk.PolicyNever(Of T).IsAllowed
+  nameWithType: PolicyNever<T>.IsAllowed
+  nameWithType.vb: PolicyNever(Of T).IsAllowed
 - uid: PeerTalk.ProtoBufHelper
   name: ProtoBufHelper
   href: api/PeerTalk.ProtoBufHelper.html
@@ -5224,32 +5563,25 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Swarm.HasPendingConnection
   nameWithType: Swarm.HasPendingConnection
-- uid: PeerTalk.Swarm.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: IsAllowedAsync(MultiAddress, CancellationToken)
-  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.Swarm.IsAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: PeerTalk.Swarm.IsAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: Swarm.IsAllowedAsync(MultiAddress, CancellationToken)
-- uid: PeerTalk.Swarm.IsAllowedAsync*
-  name: IsAllowedAsync
-  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsAllowedAsync_
-  commentId: Overload:PeerTalk.Swarm.IsAllowedAsync
+- uid: PeerTalk.Swarm.IsAllowed(Ipfs.MultiAddress)
+  name: IsAllowed(MultiAddress)
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsAllowed_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.Swarm.IsAllowed(Ipfs.MultiAddress)
+  fullName: PeerTalk.Swarm.IsAllowed(Ipfs.MultiAddress)
+  nameWithType: Swarm.IsAllowed(MultiAddress)
+- uid: PeerTalk.Swarm.IsAllowed(Ipfs.Peer)
+  name: IsAllowed(Peer)
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsAllowed_Ipfs_Peer_
+  commentId: M:PeerTalk.Swarm.IsAllowed(Ipfs.Peer)
+  fullName: PeerTalk.Swarm.IsAllowed(Ipfs.Peer)
+  nameWithType: Swarm.IsAllowed(Peer)
+- uid: PeerTalk.Swarm.IsAllowed*
+  name: IsAllowed
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsAllowed_
+  commentId: Overload:PeerTalk.Swarm.IsAllowed
   isSpec: "True"
-  fullName: PeerTalk.Swarm.IsAllowedAsync
-  nameWithType: Swarm.IsAllowedAsync
-- uid: PeerTalk.Swarm.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: IsNotAllowedAsync(MultiAddress, CancellationToken)
-  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsNotAllowedAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.Swarm.IsNotAllowedAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: PeerTalk.Swarm.IsNotAllowedAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: Swarm.IsNotAllowedAsync(MultiAddress, CancellationToken)
-- uid: PeerTalk.Swarm.IsNotAllowedAsync*
-  name: IsNotAllowedAsync
-  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsNotAllowedAsync_
-  commentId: Overload:PeerTalk.Swarm.IsNotAllowedAsync
-  isSpec: "True"
-  fullName: PeerTalk.Swarm.IsNotAllowedAsync
-  nameWithType: Swarm.IsNotAllowedAsync
+  fullName: PeerTalk.Swarm.IsAllowed
+  nameWithType: Swarm.IsAllowed
 - uid: PeerTalk.Swarm.IsRunning
   name: IsRunning
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_IsRunning
@@ -5377,19 +5709,19 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Swarm.RegisterPeer
   nameWithType: Swarm.RegisterPeer
-- uid: PeerTalk.Swarm.RegisterPeerAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  name: RegisterPeerAsync(MultiAddress, CancellationToken)
-  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_RegisterPeerAsync_Ipfs_MultiAddress_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.Swarm.RegisterPeerAsync(Ipfs.MultiAddress,System.Threading.CancellationToken)
-  fullName: PeerTalk.Swarm.RegisterPeerAsync(Ipfs.MultiAddress, System.Threading.CancellationToken)
-  nameWithType: Swarm.RegisterPeerAsync(MultiAddress, CancellationToken)
-- uid: PeerTalk.Swarm.RegisterPeerAsync*
-  name: RegisterPeerAsync
-  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_RegisterPeerAsync_
-  commentId: Overload:PeerTalk.Swarm.RegisterPeerAsync
+- uid: PeerTalk.Swarm.RegisterPeerAddress(Ipfs.MultiAddress)
+  name: RegisterPeerAddress(MultiAddress)
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_RegisterPeerAddress_Ipfs_MultiAddress_
+  commentId: M:PeerTalk.Swarm.RegisterPeerAddress(Ipfs.MultiAddress)
+  fullName: PeerTalk.Swarm.RegisterPeerAddress(Ipfs.MultiAddress)
+  nameWithType: Swarm.RegisterPeerAddress(MultiAddress)
+- uid: PeerTalk.Swarm.RegisterPeerAddress*
+  name: RegisterPeerAddress
+  href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_RegisterPeerAddress_
+  commentId: Overload:PeerTalk.Swarm.RegisterPeerAddress
   isSpec: "True"
-  fullName: PeerTalk.Swarm.RegisterPeerAsync
-  nameWithType: Swarm.RegisterPeerAsync
+  fullName: PeerTalk.Swarm.RegisterPeerAddress
+  nameWithType: Swarm.RegisterPeerAddress
 - uid: PeerTalk.Swarm.RemoveProtocol(PeerTalk.Protocols.IPeerProtocol)
   name: RemoveProtocol(IPeerProtocol)
   href: api/PeerTalk.Swarm.html#PeerTalk_Swarm_RemoveProtocol_PeerTalk_Protocols_IPeerProtocol_
@@ -5493,6 +5825,22 @@ references:
   commentId: T:PeerTalk.TaskHelper
   fullName: PeerTalk.TaskHelper
   nameWithType: TaskHelper
+- uid: PeerTalk.TaskHelper.ParallelForEachAsync*
+  name: ParallelForEachAsync
+  href: api/PeerTalk.TaskHelper.html#PeerTalk_TaskHelper_ParallelForEachAsync_
+  commentId: Overload:PeerTalk.TaskHelper.ParallelForEachAsync
+  isSpec: "True"
+  fullName: PeerTalk.TaskHelper.ParallelForEachAsync
+  nameWithType: TaskHelper.ParallelForEachAsync
+- uid: PeerTalk.TaskHelper.ParallelForEachAsync``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Threading.Tasks.Task},System.Int32)
+  name: ParallelForEachAsync<T>(IEnumerable<T>, Func<T, Task>, Int32)
+  href: api/PeerTalk.TaskHelper.html#PeerTalk_TaskHelper_ParallelForEachAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task__System_Int32_
+  commentId: M:PeerTalk.TaskHelper.ParallelForEachAsync``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Threading.Tasks.Task},System.Int32)
+  name.vb: ParallelForEachAsync(Of T)(IEnumerable(Of T), Func(Of T, Task), Int32)
+  fullName: PeerTalk.TaskHelper.ParallelForEachAsync<T>(System.Collections.Generic.IEnumerable<T>, System.Func<T, System.Threading.Tasks.Task>, System.Int32)
+  fullName.vb: PeerTalk.TaskHelper.ParallelForEachAsync(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, System.Threading.Tasks.Task), System.Int32)
+  nameWithType: TaskHelper.ParallelForEachAsync<T>(IEnumerable<T>, Func<T, Task>, Int32)
+  nameWithType.vb: TaskHelper.ParallelForEachAsync(Of T)(IEnumerable(Of T), Func(Of T, Task), Int32)
 - uid: PeerTalk.TaskHelper.WhenAnyResult*
   name: WhenAnyResult
   href: api/PeerTalk.TaskHelper.html#PeerTalk_TaskHelper_WhenAnyResult_
@@ -5635,37 +5983,20 @@ references:
   fullName.vb: PeerTalk.WhiteList(Of T)
   nameWithType: WhiteList<T>
   nameWithType.vb: WhiteList(Of T)
-- uid: PeerTalk.WhiteList`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  name: IsAllowedAsync(T, CancellationToken)
-  href: api/PeerTalk.WhiteList-1.html#PeerTalk_WhiteList_1_IsAllowedAsync__0_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.WhiteList`1.IsAllowedAsync(`0,System.Threading.CancellationToken)
-  fullName: PeerTalk.WhiteList<T>.IsAllowedAsync(T, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.WhiteList(Of T).IsAllowedAsync(T, System.Threading.CancellationToken)
-  nameWithType: WhiteList<T>.IsAllowedAsync(T, CancellationToken)
-  nameWithType.vb: WhiteList(Of T).IsAllowedAsync(T, CancellationToken)
-- uid: PeerTalk.WhiteList`1.IsAllowedAsync*
-  name: IsAllowedAsync
-  href: api/PeerTalk.WhiteList-1.html#PeerTalk_WhiteList_1_IsAllowedAsync_
-  commentId: Overload:PeerTalk.WhiteList`1.IsAllowedAsync
+- uid: PeerTalk.WhiteList`1.IsAllowed(`0)
+  name: IsAllowed(T)
+  href: api/PeerTalk.WhiteList-1.html#PeerTalk_WhiteList_1_IsAllowed__0_
+  commentId: M:PeerTalk.WhiteList`1.IsAllowed(`0)
+  fullName: PeerTalk.WhiteList<T>.IsAllowed(T)
+  fullName.vb: PeerTalk.WhiteList(Of T).IsAllowed(T)
+  nameWithType: WhiteList<T>.IsAllowed(T)
+  nameWithType.vb: WhiteList(Of T).IsAllowed(T)
+- uid: PeerTalk.WhiteList`1.IsAllowed*
+  name: IsAllowed
+  href: api/PeerTalk.WhiteList-1.html#PeerTalk_WhiteList_1_IsAllowed_
+  commentId: Overload:PeerTalk.WhiteList`1.IsAllowed
   isSpec: "True"
-  fullName: PeerTalk.WhiteList<T>.IsAllowedAsync
-  fullName.vb: PeerTalk.WhiteList(Of T).IsAllowedAsync
-  nameWithType: WhiteList<T>.IsAllowedAsync
-  nameWithType.vb: WhiteList(Of T).IsAllowedAsync
-- uid: PeerTalk.WhiteList`1.IsNotAllowedAsync(`0,System.Threading.CancellationToken)
-  name: IsNotAllowedAsync(T, CancellationToken)
-  href: api/PeerTalk.WhiteList-1.html#PeerTalk_WhiteList_1_IsNotAllowedAsync__0_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.WhiteList`1.IsNotAllowedAsync(`0,System.Threading.CancellationToken)
-  fullName: PeerTalk.WhiteList<T>.IsNotAllowedAsync(T, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.WhiteList(Of T).IsNotAllowedAsync(T, System.Threading.CancellationToken)
-  nameWithType: WhiteList<T>.IsNotAllowedAsync(T, CancellationToken)
-  nameWithType.vb: WhiteList(Of T).IsNotAllowedAsync(T, CancellationToken)
-- uid: PeerTalk.WhiteList`1.IsNotAllowedAsync*
-  name: IsNotAllowedAsync
-  href: api/PeerTalk.WhiteList-1.html#PeerTalk_WhiteList_1_IsNotAllowedAsync_
-  commentId: Overload:PeerTalk.WhiteList`1.IsNotAllowedAsync
-  isSpec: "True"
-  fullName: PeerTalk.WhiteList<T>.IsNotAllowedAsync
-  fullName.vb: PeerTalk.WhiteList(Of T).IsNotAllowedAsync
-  nameWithType: WhiteList<T>.IsNotAllowedAsync
-  nameWithType.vb: WhiteList(Of T).IsNotAllowedAsync
+  fullName: PeerTalk.WhiteList<T>.IsAllowed
+  fullName.vb: PeerTalk.WhiteList(Of T).IsAllowed
+  nameWithType: WhiteList<T>.IsAllowed
+  nameWithType.vb: WhiteList(Of T).IsAllowed

@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.BlackList-1.html",
-          "hash": "7hfXQhX5rV1ZdpawBiclpw=="
+          "hash": "73zZbbmPCwCinoycB5vL5A=="
         }
       },
       "is_incremental": false,
@@ -106,6 +106,18 @@
         ".html": {
           "relative_path": "api/PeerTalk.Cryptography.html",
           "hash": "Bg4xgqlD9ZC7aWUMlJh4yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.DeadPeer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.DeadPeer.html",
+          "hash": "UQ7QeBBTOmRXsy0YuZNrAQ=="
         }
       },
       "is_incremental": false,
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.MultiAddressBlackList.html",
-          "hash": "e79N2zWwBVu06/ZYD8EgMA=="
+          "hash": "hfomeSbOCk7ioazV6cZBmQ=="
         }
       },
       "is_incremental": false,
@@ -261,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.MultiAddressWhiteList.html",
-          "hash": "/e0LYcbZn7kuJlZ2KHt2hg=="
+          "hash": "EOdD4IQgK0zgDPGOAYHyKQ=="
         }
       },
       "is_incremental": false,
@@ -341,11 +353,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.PeerManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.PeerManager.html",
+          "hash": "dkNdjlgir3vG2zdoV0ve2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PeerTalk.Policy-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Policy-1.html",
-          "hash": "SNEK785yWUlvQmIGDp/elQ=="
+          "hash": "brGRmn2bGcukFP9VPfaDKw=="
         }
       },
       "is_incremental": false,
@@ -357,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.PolicyAlways-1.html",
-          "hash": "sC87Ai5P8A02tJ4EfB/18A=="
+          "hash": "H6/yUDxK+wfktHoIDgkqww=="
         }
       },
       "is_incremental": false,
@@ -369,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.PolicyNever-1.html",
-          "hash": "tADhuO9+5Yt9+aqg3CcT+g=="
+          "hash": "nifITgLyLwqbtnDrZOg2tw=="
         }
       },
       "is_incremental": false,
@@ -813,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Swarm.html",
-          "hash": "YoaOGw/Fl5pPGwSalct7Qg=="
+          "hash": "k/1GysyrmrXybT3KXqocEA=="
         }
       },
       "is_incremental": false,
@@ -825,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.TaskHelper.html",
-          "hash": "hsMf6n49bNfHctDU/SoajA=="
+          "hash": "lIZ5e/bJuNW/yFfD/v01Xw=="
         }
       },
       "is_incremental": false,
@@ -885,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.WhiteList-1.html",
-          "hash": "hpgqMRvAYQb5xUaNHylq8A=="
+          "hash": "ZpSMp0u9rDIptA0eqrnzIA=="
         }
       },
       "is_incremental": false,
@@ -897,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.html",
-          "hash": "dW1u6n5rjXhJLng09loiog=="
+          "hash": "EhvsjNCzdmbbLbX1BbK2Ng=="
         }
       },
       "is_incremental": false,
@@ -909,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "OMTup36HQMFg7fMQuIu5Ig=="
+          "hash": "DKzyQT8q8euT03g80lg9Kw=="
         }
       },
       "is_incremental": false,
@@ -1116,7 +1140,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 75,
+          "total_file_count": 77,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -183,18 +183,18 @@ passes.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_WhiteList_1_IsAllowedAsync__0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.WhiteList%601.IsAllowedAsync(%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_WhiteList_1_IsAllowed__0_.md&amp;value=---%0Auid%3A%20PeerTalk.WhiteList%601.IsAllowed(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/peer-talk/blob/master/src/WhiteList.cs/#L25">View Source</a>
   </span>
-  <a id="PeerTalk_WhiteList_1_IsAllowedAsync_" data-uid="PeerTalk.WhiteList`1.IsAllowedAsync*"></a>
-  <h4 id="PeerTalk_WhiteList_1_IsAllowedAsync__0_System_Threading_CancellationToken_" data-uid="PeerTalk.WhiteList`1.IsAllowedAsync(`0,System.Threading.CancellationToken)">IsAllowedAsync(T, CancellationToken)</h4>
+  <a id="PeerTalk_WhiteList_1_IsAllowed_" data-uid="PeerTalk.WhiteList`1.IsAllowed*"></a>
+  <h4 id="PeerTalk_WhiteList_1_IsAllowed__0_" data-uid="PeerTalk.WhiteList`1.IsAllowed(`0)">IsAllowed(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsAllowedAsync(T target, CancellationToken cancel = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsAllowed(T target)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,11 +211,6 @@ passes.</p>
         <td><span class="parametername">target</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancel</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -228,59 +223,7 @@ passes.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_WhiteList_1_IsNotAllowedAsync__0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.WhiteList%601.IsNotAllowedAsync(%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/richardschneider/peer-talk/blob/master/src/WhiteList.cs/#L31">View Source</a>
-  </span>
-  <a id="PeerTalk_WhiteList_1_IsNotAllowedAsync_" data-uid="PeerTalk.WhiteList`1.IsNotAllowedAsync*"></a>
-  <h4 id="PeerTalk_WhiteList_1_IsNotAllowedAsync__0_System_Threading_CancellationToken_" data-uid="PeerTalk.WhiteList`1.IsNotAllowedAsync(`0,System.Threading.CancellationToken)">IsNotAllowedAsync(T, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; IsNotAllowedAsync(T target, CancellationToken cancel = default(CancellationToken))</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">target</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancel</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -300,6 +243,10 @@ passes.</p>
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PeerTalk.TaskHelper.html#PeerTalk_TaskHelper_ParallelForEachAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task__System_Int32_">TaskHelper.ParallelForEachAsync&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Task&gt;, Int32)</a>
   </div>
 </article>
           </div>
