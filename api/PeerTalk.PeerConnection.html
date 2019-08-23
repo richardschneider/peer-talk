@@ -893,19 +893,19 @@ the remote peer.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_ReadMessages_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.ReadMessages(System.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_ReadMessagesAsync_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.ReadMessagesAsync(System.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L313">View Source</a>
   </span>
-  <a id="PeerTalk_PeerConnection_ReadMessages_" data-uid="PeerTalk.PeerConnection.ReadMessages*"></a>
-  <h4 id="PeerTalk_PeerConnection_ReadMessages_System_IO_Stream_System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.ReadMessages(System.IO.Stream,System.Threading.CancellationToken)">ReadMessages(Stream, CancellationToken)</h4>
+  <a id="PeerTalk_PeerConnection_ReadMessagesAsync_" data-uid="PeerTalk.PeerConnection.ReadMessagesAsync*"></a>
+  <h4 id="PeerTalk_PeerConnection_ReadMessagesAsync_System_IO_Stream_System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.ReadMessagesAsync(System.IO.Stream,System.Threading.CancellationToken)">ReadMessagesAsync(Stream, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Starts reading messages from the remote peer on the specified stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ReadMessages(Stream stream, CancellationToken cancel)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ReadMessagesAsync(Stream stream, CancellationToken cancel)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -929,21 +929,36 @@ the remote peer.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_ReadMessages_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.ReadMessages(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/richardschneider/peer-talk/new/master/apiSpec/new?filename=PeerTalk_PeerConnection_ReadMessagesAsync_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20PeerTalk.PeerConnection.ReadMessagesAsync(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/richardschneider/peer-talk/blob/master/src/PeerConnection.cs/#L270">View Source</a>
   </span>
-  <a id="PeerTalk_PeerConnection_ReadMessages_" data-uid="PeerTalk.PeerConnection.ReadMessages*"></a>
-  <h4 id="PeerTalk_PeerConnection_ReadMessages_System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.ReadMessages(System.Threading.CancellationToken)">ReadMessages(CancellationToken)</h4>
+  <a id="PeerTalk_PeerConnection_ReadMessagesAsync_" data-uid="PeerTalk.PeerConnection.ReadMessagesAsync*"></a>
+  <h4 id="PeerTalk_PeerConnection_ReadMessagesAsync_System_Threading_CancellationToken_" data-uid="PeerTalk.PeerConnection.ReadMessagesAsync(System.Threading.CancellationToken)">ReadMessagesAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Starts reading messages from the remote peer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ReadMessages(CancellationToken cancel)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ReadMessagesAsync(CancellationToken cancel)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -958,6 +973,21 @@ the remote peer.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>

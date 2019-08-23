@@ -2125,25 +2125,25 @@ references:
   isSpec: "True"
   fullName: PeerTalk.PeerConnection.Protocols
   nameWithType: PeerConnection.Protocols
-- uid: PeerTalk.PeerConnection.ReadMessages(System.IO.Stream,System.Threading.CancellationToken)
-  name: ReadMessages(Stream, CancellationToken)
-  href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_ReadMessages_System_IO_Stream_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.PeerConnection.ReadMessages(System.IO.Stream,System.Threading.CancellationToken)
-  fullName: PeerTalk.PeerConnection.ReadMessages(System.IO.Stream, System.Threading.CancellationToken)
-  nameWithType: PeerConnection.ReadMessages(Stream, CancellationToken)
-- uid: PeerTalk.PeerConnection.ReadMessages(System.Threading.CancellationToken)
-  name: ReadMessages(CancellationToken)
-  href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_ReadMessages_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.PeerConnection.ReadMessages(System.Threading.CancellationToken)
-  fullName: PeerTalk.PeerConnection.ReadMessages(System.Threading.CancellationToken)
-  nameWithType: PeerConnection.ReadMessages(CancellationToken)
-- uid: PeerTalk.PeerConnection.ReadMessages*
-  name: ReadMessages
-  href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_ReadMessages_
-  commentId: Overload:PeerTalk.PeerConnection.ReadMessages
+- uid: PeerTalk.PeerConnection.ReadMessagesAsync(System.IO.Stream,System.Threading.CancellationToken)
+  name: ReadMessagesAsync(Stream, CancellationToken)
+  href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_ReadMessagesAsync_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PeerConnection.ReadMessagesAsync(System.IO.Stream,System.Threading.CancellationToken)
+  fullName: PeerTalk.PeerConnection.ReadMessagesAsync(System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: PeerConnection.ReadMessagesAsync(Stream, CancellationToken)
+- uid: PeerTalk.PeerConnection.ReadMessagesAsync(System.Threading.CancellationToken)
+  name: ReadMessagesAsync(CancellationToken)
+  href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_ReadMessagesAsync_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.PeerConnection.ReadMessagesAsync(System.Threading.CancellationToken)
+  fullName: PeerTalk.PeerConnection.ReadMessagesAsync(System.Threading.CancellationToken)
+  nameWithType: PeerConnection.ReadMessagesAsync(CancellationToken)
+- uid: PeerTalk.PeerConnection.ReadMessagesAsync*
+  name: ReadMessagesAsync
+  href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_ReadMessagesAsync_
+  commentId: Overload:PeerTalk.PeerConnection.ReadMessagesAsync
   isSpec: "True"
-  fullName: PeerTalk.PeerConnection.ReadMessages
-  nameWithType: PeerConnection.ReadMessages
+  fullName: PeerTalk.PeerConnection.ReadMessagesAsync
+  nameWithType: PeerConnection.ReadMessagesAsync
 - uid: PeerTalk.PeerConnection.RemoteAddress
   name: RemoteAddress
   href: api/PeerTalk.PeerConnection.html#PeerTalk_PeerConnection_RemoteAddress
@@ -2414,19 +2414,19 @@ references:
   commentId: T:PeerTalk.Protocols.Identify1
   fullName: PeerTalk.Protocols.Identify1
   nameWithType: Identify1
-- uid: PeerTalk.Protocols.Identify1.GetRemotePeer(PeerTalk.PeerConnection,System.Threading.CancellationToken)
-  name: GetRemotePeer(PeerConnection, CancellationToken)
-  href: api/PeerTalk.Protocols.Identify1.html#PeerTalk_Protocols_Identify1_GetRemotePeer_PeerTalk_PeerConnection_System_Threading_CancellationToken_
-  commentId: M:PeerTalk.Protocols.Identify1.GetRemotePeer(PeerTalk.PeerConnection,System.Threading.CancellationToken)
-  fullName: PeerTalk.Protocols.Identify1.GetRemotePeer(PeerTalk.PeerConnection, System.Threading.CancellationToken)
-  nameWithType: Identify1.GetRemotePeer(PeerConnection, CancellationToken)
-- uid: PeerTalk.Protocols.Identify1.GetRemotePeer*
-  name: GetRemotePeer
-  href: api/PeerTalk.Protocols.Identify1.html#PeerTalk_Protocols_Identify1_GetRemotePeer_
-  commentId: Overload:PeerTalk.Protocols.Identify1.GetRemotePeer
+- uid: PeerTalk.Protocols.Identify1.GetRemotePeerAsync(PeerTalk.PeerConnection,System.Threading.CancellationToken)
+  name: GetRemotePeerAsync(PeerConnection, CancellationToken)
+  href: api/PeerTalk.Protocols.Identify1.html#PeerTalk_Protocols_Identify1_GetRemotePeerAsync_PeerTalk_PeerConnection_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.Protocols.Identify1.GetRemotePeerAsync(PeerTalk.PeerConnection,System.Threading.CancellationToken)
+  fullName: PeerTalk.Protocols.Identify1.GetRemotePeerAsync(PeerTalk.PeerConnection, System.Threading.CancellationToken)
+  nameWithType: Identify1.GetRemotePeerAsync(PeerConnection, CancellationToken)
+- uid: PeerTalk.Protocols.Identify1.GetRemotePeerAsync*
+  name: GetRemotePeerAsync
+  href: api/PeerTalk.Protocols.Identify1.html#PeerTalk_Protocols_Identify1_GetRemotePeerAsync_
+  commentId: Overload:PeerTalk.Protocols.Identify1.GetRemotePeerAsync
   isSpec: "True"
-  fullName: PeerTalk.Protocols.Identify1.GetRemotePeer
-  nameWithType: Identify1.GetRemotePeer
+  fullName: PeerTalk.Protocols.Identify1.GetRemotePeerAsync
+  nameWithType: Identify1.GetRemotePeerAsync
 - uid: PeerTalk.Protocols.Identify1.Name
   name: Name
   href: api/PeerTalk.Protocols.Identify1.html#PeerTalk_Protocols_Identify1_Name
@@ -5841,22 +5841,22 @@ references:
   fullName.vb: PeerTalk.TaskHelper.ParallelForEachAsync(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, System.Threading.Tasks.Task), System.Int32)
   nameWithType: TaskHelper.ParallelForEachAsync<T>(IEnumerable<T>, Func<T, Task>, Int32)
   nameWithType.vb: TaskHelper.ParallelForEachAsync(Of T)(IEnumerable(Of T), Func(Of T, Task), Int32)
-- uid: PeerTalk.TaskHelper.WhenAnyResult*
-  name: WhenAnyResult
-  href: api/PeerTalk.TaskHelper.html#PeerTalk_TaskHelper_WhenAnyResult_
-  commentId: Overload:PeerTalk.TaskHelper.WhenAnyResult
+- uid: PeerTalk.TaskHelper.WhenAnyResultAsync*
+  name: WhenAnyResultAsync
+  href: api/PeerTalk.TaskHelper.html#PeerTalk_TaskHelper_WhenAnyResultAsync_
+  commentId: Overload:PeerTalk.TaskHelper.WhenAnyResultAsync
   isSpec: "True"
-  fullName: PeerTalk.TaskHelper.WhenAnyResult
-  nameWithType: TaskHelper.WhenAnyResult
-- uid: PeerTalk.TaskHelper.WhenAnyResult``1(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
-  name: WhenAnyResult<T>(IEnumerable<Task<T>>, CancellationToken)
-  href: api/PeerTalk.TaskHelper.html#PeerTalk_TaskHelper_WhenAnyResult__1_System_Collections_Generic_IEnumerable_System_Threading_Tasks_Task___0___System_Threading_CancellationToken_
-  commentId: M:PeerTalk.TaskHelper.WhenAnyResult``1(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
-  name.vb: WhenAnyResult(Of T)(IEnumerable(Of Task(Of T)), CancellationToken)
-  fullName: PeerTalk.TaskHelper.WhenAnyResult<T>(System.Collections.Generic.IEnumerable<System.Threading.Tasks.Task<T>>, System.Threading.CancellationToken)
-  fullName.vb: PeerTalk.TaskHelper.WhenAnyResult(Of T)(System.Collections.Generic.IEnumerable(Of System.Threading.Tasks.Task(Of T)), System.Threading.CancellationToken)
-  nameWithType: TaskHelper.WhenAnyResult<T>(IEnumerable<Task<T>>, CancellationToken)
-  nameWithType.vb: TaskHelper.WhenAnyResult(Of T)(IEnumerable(Of Task(Of T)), CancellationToken)
+  fullName: PeerTalk.TaskHelper.WhenAnyResultAsync
+  nameWithType: TaskHelper.WhenAnyResultAsync
+- uid: PeerTalk.TaskHelper.WhenAnyResultAsync``1(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
+  name: WhenAnyResultAsync<T>(IEnumerable<Task<T>>, CancellationToken)
+  href: api/PeerTalk.TaskHelper.html#PeerTalk_TaskHelper_WhenAnyResultAsync__1_System_Collections_Generic_IEnumerable_System_Threading_Tasks_Task___0___System_Threading_CancellationToken_
+  commentId: M:PeerTalk.TaskHelper.WhenAnyResultAsync``1(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
+  name.vb: WhenAnyResultAsync(Of T)(IEnumerable(Of Task(Of T)), CancellationToken)
+  fullName: PeerTalk.TaskHelper.WhenAnyResultAsync<T>(System.Collections.Generic.IEnumerable<System.Threading.Tasks.Task<T>>, System.Threading.CancellationToken)
+  fullName.vb: PeerTalk.TaskHelper.WhenAnyResultAsync(Of T)(System.Collections.Generic.IEnumerable(Of System.Threading.Tasks.Task(Of T)), System.Threading.CancellationToken)
+  nameWithType: TaskHelper.WhenAnyResultAsync<T>(IEnumerable<Task<T>>, CancellationToken)
+  nameWithType.vb: TaskHelper.WhenAnyResultAsync(Of T)(IEnumerable(Of Task(Of T)), CancellationToken)
 - uid: PeerTalk.Transports
   name: PeerTalk.Transports
   href: api/PeerTalk.Transports.html
