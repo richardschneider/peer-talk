@@ -20,6 +20,8 @@ namespace PeerTalk.Protocols
     /// </summary>
     public class Ping1 : IPeerProtocol, IService
     {
+        const int PingSize = 32;
+
         static ILog log = LogManager.GetLogger(typeof(Ping1));
 
         /// <inheritdoc />
@@ -45,17 +47,15 @@ namespace PeerTalk.Protocols
             while (true)
             {
                 // Read the message.
-                var length = await stream.ReadVarint32Async(cancel).ConfigureAwait(false);
-                var request = new byte[length];
-                for (int offset = 0; offset < length;)
+                var request = new byte[PingSize];
+                for (int offset = 0; offset < PingSize;)
                 {
-                    offset += await stream.ReadAsync(request, offset, length - offset, cancel).ConfigureAwait(false);
+                    offset += await stream.ReadAsync(request, offset, PingSize - offset, cancel).ConfigureAwait(false);
                 }
                 log.Debug($"got ping from {connection.RemotePeer}");
 
                 // Echo the message
-                await stream.WriteVarintAsync(length, cancel).ConfigureAwait(false);
-                await stream.WriteAsync(request, 0, length, cancel).ConfigureAwait(false);
+                await stream.WriteAsync(request, 0, PingSize, cancel).ConfigureAwait(false);
                 await stream.FlushAsync(cancel).ConfigureAwait(false);
             }
         }
@@ -126,7 +126,6 @@ namespace PeerTalk.Protocols
 
         async Task<IEnumerable<PingResult>> PingAsync(Peer peer, int count, CancellationToken cancel)
         {
-            const int PingSize = 32;
             var ping = new byte[PingSize];
             var rng = new Random();
             var results = new List<PingResult>();
@@ -141,15 +140,13 @@ namespace PeerTalk.Protocols
                     var start = DateTime.Now;
                     try
                     {
-                        await stream.WriteVarintAsync(ping.Length, cancel).ConfigureAwait(false);
                         await stream.WriteAsync(ping, 0, ping.Length).ConfigureAwait(false); ;
                         await stream.FlushAsync(cancel).ConfigureAwait(false);
 
-                        var length = await stream.ReadVarint32Async(cancel).ConfigureAwait(false);
-                        var response = new byte[length];
-                        for (int offset = 0; offset < length;)
+                        var response = new byte[PingSize];
+                        for (int offset = 0; offset < PingSize;)
                         {
-                            offset += await stream.ReadAsync(response, offset, length - offset, cancel).ConfigureAwait(false);
+                            offset += await stream.ReadAsync(response, offset, PingSize - offset, cancel).ConfigureAwait(false);
                         }
 
                         var result = new PingResult
