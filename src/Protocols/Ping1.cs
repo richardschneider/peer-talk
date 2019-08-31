@@ -128,7 +128,10 @@ namespace PeerTalk.Protocols
         {
             var ping = new byte[PingSize];
             var rng = new Random();
-            var results = new List<PingResult>();
+            var results = new List<PingResult>
+            {
+                new PingResult { Success = true, Text = $"PING {peer}."}
+            };
             var totalTime = TimeSpan.Zero;
 
             using (var stream = await Swarm.DialAsync(peer, this.ToString(), cancel))
@@ -178,6 +181,13 @@ namespace PeerTalk.Protocols
                     }
                 }
             }
+
+            var avg = totalTime.TotalMilliseconds / count;
+            results.Add(new PingResult
+            {
+                Success = true,
+                Text = $"Average latency: {avg.ToString("0.000")}ms"
+            });
 
             return results;
         }
