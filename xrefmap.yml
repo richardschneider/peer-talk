@@ -5570,6 +5570,37 @@ references:
   isSpec: "True"
   fullName: PeerTalk.StatsStream.WriteTimeout
   nameWithType: StatsStream.WriteTimeout
+- uid: PeerTalk.StreamExtensions
+  name: StreamExtensions
+  href: api/PeerTalk.StreamExtensions.html
+  commentId: T:PeerTalk.StreamExtensions
+  fullName: PeerTalk.StreamExtensions
+  nameWithType: StreamExtensions
+- uid: PeerTalk.StreamExtensions.ReadExactAsync(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+  name: ReadExactAsync(Stream, Byte[], Int32, Int32)
+  href: api/PeerTalk.StreamExtensions.html#PeerTalk_StreamExtensions_ReadExactAsync_System_IO_Stream_System_Byte___System_Int32_System_Int32_
+  commentId: M:PeerTalk.StreamExtensions.ReadExactAsync(System.IO.Stream,System.Byte[],System.Int32,System.Int32)
+  name.vb: ReadExactAsync(Stream, Byte(), Int32, Int32)
+  fullName: PeerTalk.StreamExtensions.ReadExactAsync(System.IO.Stream, System.Byte[], System.Int32, System.Int32)
+  fullName.vb: PeerTalk.StreamExtensions.ReadExactAsync(System.IO.Stream, System.Byte(), System.Int32, System.Int32)
+  nameWithType: StreamExtensions.ReadExactAsync(Stream, Byte[], Int32, Int32)
+  nameWithType.vb: StreamExtensions.ReadExactAsync(Stream, Byte(), Int32, Int32)
+- uid: PeerTalk.StreamExtensions.ReadExactAsync(System.IO.Stream,System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+  name: ReadExactAsync(Stream, Byte[], Int32, Int32, CancellationToken)
+  href: api/PeerTalk.StreamExtensions.html#PeerTalk_StreamExtensions_ReadExactAsync_System_IO_Stream_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.StreamExtensions.ReadExactAsync(System.IO.Stream,System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadExactAsync(Stream, Byte(), Int32, Int32, CancellationToken)
+  fullName: PeerTalk.StreamExtensions.ReadExactAsync(System.IO.Stream, System.Byte[], System.Int32, System.Int32, System.Threading.CancellationToken)
+  fullName.vb: PeerTalk.StreamExtensions.ReadExactAsync(System.IO.Stream, System.Byte(), System.Int32, System.Int32, System.Threading.CancellationToken)
+  nameWithType: StreamExtensions.ReadExactAsync(Stream, Byte[], Int32, Int32, CancellationToken)
+  nameWithType.vb: StreamExtensions.ReadExactAsync(Stream, Byte(), Int32, Int32, CancellationToken)
+- uid: PeerTalk.StreamExtensions.ReadExactAsync*
+  name: ReadExactAsync
+  href: api/PeerTalk.StreamExtensions.html#PeerTalk_StreamExtensions_ReadExactAsync_
+  commentId: Overload:PeerTalk.StreamExtensions.ReadExactAsync
+  isSpec: "True"
+  fullName: PeerTalk.StreamExtensions.ReadExactAsync
+  nameWithType: StreamExtensions.ReadExactAsync
 - uid: PeerTalk.Swarm
   name: Swarm
   href: api/PeerTalk.Swarm.html
