@@ -2730,6 +2730,122 @@ references:
   isSpec: "True"
   fullName: PeerTalk.Protocols.Multistream1.Version
   nameWithType: Multistream1.Version
+- uid: PeerTalk.Protocols.Ping1
+  name: Ping1
+  href: api/PeerTalk.Protocols.Ping1.html
+  commentId: T:PeerTalk.Protocols.Ping1
+  fullName: PeerTalk.Protocols.Ping1
+  nameWithType: Ping1
+- uid: PeerTalk.Protocols.Ping1.Name
+  name: Name
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_Name
+  commentId: P:PeerTalk.Protocols.Ping1.Name
+  fullName: PeerTalk.Protocols.Ping1.Name
+  nameWithType: Ping1.Name
+- uid: PeerTalk.Protocols.Ping1.Name*
+  name: Name
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_Name_
+  commentId: Overload:PeerTalk.Protocols.Ping1.Name
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Ping1.Name
+  nameWithType: Ping1.Name
+- uid: PeerTalk.Protocols.Ping1.PingAsync(Ipfs.MultiAddress,System.Int32,System.Threading.CancellationToken)
+  name: PingAsync(MultiAddress, Int32, CancellationToken)
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_PingAsync_Ipfs_MultiAddress_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.Protocols.Ping1.PingAsync(Ipfs.MultiAddress,System.Int32,System.Threading.CancellationToken)
+  fullName: PeerTalk.Protocols.Ping1.PingAsync(Ipfs.MultiAddress, System.Int32, System.Threading.CancellationToken)
+  nameWithType: Ping1.PingAsync(MultiAddress, Int32, CancellationToken)
+- uid: PeerTalk.Protocols.Ping1.PingAsync(Ipfs.MultiHash,System.Int32,System.Threading.CancellationToken)
+  name: PingAsync(MultiHash, Int32, CancellationToken)
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_PingAsync_Ipfs_MultiHash_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.Protocols.Ping1.PingAsync(Ipfs.MultiHash,System.Int32,System.Threading.CancellationToken)
+  fullName: PeerTalk.Protocols.Ping1.PingAsync(Ipfs.MultiHash, System.Int32, System.Threading.CancellationToken)
+  nameWithType: Ping1.PingAsync(MultiHash, Int32, CancellationToken)
+- uid: PeerTalk.Protocols.Ping1.PingAsync*
+  name: PingAsync
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_PingAsync_
+  commentId: Overload:PeerTalk.Protocols.Ping1.PingAsync
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Ping1.PingAsync
+  nameWithType: Ping1.PingAsync
+- uid: PeerTalk.Protocols.Ping1.ProcessMessageAsync(PeerTalk.PeerConnection,System.IO.Stream,System.Threading.CancellationToken)
+  name: ProcessMessageAsync(PeerConnection, Stream, CancellationToken)
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_ProcessMessageAsync_PeerTalk_PeerConnection_System_IO_Stream_System_Threading_CancellationToken_
+  commentId: M:PeerTalk.Protocols.Ping1.ProcessMessageAsync(PeerTalk.PeerConnection,System.IO.Stream,System.Threading.CancellationToken)
+  fullName: PeerTalk.Protocols.Ping1.ProcessMessageAsync(PeerTalk.PeerConnection, System.IO.Stream, System.Threading.CancellationToken)
+  nameWithType: Ping1.ProcessMessageAsync(PeerConnection, Stream, CancellationToken)
+- uid: PeerTalk.Protocols.Ping1.ProcessMessageAsync*
+  name: ProcessMessageAsync
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_ProcessMessageAsync_
+  commentId: Overload:PeerTalk.Protocols.Ping1.ProcessMessageAsync
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Ping1.ProcessMessageAsync
+  nameWithType: Ping1.ProcessMessageAsync
+- uid: PeerTalk.Protocols.Ping1.StartAsync
+  name: StartAsync()
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_StartAsync
+  commentId: M:PeerTalk.Protocols.Ping1.StartAsync
+  fullName: PeerTalk.Protocols.Ping1.StartAsync()
+  nameWithType: Ping1.StartAsync()
+- uid: PeerTalk.Protocols.Ping1.StartAsync*
+  name: StartAsync
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_StartAsync_
+  commentId: Overload:PeerTalk.Protocols.Ping1.StartAsync
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Ping1.StartAsync
+  nameWithType: Ping1.StartAsync
+- uid: PeerTalk.Protocols.Ping1.StopAsync
+  name: StopAsync()
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_StopAsync
+  commentId: M:PeerTalk.Protocols.Ping1.StopAsync
+  fullName: PeerTalk.Protocols.Ping1.StopAsync()
+  nameWithType: Ping1.StopAsync()
+- uid: PeerTalk.Protocols.Ping1.StopAsync*
+  name: StopAsync
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_StopAsync_
+  commentId: Overload:PeerTalk.Protocols.Ping1.StopAsync
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Ping1.StopAsync
+  nameWithType: Ping1.StopAsync
+- uid: PeerTalk.Protocols.Ping1.Swarm
+  name: Swarm
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_Swarm
+  commentId: P:PeerTalk.Protocols.Ping1.Swarm
+  fullName: PeerTalk.Protocols.Ping1.Swarm
+  nameWithType: Ping1.Swarm
+- uid: PeerTalk.Protocols.Ping1.Swarm*
+  name: Swarm
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_Swarm_
+  commentId: Overload:PeerTalk.Protocols.Ping1.Swarm
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Ping1.Swarm
+  nameWithType: Ping1.Swarm
+- uid: PeerTalk.Protocols.Ping1.ToString
+  name: ToString()
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_ToString
+  commentId: M:PeerTalk.Protocols.Ping1.ToString
+  fullName: PeerTalk.Protocols.Ping1.ToString()
+  nameWithType: Ping1.ToString()
+- uid: PeerTalk.Protocols.Ping1.ToString*
+  name: ToString
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_ToString_
+  commentId: Overload:PeerTalk.Protocols.Ping1.ToString
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Ping1.ToString
+  nameWithType: Ping1.ToString
+- uid: PeerTalk.Protocols.Ping1.Version
+  name: Version
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_Version
+  commentId: P:PeerTalk.Protocols.Ping1.Version
+  fullName: PeerTalk.Protocols.Ping1.Version
+  nameWithType: Ping1.Version
+- uid: PeerTalk.Protocols.Ping1.Version*
+  name: Version
+  href: api/PeerTalk.Protocols.Ping1.html#PeerTalk_Protocols_Ping1_Version_
+  commentId: Overload:PeerTalk.Protocols.Ping1.Version
+  isSpec: "True"
+  fullName: PeerTalk.Protocols.Ping1.Version
+  nameWithType: Ping1.Version
 - uid: PeerTalk.Protocols.Plaintext1
   name: Plaintext1
   href: api/PeerTalk.Protocols.Plaintext1.html

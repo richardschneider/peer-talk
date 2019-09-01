@@ -485,6 +485,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PeerTalk.Protocols.Ping1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PeerTalk.Protocols.Ping1.html",
+          "hash": "7XUD9G8fzyFH/kw78M/IpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PeerTalk.Protocols.Plaintext1.yml",
       "output": {
         ".html": {
@@ -525,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PeerTalk.Protocols.html",
-          "hash": "ct4gWz8+VdvFnZyYxwEMjw=="
+          "hash": "+MDDM+EffiWquqCZvqjqYw=="
         }
       },
       "is_incremental": false,
@@ -933,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "DKzyQT8q8euT03g80lg9Kw=="
+          "hash": "fWwGcypvaoKSYotkpGGxNA=="
         }
       },
       "is_incremental": false,
@@ -1131,16 +1143,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 78,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 6,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 77,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
