@@ -21,10 +21,6 @@ init:
   - git config --global user.email "noreply@emanon.org"
   - git config --global user.name "Appveyor CI"
 
-cache:
-  - '%APPDATA%\npm-cache'               # npm cache
-  - '%USERPROFILE%\.nuget\packages'     # nuget cache
-
 environment:
   COVERALLS_REPO_TOKEN:
     secure: j7JWZ2JMDCRkYzFtC5MqoCbEEoCE3gi/mUv2UMXkxr3dTbfnU6F9gs2tGbwK2j3g
