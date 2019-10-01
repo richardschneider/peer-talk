@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461;netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>net461;netcoreapp2.1;netcoreapp3.0</TargetFrameworks>
 
     <IsPackable>false</IsPackable>
     <DebugType>portable</DebugType>
@@ -13,7 +13,7 @@
     <!-- Do not collect by default -->
     <CollectCoverage>false</CollectCoverage>
     <CoverletOutputFormat>opencover</CoverletOutputFormat>
-    <!--<Exclude>[xunit.*]*</Exclude>-->
+    <Include>[PeerTalk]*</Include>
   </PropertyGroup>
 
   <ItemGroup>

@@ -557,7 +557,11 @@ namespace PeerTalk
             }
             catch (Exception)
             {
+#if NETCOREAPP3_0
+                await stream.DisposeAsync().ConfigureAwait(false);
+#else
                 stream.Dispose();
+#endif
                 throw;
             }
         }
@@ -676,7 +680,11 @@ namespace PeerTalk
                     stream = await transport().ConnectAsync(addr, cancel).ConfigureAwait(false);
                     if (cancel.IsCancellationRequested)
                     {
-                        stream?.Dispose();
+#if NETCOREAPP3_0
+                        await stream.DisposeAsync().ConfigureAwait(false);
+#else
+                        stream.Dispose();
+#endif
                         continue;
                     }
                     break;

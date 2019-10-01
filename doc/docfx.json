@@ -15,7 +15,7 @@
         }
       ],
       "properties": {
-        "TargetFramework": "netstandard2"
+        "TargetFramework": "netcoreapp3.0"
       },
 
       "dest": "api"

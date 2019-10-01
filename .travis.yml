@@ -1,7 +1,7 @@
 language: csharp
 mono: none
-dotnet: 2.1.400
-dist: trusty
+dotnet: 3.0.100
+dist: xenial
 sudo: required
 os:
 #  - linux CircleCI does linux tests
@@ -15,5 +15,5 @@ before_script:
     fi
 
 script:
-  - dotnet build -c Release --framework netstandard2 ./src
-  - dotnet test --logger "console;verbosity=normal" -c Release --framework netcoreapp2.1 ./test --filter TestCategory!=IPv6
+  - dotnet build -c Release --framework netcoreapp3.0 ./src
+  - dotnet test --logger "console;verbosity=normal" -c Release --framework netcoreapp3.0 ./test --filter TestCategory!=IPv6
