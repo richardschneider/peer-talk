@@ -1,19 +1,13 @@
 language: csharp
-mono: none
-dotnet: 3.0.100
-dist: xenial
 sudo: required
+mono: none
+dist: xenial
+dotnet: 3.0.100
 os:
-#  - linux CircleCI does linux tests
+  - linux
   - osx
 
-before_script:
-  # Add an IPv6 config - see the corresponding Travis issue
-  # https://github.com/travis-ci/travis-ci/issues/8361
-  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then 
-      sudo sh -c 'echo 0 > /proc/sys/net/ipv6/conf/all/disable_ipv6';
-    fi
-
 script:
-  - dotnet build -c Release --framework netcoreapp3.0 ./src
-  - dotnet test --logger "console;verbosity=normal" -c Release --framework netcoreapp3.0 ./test --filter TestCategory!=IPv6
+  - dotnet restore
+  - dotnet build -c Release --no-restore --framework netcoreapp3.0 ./src
+  - dotnet test  -c Release --no-restore --framework netcoreapp3.0 ./test --filter TestCategory!=IPv6
