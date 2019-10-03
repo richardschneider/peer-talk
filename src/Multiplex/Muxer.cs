@@ -299,14 +299,24 @@ namespace PeerTalk.Multiplex
             if (Connection != null)
                 Connection.Dispose();
             else if (Channel != null)
+            {
+#if NETCOREAPP3_0
+                await Channel.DisposeAsync().ConfigureAwait(false);
+#else
                 Channel.Dispose();
+#endif
+            }
 
             // Dispose of all the substreams.
             var streams = Substreams.Values.ToArray();
             Substreams.Clear();
             foreach (var stream in streams)
             {
+#if NETCOREAPP3_0
+                await stream.DisposeAsync().ConfigureAwait(false);
+#else
                 stream.Dispose();
+#endif
             }
         }
 

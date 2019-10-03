@@ -108,7 +108,11 @@ namespace PeerTalk.Transports
             if (cancel.IsCancellationRequested)
             {
                 log.Trace("cancel " + address);
+#if NETCOREAPP3_0
+                await stream.DisposeAsync().ConfigureAwait(false);
+#else
                 stream.Dispose();
+#endif
                 cancel.ThrowIfCancellationRequested();
             }
 

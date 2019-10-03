@@ -297,7 +297,14 @@ namespace PeerTalk
             // Ignore any disposal exceptions.
             try
             {
-                Stream?.Dispose();
+                if (stream != null)
+                {
+#if NETCOREAPP3_0
+                    await stream.DisposeAsync().ConfigureAwait(false);
+#else
+                    stream.Dispose();
+#endif
+                }
             }
             catch (Exception)
             {
