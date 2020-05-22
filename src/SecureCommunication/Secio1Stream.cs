@@ -91,7 +91,7 @@ namespace PeerTalk.SecureCommunication
         public override bool CanSeek => false;
 
         /// <inheritdoc />
-        public override bool CanWrite => stream.CanRead;
+        public override bool CanWrite => stream.CanWrite;
 
         /// <inheritdoc />
         public override bool CanTimeout => false;
