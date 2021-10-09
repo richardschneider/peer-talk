@@ -28,7 +28,14 @@ namespace PeerTalk.Protocols
         /// <inheritdoc />
         public override string ToString()
         {
-            return $"/{Name}/{Version}";
+            if (Version != null)
+            {
+                return $"/{Name}/{Version}";
+            }
+            else
+            {
+                return $"/{Name}";
+            }
         }
 
         /// <summary>
@@ -41,8 +48,8 @@ namespace PeerTalk.Protocols
             var parts = s.Split('/').Where(p => p.Length > 0).ToArray();
             return new VersionedName
             {
-                Name = string.Join("/", parts, 0, parts.Length - 1),
-                Version = SemVersion.Parse(parts[parts.Length - 1])
+                Name = string.Join("/", parts, 0, parts.Length > 1 ? parts.Length - 1 : 1),
+                Version = parts.Length > 1 ? SemVersion.Parse(parts[parts.Length - 1]) : null
             };
         }
 
@@ -95,7 +102,7 @@ namespace PeerTalk.Protocols
         public int CompareTo(VersionedName that)
         {
             if (that == null) return 1;
-            if (this.Name == that.Name) return this.Version.CompareTo(that.Version);
+            if (this.Name == that.Name) return this.Version == null ? -1 : this.Version.CompareTo(that.Version);
             return this.Name.CompareTo(that.Name);
         }
     }
