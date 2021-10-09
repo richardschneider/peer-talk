@@ -1,22 +1,16 @@
 ﻿using Common.Logging;
 using Ipfs;
-using Ipfs.Registry;
 using Noise;
-using Org.BouncyCastle.Security;
 using PeerTalk.Cryptography;
 using PeerTalk.Protocols;
-using ProtoBuf;
 using Semver;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PeerTalk.SecureCommunication
+namespace PeerTalk.SecureCommunication.Noise
 {
     /// <summary>
     ///   Creates a secure connection with a peer.
@@ -37,7 +31,7 @@ namespace PeerTalk.SecureCommunication
             return $"/{Name}";
         }
 
-        //private static string payloadSigPrefix = "noise-libp2p-static-key:";
+        private static byte[] payloadSigPrefix = System.Text.Encoding.UTF8.GetBytes("noise-libp2p-static-key:");
 
         /// <inheritdoc />
         public async Task ProcessMessageAsync(PeerConnection connection, Stream stream, CancellationToken cancel = default(CancellationToken))
@@ -67,38 +61,59 @@ namespace PeerTalk.SecureCommunication
               PatternModifiers.None
             );
 
-            var psk = new byte[32];
-
-            // Generate a random 32-byte pre-shared secret key.
-            using (var random = RandomNumberGenerator.Create())
-            {
-                random.GetBytes(psk);
-            }
+            /*
+             * In a nutshell
+             * 
+             * We generate a new public keypair for this connection (Our "static" key) and establish a connection to another peer.
+             * 
+             * If we started the connection, they send us their identity public key and a signature signed with the identity key of
+             * their salted static public key so we can verify this connection could only be estabilshed by that identity.
+             * 
+             * We then do the same, sending our identity public key and sign with our identity key our salted static public key
+             * 
+             * Note: The salt, though constant, makes collision attacks more difficult.
+             */
 
             try
             {
                 using (var kp = KeyPair.Generate())
                 {
-                    var buffer = new byte[Protocol.MaxMessageLength];
-                    var readbuffer = new byte[Protocol.MaxMessageLength];
+                    var streambuffer = new byte[Protocol.MaxMessageLength];
+                    var plaintextbuffer = new byte[Protocol.MaxMessageLength];
 
                     using (var state = protocol.Create(initiator: !connection.IsIncoming, s: kp.PrivateKey))
                     {
                         if (!connection.IsIncoming)
                         {
-
-                            log.Info($"Sending Noise Handshake {connection.RemotePeer.Id}");
-
-                            var (bytesWritten, _, _) = state.WriteMessage(null, buffer);
-                            await WriteStreamMessageAsync(stream, buffer, bytesWritten);
-
-                            log.Info($"Waiting For Noise Handshake {connection.RemotePeer.Id}");
+                            {
+                                var (bytesWritten, _, _) = state.WriteMessage(null, streambuffer);
+                                await WriteStreamMessageAsync(stream, streambuffer, bytesWritten);
+                            }
 
                             // Receive the second handshake message from the server.
-                            var received = await ReadStreamMessageAsync(stream, buffer, Protocol.MaxMessageLength);
-                            var (_, _, transport) = state.ReadMessage(new ReadOnlySpan<byte>(buffer, 0, received), readbuffer);
+                            var received = await ReadStreamMessageAsync(stream, streambuffer, Protocol.MaxMessageLength);
+                            var (bytesRead, _, _) = state.ReadMessage(new ReadOnlySpan<byte>(streambuffer, 0, received), plaintextbuffer);
+
+                            using (var incomingstream = new MemoryStream(plaintextbuffer, 0, bytesRead, writable: false)) {
+                                var peerPayload = ProtoBuf.Serializer.Deserialize<NoiseHandshakePayload>(incomingstream);
+                                ValidatePayload(connection, state, peerPayload);
+                            }
+
+                            log.Info($"Validated the peer identity with Noise Protocol: {connection.RemotePeer.Id}");
+
+                            // Send third step in handshake
+                            var myPayload = GeneratePayload(connection, state, kp.PublicKey);
+
+                            using (var outgoingstream = new MemoryStream(plaintextbuffer, 0, Protocol.MaxMessageLength, writable: true))
+                            {
+                                ProtoBuf.Serializer.Serialize(outgoingstream, myPayload);
+                                var (bytesWritten, _, transport) = state.WriteMessage(new ReadOnlySpan<byte>(plaintextbuffer, 0, Convert.ToInt32(outgoingstream.Position)), streambuffer);
+                                await WriteStreamMessageAsync(stream, streambuffer, bytesWritten);
+                            }
 
                             log.Info($"Noise Handshake Done {connection.RemotePeer.Id}");
+
+                            await Task.Delay(10000);
                         }
                     }
                 }
@@ -171,6 +186,54 @@ namespace PeerTalk.SecureCommunication
             }
 
             return readTotal;
+        }
+
+        private static MultiHash PeerKeyToId(byte[] key)
+        {
+            var ridAlg = (key.Length <= 48) ? "identity" : "sha2-256";
+            return MultiHash.ComputeHash(key, ridAlg);
+        }
+
+        private static void ValidatePayload(PeerConnection connection, HandshakeState state, NoiseHandshakePayload payload)
+        {
+            var remotePeer = connection.RemotePeer;
+
+            var remoteId = PeerKeyToId(payload.IdentityKey);
+            if (remotePeer.Id == null)
+            {
+                remotePeer.Id = remoteId;
+            }
+            else if (remoteId != remotePeer.Id)
+            {
+                throw new Exception($"Expected peer '{remotePeer.Id}', got '{remoteId}'");
+            }
+
+            var peerStaticKey = state.RemoteStaticPublicKey;
+            var peerIdentityKey = Key.CreatePublicKeyFromIpfs(payload.IdentityKey);
+
+            using (var ms = new MemoryStream())
+            {
+                ms.Write(payloadSigPrefix, 0, payloadSigPrefix.Length);
+                ms.Write(peerStaticKey.ToArray(), 0, peerStaticKey.Length);
+                peerIdentityKey.Verify(ms.ToArray(), payload.IdentitySig);
+            }
+        }
+
+        private static NoiseHandshakePayload GeneratePayload(PeerConnection connection, HandshakeState state, byte[] myStaticPublicKey)
+        {
+            var payload = new NoiseHandshakePayload();
+
+            payload.Data = null;
+            payload.IdentityKey = Convert.FromBase64String(connection.LocalPeer.PublicKey);
+
+            using (var ms = new MemoryStream())
+            {
+                ms.Write(payloadSigPrefix, 0, payloadSigPrefix.Length);
+                ms.Write(myStaticPublicKey, 0, myStaticPublicKey.Length);
+                payload.IdentitySig = connection.LocalPeerKey.Sign(ms.ToArray());
+            }
+
+            return payload;
         }
     }
 }
