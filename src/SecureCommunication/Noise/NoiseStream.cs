@@ -152,9 +152,6 @@ namespace PeerTalk.SecureCommunication.Noise
             //Do that pesky decrypt thing
             var plaintextBytes = transport.ReadMessage(buffer, plaintextbuffer);
 
-
-            log.Debug($"Recieved via Noise {messageSize} bytes");
-
             //This is really inefficient but gets the job done
             return new ReadOnlySpan<byte>(plaintextbuffer, 0, plaintextBytes).ToArray();
         }
@@ -199,8 +196,6 @@ namespace PeerTalk.SecureCommunication.Noise
             }
 
             await stream.FlushAsync(cancel).ConfigureAwait(false);
-
-            log.Debug($"Sent via Noise {data.Length} bytes");
         }
 
         /// <inheritdoc />
