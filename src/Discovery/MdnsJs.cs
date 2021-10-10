@@ -77,9 +77,14 @@ namespace PeerTalk.Discovery
             foreach (var name in peerNames)
             {
                 var id = name.Labels[0];
-                var srv = message.Answers
+                var srvList = message.Answers
                     .OfType<SRVRecord>()
-                    .First(r => r.Name == name);
+                    .Where(r => r.Name == name);
+                if(srvList.Count() == 0)
+                {
+                    continue;
+                }
+                var srv = srvList.First();
                 var aRecords = message.Answers
                     .OfType<ARecord>()
                     .Where(a => a.Name == name || a.Name == srv.Target);
