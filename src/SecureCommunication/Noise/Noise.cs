@@ -109,22 +109,27 @@ namespace PeerTalk.SecureCommunication.Noise
                                 ProtoBuf.Serializer.Serialize(outgoingstream, myPayload);
                                 var (bytesWritten, _, transport) = state.WriteMessage(new ReadOnlySpan<byte>(plaintextbuffer, 0, Convert.ToInt32(outgoingstream.Position)), streambuffer);
                                 await WriteStreamMessageAsync(stream, streambuffer, bytesWritten);
+
+                                log.Info($"Noise Handshake Done {connection.RemotePeer.Id}");
+
+                                var secureStream = new NoiseStream(transport, stream);
+                                connection.Stream = secureStream;
+                                connection.SecurityEstablished.SetResult(true);
+                                return secureStream;
                             }
-
-                            log.Info($"Noise Handshake Done {connection.RemotePeer.Id}");
-
-                            await Task.Delay(10000);
+                        }
+                        else
+                        {
+                            throw new NotImplementedException("TODO: Implement incoming connections with Noise");
                         }
                     }
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 log.Error($"Something failed {e.Message}", e);
+                throw;
             }
-
-            await Task.Yield();
-
-            return new System.IO.MemoryStream();//This should be the encrypted stream;
         }
 
         /**
@@ -217,6 +222,8 @@ namespace PeerTalk.SecureCommunication.Noise
                 ms.Write(peerStaticKey.ToArray(), 0, peerStaticKey.Length);
                 peerIdentityKey.Verify(ms.ToArray(), payload.IdentitySig);
             }
+
+            remotePeer.PublicKey = Convert.ToBase64String(payload.IdentityKey);
         }
 
         private static NoiseHandshakePayload GeneratePayload(PeerConnection connection, HandshakeState state, byte[] myStaticPublicKey)
