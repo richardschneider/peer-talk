@@ -240,7 +240,6 @@ namespace PeerTalk.SecureCommunication.Noise
             }
 
             var peerStaticKey = state.RemoteStaticPublicKey;
-            log.Debug($"Identity {remoteId} Keylength: {payload.IdentityKey.Length}");
             try
             {
                 var peerIdentityKey = Key.CreatePublicKeyFromIpfs(payload.IdentityKey);
