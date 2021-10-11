@@ -36,12 +36,7 @@ namespace PeerTalk.Protocols
         public async Task ProcessMessageAsync(PeerConnection connection, Stream stream, CancellationToken cancel = default(CancellationToken))
         {
             log.Debug("start processing requests from " + connection.RemoteAddress);
-            var muxer = new Muxer
-            {
-                Channel = stream,
-                Connection = connection,
-                Receiver = true
-            };
+            var muxer = new Muxer(stream, connection);
             muxer.SubstreamCreated += (s, e) => _ = connection.ReadMessagesAsync(e, CancellationToken.None);
 
             // Attach muxer to the connection.  It now becomes the message reader.

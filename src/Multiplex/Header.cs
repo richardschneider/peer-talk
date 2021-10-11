@@ -23,9 +23,9 @@ namespace PeerTalk.Multiplex
         ///   The largest possible value of a <see cref="StreamId"/>.
         /// </summary>
         /// <value>
-        ///   long.MaxValue >> 3.
+        ///  2^60 -1
         /// </value>
-        public const long MaxStreamId = long.MaxValue >> 3;
+        public const UInt64 MaxStreamId = ((UInt64)1073741824 * (UInt64)1073741824) - 1;
 
         /// <summary>
         ///   The smallest possible value of a <see cref="StreamId"/>.
@@ -33,15 +33,12 @@ namespace PeerTalk.Multiplex
         /// <value>
         ///   Zero.
         /// </value>
-        public const long MinStreamId = 0;
+        public const UInt64 MinStreamId = 0;
 
         /// <summary>
         ///   The stream identifier.
         /// </summary>
-        /// <value>
-        ///   The session initiator allocates odd IDs and the session receiver allocates even IDs.
-        /// </value>
-        public long StreamId;
+        public UInt64 StreamId;
 
         /// <summary>
         ///   The purpose of the multiplex message.
@@ -65,8 +62,8 @@ namespace PeerTalk.Multiplex
         /// </returns>
         public async Task WriteAsync(Stream stream, CancellationToken cancel = default(CancellationToken))
         {
-            var header = (StreamId << 3) | (long)PacketType;
-            await Varint.WriteVarintAsync(stream, header, cancel).ConfigureAwait(false);
+            var header = (StreamId << 3) | (UInt64)PacketType;
+            await Varint.WriteVarintAsync(stream, unchecked((Int64)header /*Varint should really be taking uints...*/), cancel).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -84,7 +81,7 @@ namespace PeerTalk.Multiplex
         /// </returns>
         public static async Task<Header> ReadAsync(Stream stream, CancellationToken cancel = default(CancellationToken))
         {
-            var varint = await Varint.ReadVarint64Async(stream, cancel).ConfigureAwait(false);
+            var varint = unchecked( (UInt64)await Varint.ReadVarint64Async(stream, cancel).ConfigureAwait(false)  /*Varint should really be returning uints...*/);
             return new Header
             {
                 StreamId = varint >> 3,

@@ -45,7 +45,7 @@ namespace PeerTalk.Multiplex
         /// <value>
         ///   The session initiator allocates odd IDs and the session receiver allocates even IDs.
         /// </value>
-        public long Id;
+        public UInt64 Id;
         
         /// <summary>
         ///   A name for the stream.
