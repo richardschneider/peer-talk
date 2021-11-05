@@ -29,7 +29,7 @@ namespace PeerTalk.Multiplex
         /// <value>
         ///   The session initiator allocates even IDs and the session receiver allocates odd IDs.
         /// </value>
-        public long NextStreamId { get; private set; } = 1000;
+        private UInt64 NextStreamId { get; set; } = 0;
 
         /// <summary>
         ///   The signle channel to exchange protocol messages.
@@ -37,7 +37,7 @@ namespace PeerTalk.Multiplex
         /// <value>
         ///   A <see cref="Stream"/> to exchange protocol messages.
         /// </value>
-        public Stream Channel { get; set; }
+        internal Stream Channel { get; set; }
 
         /// <summary>
         ///   The peer connection.
@@ -45,7 +45,7 @@ namespace PeerTalk.Multiplex
         /// <value>
         ///   The peer connection that owns this muxer.
         /// </value>
-        public PeerConnection Connection { get; set; }
+        private PeerConnection Connection { get; set; }
 
         /// <summary>
         ///   Raised when the remote end creates a new stream.
@@ -55,46 +55,25 @@ namespace PeerTalk.Multiplex
         /// <summary>
         ///   Raised when the remote end closes a stream.
         /// </summary>
-        public event EventHandler<Substream> SubstreamClosed;
+        private event EventHandler<Substream> SubstreamClosed;
 
-        readonly AsyncLock ChannelWriteLock = new AsyncLock();
-        
+        private readonly AsyncLock ChannelWriteLock = new AsyncLock();
+
         /// <summary>
         ///   The substreams that are open.
         /// </summary>
         /// <value>
         ///   The key is stream ID and the value is a <see cref="Substream"/>.
         /// </value>
-        public ConcurrentDictionary<long, Substream> Substreams = new ConcurrentDictionary<long, Substream>();
-
+        private readonly ConcurrentDictionary<SubstreamId, Substream> Substreams = new ConcurrentDictionary<SubstreamId, Substream>();
+        
         /// <summary>
-        ///   Determines if the muxer is the initiator.
+        ///   Multiplexes the provided stream
         /// </summary>
-        /// <value>
-        ///   <b>true</b> if the muxer is the initiator.
-        /// </value>
-        /// <seealso cref="Receiver"/>
-        public bool Initiator
+        public Muxer(Stream channel, PeerConnection connection)
         {
-            get { return (NextStreamId & 1) == 0; }
-            set
-            {
-                if (value != Initiator)
-                    NextStreamId += 1;
-            }
-        }
-
-        /// <summary>
-        ///   Determines if the muxer is the receiver.
-        /// </summary>
-        /// <value>
-        ///   <b>true</b> if the muxer is the receiver.
-        /// </value>
-        /// <seealso cref="Initiator"/>
-        public bool Receiver
-        {
-            get { return !Initiator; }
-            set { Initiator = !value; }
+            Channel = channel;
+            Connection = connection;
         }
 
         /// <summary>
@@ -112,7 +91,7 @@ namespace PeerTalk.Multiplex
         public async Task<Substream> CreateStreamAsync(string name = "", CancellationToken cancel = default(CancellationToken))
         {
             var streamId = NextStreamId;
-            NextStreamId += 2;
+            NextStreamId += 1;
             var substream = new Substream
             {
                 Id = streamId,
@@ -120,7 +99,11 @@ namespace PeerTalk.Multiplex
                 Muxer = this,
                 SentMessageType = PacketType.MessageInitiator,
             };
-            Substreams.TryAdd(streamId, substream);
+
+            var substreamId = new SubstreamId(true, streamId);
+
+            log.Debug($"I want to create stream #{substreamId} w/ {Connection.RemotePeer.Id}");
+            Substreams.TryAdd(substreamId, substream);
 
             // Tell the other side about the new stream.
             using (await AcquireWriteAccessAsync().ConfigureAwait(false))
@@ -141,25 +124,29 @@ namespace PeerTalk.Multiplex
         /// <remarks>
         ///   Internal method called by Substream.Dispose().
         /// </remarks>
-        public async Task<Substream> RemoveStreamAsync(Substream stream, CancellationToken cancel = default(CancellationToken))
+        public async Task RemoveStreamAsync(Substream stream, CancellationToken cancel = default(CancellationToken))
         {
-            if (Substreams.TryRemove(stream.Id, out Substream _))
-            {
-                // Tell the other side.
-                using (await AcquireWriteAccessAsync().ConfigureAwait(false))
-                {
-                    var header = new Header
-                    {
-                        StreamId = stream.Id,
-                        PacketType = PacketType.CloseInitiator
-                    };
-                    await header.WriteAsync(Channel, cancel).ConfigureAwait(false);
-                    Channel.WriteByte(0); // length
-                    await Channel.FlushAsync().ConfigureAwait(false);
-                }
-            }
+            //FIXME: Initiator is not known here
+            log.Error("FIXME: RemoveStreamAsync");
 
-            return stream;
+            //var substreamId = new SubstreamId(?, stream.Id);
+            //if (Substreams.TryRemove(substreamId, out Substream _))
+            //{
+            //    // Tell the other side.
+            //    using (await AcquireWriteAccessAsync().ConfigureAwait(false))
+            //    {
+            //        var header = new Header
+            //        {
+            //            StreamId = stream.Id,
+            //            PacketType = PacketType.CloseInitiator
+            //        };
+            //        await header.WriteAsync(Channel, cancel).ConfigureAwait(false);
+            //        Channel.WriteByte(0); // length
+            //        await Channel.FlushAsync().ConfigureAwait(false);
+            //    }
+            //}
+
+            await Task.Yield();
         }
 
         /// <summary>
@@ -190,14 +177,17 @@ namespace PeerTalk.Multiplex
                     var payload = new byte[length];
                     await Channel.ReadExactAsync(payload, 0, length, cancel).ConfigureAwait(false);
 
+                    var iAmInitiator = ((byte)header.PacketType & 0x01) == 0x01;
+                    var substreamId = new SubstreamId(iAmInitiator, header.StreamId);
+
                     // Process the packet
-                    Substreams.TryGetValue(header.StreamId, out Substream substream);
+                    Substreams.TryGetValue(substreamId, out Substream substream);
                     switch (header.PacketType)
                     {
                         case PacketType.NewStream:
                             if (substream != null)
                             {
-                                log.Warn($"Stream {substream.Id} already exists");
+                                log.Warn($"Stream {substreamId} already exists");
                                 continue;
                             }
                             substream = new Substream
@@ -206,67 +196,54 @@ namespace PeerTalk.Multiplex
                                 Name = Encoding.UTF8.GetString(payload),
                                 Muxer = this
                             };
-                            if (!Substreams.TryAdd(substream.Id, substream))
+                            log.Debug($"Asked to create stream #{substreamId} w/ {Connection.RemotePeer.Id}");
+                            if (!Substreams.TryAdd(substreamId, substream))
                             {
                                 // Should not happen.
                                 throw new Exception($"Stream {substream.Id} already exists");
                             }
                             SubstreamCreated?.Invoke(this, substream);
-
-                            // Special hack for go-ipfs
-#if true
-                            if (Receiver && (substream.Id & 1) == 1)
-                            {
-                                log.Debug($"go-hack sending newstream {substream.Id}");
-                                using (await AcquireWriteAccessAsync().ConfigureAwait(false))
-                                {
-                                    var hdr = new Header
-                                    {
-                                        StreamId = substream.Id,
-                                        PacketType = PacketType.NewStream
-                                    };
-                                    await hdr.WriteAsync(Channel, cancel).ConfigureAwait(false);
-                                    Channel.WriteByte(0); // length
-                                    await Channel.FlushAsync().ConfigureAwait(false);
-                                }
-                            }
-#endif
                             break;
 
                         case PacketType.MessageInitiator:
-                            if (substream == null)
-                            {
-                                log.Warn($"Message to unknown stream #{header.StreamId}");
-                                continue;
-                            }
-                            substream.AddData(payload);
-                            break;
-
                         case PacketType.MessageReceiver:
                             if (substream == null)
                             {
-                                log.Warn($"Message to unknown stream #{header.StreamId}");
+                                log.Warn($"Message to unknown stream #{substreamId}");
                                 continue;
                             }
                             substream.AddData(payload);
                             break;
 
+                        // Closing is one sided, it means the other side is done sending and the stream should EOF after consuming existing content. You can still send the other way
                         case PacketType.CloseInitiator:
                         case PacketType.CloseReceiver:
-                        case PacketType.ResetInitiator:
-                        case PacketType.ResetReceiver:
+                            log.Debug($"Asked to close stream #{substreamId} w/ {Connection.RemotePeer.Id}");
                             if (substream == null)
                             {
-                                log.Warn($"Reset of unknown stream #{header.StreamId}");
+                                log.Warn($"Close of unknown stream #{header.StreamId} w/ {Connection.RemotePeer.Id} due to {header.PacketType}");
                                 continue;
                             }
                             substream.NoMoreData();
-                            Substreams.TryRemove(substream.Id, out Substream _);
+                            Substreams.TryRemove(substreamId, out Substream _);
+                            SubstreamClosed?.Invoke(this, substream);
+                            break;
+                        // Hard cut, existing unread data should be discarded and sending/receiving is an error.
+                        case PacketType.ResetInitiator:
+                        case PacketType.ResetReceiver:
+                            log.Warn($"Asked to reset stream #{substreamId}  w/ {Connection.RemotePeer.Id}, this is usually in response to a protocol error");
+                            if (substream == null)
+                            {
+                                log.Warn($"Reset of unknown stream #{substreamId} w/ {Connection.RemotePeer.Id} due to {header.PacketType}");
+                                continue;
+                            }
+                            substream.NoMoreData();
+                            Substreams.TryRemove(substreamId, out Substream _);
                             SubstreamClosed?.Invoke(this, substream);
                             break;
 
                         default:
-                            throw new InvalidDataException($"Unknown Muxer packet type '{header.PacketType}'.");
+                            throw new InvalidDataException($"Unknown Muxer packet type '{header.PacketType}' from {Connection.RemotePeer.Id}.");
                     }
                 }
             }

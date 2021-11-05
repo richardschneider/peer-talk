@@ -42,6 +42,7 @@ namespace PeerTalk
         List<IPeerProtocol> protocols = new List<IPeerProtocol>
         {
             new Multistream1(),
+            new SecureCommunication.Noise.Noise(),
             new SecureCommunication.Secio1(),
             new Identify1(),
             new Mplex67()

@@ -45,7 +45,7 @@ namespace PeerTalk.Multiplex
         /// <value>
         ///   The session initiator allocates odd IDs and the session receiver allocates even IDs.
         /// </value>
-        public long Id;
+        public UInt64 Id;
         
         /// <summary>
         ///   A name for the stream.
@@ -174,6 +174,7 @@ namespace PeerTalk.Multiplex
         /// <inheritdoc />
         public override async Task FlushAsync(CancellationToken cancel)
         {
+            if (outStream == null) throw new ObjectDisposedException(nameof(Substream));
             if (outStream.Length == 0)
                 return;
 
@@ -198,12 +199,14 @@ namespace PeerTalk.Multiplex
         /// <inheritdoc />
         public override void Write(byte[] buffer, int offset, int count)
         {
+            if (outStream == null) throw new ObjectDisposedException(nameof(Substream));
             outStream.Write(buffer, offset, count);
         }
 
         /// <inheritdoc />
         public override Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
         {
+            if (outStream == null) throw new ObjectDisposedException(nameof(Substream));
             return outStream.WriteAsync(buffer, offset, count, cancellationToken);
         }
 

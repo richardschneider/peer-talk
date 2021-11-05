@@ -211,12 +211,7 @@ namespace PeerTalk
             await EstablishProtocolAsync("/multistream/", cancel).ConfigureAwait(false);
             await EstablishProtocolAsync("/mplex/", cancel).ConfigureAwait(false);
 
-            var muxer = new Muxer
-            {
-                Channel = Stream,
-                Initiator = true,
-                Connection = this
-            };
+            var muxer = new Muxer(Stream, this);
             muxer.SubstreamCreated += (s, e) => _ = ReadMessagesAsync(e, CancellationToken.None);
             this.MuxerEstablished.SetResult(muxer);
 
